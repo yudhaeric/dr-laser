@@ -21,9 +21,22 @@ export default function Home() {
       "name" : "DR QYU\nLUMBAR TRACTION\nDEVICE",
     },
   ]
-  
   const thoseWhoHave = ["Yeyen Lidya", "Lulu Kamal", "Melisa Karim", "Okan Kornelius"];
   const mediaLiput = ["/media-liput/medialiput1.png", "/media-liput/medialiput2.png", "/media-liput/medialiput3.png", "/media-liput/medialiput4.png", "/media-liput/medialiput5.png"];
+  const location = [
+    {
+      "address" : "Komplek ruko roxy mas blok D4 No.1, Daerah Khusus Ibukota Jakarta 10150",
+      "maps" : "/maps.png"
+    },
+    {
+      "address" : "Komplek ruko roxy mas blok D4 No.1, Daerah Khusus Ibukota Jakarta 10150",
+      "maps" : "/maps.png"
+    },
+    {
+      "address" : "Komplek ruko roxy mas blok D4 No.1, Daerah Khusus Ibukota Jakarta 10150",
+      "maps" : "/maps.png"
+    }
+  ]
 
   return (
     <>
@@ -266,6 +279,38 @@ export default function Home() {
                 />
               </>
             );
+          })}
+        </div>
+      </div>
+      {/* Find Us */}
+      <div className='mt-20'>
+        <div className='flex items-center justify-center mb-12'>
+          <h1 className='text-[#ff565c] font-bold text-[20pt]'>TEMUKAN KAMI</h1>
+        </div>
+        <div className='flex justify-center w-[80%] mx-[130px]'>
+          {location.map((item) => {
+            return (
+              <>
+                <div className='flex flex-col items-center'>
+                  <Image
+                    className='mb-10'
+                    src="/shop.png"
+                    width={70}
+                    height={60}
+                    alt="..."
+                  />
+                  <p className='mb-10 font-bold text-center w-[70%] leading-4'>
+                    {item.address}
+                  </p>
+                  <Image
+                    src={item.maps}
+                    width={300}
+                    height={300}
+                    alt="..."
+                  />
+                </div>
+              </>
+            )
           })}
         </div>
       </div>
