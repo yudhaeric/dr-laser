@@ -23,6 +23,7 @@ export default function Home() {
   ]
   
   const thoseWhoHave = ["Yeyen Lidya", "Lulu Kamal", "Melisa Karim", "Okan Kornelius"];
+  const mediaLiput = ["/media-liput/medialiput1.png", "/media-liput/medialiput2.png", "/media-liput/medialiput3.png", "/media-liput/medialiput4.png", "/media-liput/medialiput5.png"];
 
   return (
     <>
@@ -161,7 +162,7 @@ export default function Home() {
         <div className='flex flex-col items-center justify-center mb-4'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>DAPATKAN SEKARANG</h1>
         </div>
-        <div className='flex text-[12pt] gap-20 mt-[70px] ml-[150px] mr-[150px]'>
+        <div className='flex text-[12pt] gap-20 mt-[70px] mx-[150px]'>
         {product.map((item, index) => {
           const nameLines = item.name.split('\n');
           return (
@@ -184,11 +185,11 @@ export default function Home() {
         </div>
       </div>
       {/* Those Who Have Section */}
-      <div className='mt-12'>
+      <div className='mt-10'>
         <div className='flex flex-col items-center justify-center mb-4'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>MEREKA YANG PERNAH</h1>
         </div>
-        <div className='flex text-[12pt] text-red gap-20 mt-[70px] ml-[150px] mr-[150px]'>
+        <div className='flex text-[12pt] text-red gap-20 mt-[30px] ml-[150px] mr-[150px]'>
           {thoseWhoHave.map((item, index) => (
             <>
               <div className='flex flex-col items-center'>
@@ -197,7 +198,7 @@ export default function Home() {
                     src={`/video${index + 1}.png`}
                     width={344}
                     height={196}
-                    alt="..."
+                    alt="Review"
                 />
                 <p className='w-38 text-center text-[#464646] font-bold'>
                   {item} (Artis)
@@ -205,6 +206,14 @@ export default function Home() {
               </div>
             </>
           ))}
+        </div>
+        <div className='flex justify-center mt-14'>
+          <Image
+            src="/testimoni.png"
+            width={960}
+            height={545}
+            alt="Testimoni"
+          />
         </div>
       </div>
       {/* Media Partner */}
@@ -237,6 +246,27 @@ export default function Home() {
               alt="..."
             />
           </div>
+        </div>
+      </div>
+      {/* Media Liput */}
+      <div className='flex justify-center items-center mt-[50px] w-[80%] mx-[140px] gap-5'>
+        <p className='w-full font-bold'>
+          Dr Laser telah diliput <br/>
+          oleh berbagai media nasional
+        </p>
+        <div className='flex'>
+          {mediaLiput.map((item) => {
+            return (
+              <>
+                <Image
+                  src={item}
+                  width={530}
+                  height={215}
+                  alt="..."
+                />
+              </>
+            );
+          })}
         </div>
       </div>
     </>
