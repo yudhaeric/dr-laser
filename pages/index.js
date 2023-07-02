@@ -1,7 +1,29 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { useState } from 'react';
 
 export default function Home() {
+  const product = [
+    {
+      "image" : "/product/supreme.png",
+      "name" : "DR LASER\nSUPREME",
+    },
+    {
+      "image" : "/product/plus.png",
+      "name" : "DR LASER\nHI PLUS",
+    },
+    {
+      "image" : "/product/perfect.png",
+      "name" : "DR LASER\nPERFECT 10 PLUS",
+    },
+    {
+      "image" : "/product/traction.png",
+      "name" : "DR QYU\nLUMBAR TRACTION\nDEVICE",
+    },
+  ]
+  
+  const thoseWhoHave = ["Yeyen Lidya", "Lulu Kamal", "Melisa Karim", "Okan Kornelius"];
+
   return (
     <>
       <Image
@@ -11,6 +33,7 @@ export default function Home() {
         height={1284}
         alt="Background Hero"
       />
+      {/* Header */}
       <div className='flex justify-center gap-60'>
         <div className='mt-10'>
           <Image
@@ -29,6 +52,7 @@ export default function Home() {
           </ul>
         </div>
       </div>
+      {/* Hero Section */}
       <div className='flex justify-center gap-20'>
         <div className='w-[400px] mt-16'>
           <h1 className='text-[20pt] mb-7 leading-8'>
@@ -56,6 +80,7 @@ export default function Home() {
           />
         </div>
       </div>
+       {/* Benefit Section */}
       <div className='mt-[60pt]'>
         <div className='flex flex-col items-center justify-center mb-4'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>MANFAAT</h1>
@@ -109,6 +134,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* Sleep Quality Section */}
       <div className='flex'>
         <div className='w-[50%] h-44'>
           <Image
@@ -121,8 +147,7 @@ export default function Home() {
         </div>
         <div className='w-[50%] h-44 mt-12'>
           <h1 className='font-bold text-[#ff565c] text-2xl'>
-            MEMPERBAIKI <br/>
-            KUALITAS TIDUR
+            MEMPERBAIKI <br/> KUALITAS TIDUR
           </h1>
           <p className='text-[#464646] mt-8'>
             <span className='font-bold'>Kualitas tidur yang baik</span> adalah salah satu faktor <br/> pendukung terapi. <span className='font-bold'>90% pengguna Dr Laser merasakan <br/> tidur
@@ -131,172 +156,89 @@ export default function Home() {
           </p>
         </div>
       </div>
+      {/* Product Section */}
       <div className='mt-48'>
         <div className='flex flex-col items-center justify-center mb-4'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>DAPATKAN SEKARANG</h1>
         </div>
+        <div className='flex text-[12pt] gap-20 mt-[70px] ml-[150px] mr-[150px]'>
+        {product.map((item, index) => {
+          const nameLines = item.name.split('\n');
+          return (
+            <div key={index}>
+              <Image
+                className='mb-5'
+                src={item.image}
+                width={280}
+                height={230}
+                alt="Product Supreme"
+              />
+              {nameLines.map((line, lineIndex) => (
+                <p key={lineIndex} className='text-center text-[#ff565c] font-bold'>
+                  {line}
+                </p>
+              ))}
+            </div>
+          );
+        })}
+        </div>
       </div>
-      <div className='flex text-[12pt] text-red gap-20 mt-[70px] ml-[150px] mr-[150px]'>
-            <div className='flex flex-col items-center'>
-              <Image
-                  className='mb-5'
-                  src="/supreme.png"
-                  width={180}
-                  height={197}
-                  alt="..."
-              />
-              <p className='w-20 text-center text-[#ff565c] font-bold'>
-                DR LASER <br/>
-                SUPREME
-              </p>
-            </div>
-            <div className='flex flex-col items-center'>
-              <Image
-                  className='mb-5'
-                  src="/dr -laser-hi.png"
-                  width={148}
-                  height={197}
-                  alt="..."
-              />
-              <p className='w-20 text-center text-[#ff565c] font-bold'>
-                DR LASER <br/>
-                HI PLUS
-              </p>
-            </div>
-            <div className='flex flex-col items-center'>
-              <Image
-                  className='mb-5'
-                  src="/perfect10.png"
-                  width={226}
-                  height={197}
-                  alt="..."
-              />
-              <p className='w-40 text-center text-[#ff565c] font-bold'>
-              DR LASER  <br/>
-              PERFECT 10 PLUS
-              </p>
-            </div>
-            <div className='flex flex-col items-center'>
-              <Image
-                  className='mb-5'
-                  src="/aculaser.png"
-                  width={237}
-                  height={197}
-                  alt="..."
-              />
-              <p className='w-40 text-center text-[#ff565c] font-bold'>
-              ACULASER <br/>
-              ULTIMATE
-              </p>
-            </div>      
-      </div>
-      <div className='mt-[50pt]'>
+      {/* Those Who Have Section */}
+      <div className='mt-12'>
         <div className='flex flex-col items-center justify-center mb-4'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>MEREKA YANG PERNAH</h1>
         </div>
+        <div className='flex text-[12pt] text-red gap-20 mt-[70px] ml-[150px] mr-[150px]'>
+          {thoseWhoHave.map((item, index) => (
+            <>
+              <div className='flex flex-col items-center'>
+                <Image
+                    className='mb-5'
+                    src={`/video${index + 1}.png`}
+                    width={344}
+                    height={196}
+                    alt="..."
+                />
+                <p className='w-38 text-center text-[#464646] font-bold'>
+                  {item} (Artis)
+                </p>
+              </div>
+            </>
+          ))}
+        </div>
       </div>
-      <div className='flex text-[12pt] text-red gap-20 mt-[70px] ml-[150px] mr-[150px]'>
-            <div className='flex flex-col items-center'>
-              <Image
-                  className='mb-5'
-                  src="/video1.png"
-                  width={344}
-                  height={196}
-                  alt="..."
-              />
-              <p className='w-40 text-center text-[#464646] font-bold'>
-              Yeyen Lidya (Artis)
-              </p>
-            </div>
-            <div className='flex flex-col items-center'>
-              <Image
-                  className='mb-5'
-                  src="/video2.png"
-                  width={344}
-                  height={196}
-                  alt="..."
-              />
-              <p className='w-40 text-center text-[#464646] font-bold'>
-              Lulu Kamal (Artis)
-              </p>
-            </div>
-            <div className='flex flex-col items-center'>
-              <Image
-                  className='mb-5'
-                  src="/video3.png"
-                  width={344}
-                  height={196}
-                  alt="..."
-              />
-              <p className='w-40 text-center text-[#464646] font-bold'>
-              Melisa Karim (Artis)
-              </p>
-            </div>
-            <div className='flex flex-col items-center'>
-              <Image
-                  className='mb-5'
-                  src="/video4.png"
-                  width={344}
-                  height={196}
-                  alt="..."
-              />
-              <p className='w-45 text-center text-[#464646] font-bold'>
-              Okan Kornelius (Artis)
-              </p>
-            </div>  
-          </div>
-          
-    
-        <div className='mt-[10pt]'>
-        <div className='flex flex-col items-center justify-center mb-4'>
+      {/* Media Partner */}
+      <div className='mt-12'>
+        <div className='flex items-center justify-center mb-4'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>MEDIA PARTNER OF</h1>
         </div> 
-        <div className='flex flex-col items-center'>
-              <Image
-                  className='mt-10 mb-5'
-                  src="/metrotv.png"
-                  width={574}
-                  height={144}
-                  alt="..."
-              />
-            </div>
-            <div className='mt-[50pt]'>
-        <div className='flex flex-col items-center justify-center mb-4'></div>
+        <div className='flex justify-center'>
+          <Image
+            src="/metrotv.png"
+            width={300}
+            height={75}
+            alt="Metro TV"
+          />
+        </div>
+        <div className='flex justify-center text-[12pt] gap-5 mt-[40px] bg-[#ff565c] py-7'>
+          <div>
+            <Image
+              src="/media1.png"
+              width={480}
+              height={270}
+              alt="..."
+            />
+          </div>
+          <div>
+            <Image
+              src="/media2.png"
+              width={480}
+              height={270}
+              alt="..."
+            />
+          </div>
+        </div>
       </div>
-      <div className='flex text-[12pt] text-red gap-40 mt-[40px] ml-[200px] mr-[200px]'>
-            <div className='flex flex-col items-center'>
-              <Image
-                  className='mb-5'
-                  src="/media1.png"
-                  width={400}
-                  height={225}
-                  alt="..."
-              />
-            </div>
-            <div className='flex flex-col items-center'>
-              <Image
-                  className='mb-5'
-                  src="/media2.png"
-                  width={400}
-                  height={225}
-                  alt="..."
-              />
-            </div>
-            </div>
-            
-      </div>
-      
-      
-      
-         
-            
-      
-      
-      
-
-                  
-            
     </>
-    
   )
 }
