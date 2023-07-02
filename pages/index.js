@@ -96,6 +96,189 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="flex justify-center">
+          <Image
+            className="mt-[-200px] ml-[-220px] bg-red-500"
+            src="/wakeup.png"
+            width={1080}
+            height={801}
+            alt="Picture of the author"
+          />
+        <h1 className='mt-10  text-2xl font-bold bg-yellow-100' >  MEMPERBAIKI
+        <span className='block'>KUALITAS TIDUR</span>
+        <p className='text-[#4e4e4e] mb-7 text-[10pt]'>
+            Low Level Laser membantu mengencerkan darah sehingga mencegah terbentuknya trombus (gumpalan darah), 
+            dengan mekanisme menghambat agregasi trombosit, serta dapat mengaktifkan fibrinolisis sehingga membantu 
+            menguraikan trombus/gumpalan darah pemicu STROKE dan SERANGAN JANTUNG.
+          </p>
+        </h1>
+      </div>
+      <div className='mt-[10pt]'>
+        <div className='flex flex-col items-center justify-center mb-4'>
+          <h1 className='text-[#ff565c] font-bold text-[20pt]'>DAPATKAN SEKARANG</h1>
+        </div>
+      </div>
+      <div className='flex text-[12pt] text-red gap-20 mt-[70px] ml-[150px] mr-[150px]'>
+            <div className='flex flex-col items-center'>
+              <Image
+                  className='mb-5'
+                  src="/supreme.png"
+                  width={180}
+                  height={197}
+                  alt="..."
+              />
+              <p className='w-20 text-center text-[#ff565c] font-bold'>
+                DR LASER <br/>
+                SUPREME
+              </p>
+            </div>
+            <div className='flex flex-col items-center'>
+              <Image
+                  className='mb-5'
+                  src="/dr -laser-hi.png"
+                  width={148}
+                  height={197}
+                  alt="..."
+              />
+              <p className='w-20 text-center text-[#ff565c] font-bold'>
+                DR LASER <br/>
+                HI PLUS
+              </p>
+            </div>
+            <div className='flex flex-col items-center'>
+              <Image
+                  className='mb-5'
+                  src="/perfect10.png"
+                  width={226}
+                  height={197}
+                  alt="..."
+              />
+              <p className='w-40 text-center text-[#ff565c] font-bold'>
+              DR LASER  <br/>
+              PERFECT 10 PLUS
+              </p>
+            </div>
+            <div className='flex flex-col items-center'>
+              <Image
+                  className='mb-5'
+                  src="/aculaser.png"
+                  width={237}
+                  height={197}
+                  alt="..."
+              />
+              <p className='w-40 text-center text-[#ff565c] font-bold'>
+              ACULASER <br/>
+              ULTIMATE
+              </p>
+            </div>      
+      </div>
+      <div className='mt-[50pt]'>
+        <div className='flex flex-col items-center justify-center mb-4'>
+          <h1 className='text-[#ff565c] font-bold text-[20pt]'>MEREKA YANG PERNAH</h1>
+        </div>
+      </div>
+      <div className='flex text-[12pt] text-red gap-20 mt-[70px] ml-[150px] mr-[150px]'>
+            <div className='flex flex-col items-center'>
+              <Image
+                  className='mb-5'
+                  src="/video1.png"
+                  width={344}
+                  height={196}
+                  alt="..."
+              />
+              <p className='w-40 text-center text-[#464646] font-bold'>
+              Yeyen Lidya (Artis)
+              </p>
+            </div>
+            <div className='flex flex-col items-center'>
+              <Image
+                  className='mb-5'
+                  src="/video2.png"
+                  width={344}
+                  height={196}
+                  alt="..."
+              />
+              <p className='w-40 text-center text-[#464646] font-bold'>
+              Lulu Kamal (Artis)
+              </p>
+            </div>
+            <div className='flex flex-col items-center'>
+              <Image
+                  className='mb-5'
+                  src="/video3.png"
+                  width={344}
+                  height={196}
+                  alt="..."
+              />
+              <p className='w-40 text-center text-[#464646] font-bold'>
+              Melisa Karim (Artis)
+              </p>
+            </div>
+            <div className='flex flex-col items-center'>
+              <Image
+                  className='mb-5'
+                  src="/video4.png"
+                  width={344}
+                  height={196}
+                  alt="..."
+              />
+              <p className='w-45 text-center text-[#464646] font-bold'>
+              Okan Kornelius (Artis)
+              </p>
+            </div>  
+          </div>
+          
+    
+        <div className='mt-[10pt]'>
+        <div className='flex flex-col items-center justify-center mb-4'>
+          <h1 className='text-[#ff565c] font-bold text-[20pt]'>MEDIA PARTNER OF</h1>
+        </div> 
+        <div className='flex flex-col items-center'>
+              <Image
+                  className='mb-5 mt-10'
+                  src="/metrotv.png"
+                  width={574}
+                  height={144}
+                  alt="..."
+              />
+            </div>
+            <div className='mt-[50pt]'>
+        <div className='flex flex-col items-center justify-center mb-4'></div>
+      </div>
+      <div className='flex text-[12pt] text-red gap-40 mt-[40px] ml-[200px] mr-[200px]'>
+            <div className='flex flex-col items-center'>
+              <Image
+                  className='mb-5'
+                  src="/media1.png"
+                  width={400}
+                  height={225}
+                  alt="..."
+              />
+            </div>
+            <div className='flex flex-col items-center'>
+              <Image
+                  className='mb-5'
+                  src="/media2.png"
+                  width={400}
+                  height={225}
+                  alt="..."
+              />
+            </div>
+            </div>
+            
+      </div>
+      
+      
+      
+         
+            
+      
+      
+      
+
+                  
+            
     </>
+    
   )
 }
