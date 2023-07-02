@@ -7,18 +7,30 @@ export default function Home() {
     {
       "image" : "/product/supreme.png",
       "name" : "DR LASER\nSUPREME",
+      "desc" : "Dr Laser Supreme 16 Titik Mata Laser - Terapi Melancarkan Aliran Darah Untuk Membantu Mencegah Diabetes Stroke Hipertensi Kolesterol.",
+      "disc" : "Rp 8.880.000",
+      "price" : "Rp 6.880.000",
     },
     {
       "image" : "/product/plus.png",
       "name" : "DR LASER\nHI PLUS",
+      "desc" : "Dr Laser Hi Plus 7 Titik Mata Laser - Terapi Melancarkan Aliran Darah Untuk Membantu Mencegah Diabetes Stroke Hipertensi Kolesterol.",
+      "disc" : "Rp 4.880.000",
+      "price" : "Rp 3.880.000",
     },
     {
       "image" : "/product/perfect.png",
       "name" : "DR LASER\nPERFECT 10 PLUS",
+      "desc" : "Dr Laser Perfect 10 Plus 10 Titik Mata Laser - Terapi Melancarkan Aliran Darah Untuk Membantu Mencegah Diabetes Stroke Hipertensi Kolesterol.",
+      "disc" : "Rp 6.880.000",
+      "price" : "Rp 5.980.000",
     },
     {
       "image" : "/product/traction.png",
       "name" : "DR QYU\nLUMBAR TRACTION\nDEVICE",
+      "desc" : "Dr Qyu Lumbar Traction Device - Membantu Mengatasi Nyeri Pinggang Saraf Terjepit.",
+      "disc" : "Rp 4.980.000",
+      "price" : "Rp 2.999.000",
     },
   ]
   
@@ -189,53 +201,57 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* Sleep Quality Section */}
-      <div className='flex'>
-        <div className='w-[50%] h-44'>
-          <Image
-            className='mb-5'
-            src="/wakeup.png"
-            width={1050}
-            height={722}
-            alt="Icon Heart"
-          />
+      <div className='w-full bg-[#f4f4f4]'>
+        {/* Sleep Quality Section */}
+        <div className='flex'>
+          <div className='w-[50%] h-44'>
+            <Image
+              className='mb-5'
+              src="/wakeup.png"
+              width={1050}
+              height={722}
+              alt="Icon Heart"
+            />
+          </div>
+          <div className='w-[50%] h-44 mt-12'>
+            <h1 className='font-bold text-[#ff565c] text-2xl'>
+              MEMPERBAIKI <br/> KUALITAS TIDUR
+            </h1>
+            <p className='text-[#464646] mt-8'>
+              <span className='font-bold'>Kualitas tidur yang baik</span> adalah salah satu faktor <br/> pendukung terapi. <span className='font-bold'>90% pengguna Dr Laser merasakan <br/> tidur
+              yang lebih nyenyak</span>, tidak lagi merasakan <br/> insomnia sehingga merasa segar ketika bangun tidur. <br/> Tidur yang berkualitas
+              membuat imunitas tetap terjaga <br/> dan gula darah lebih terkontrol.
+            </p>
+          </div>
         </div>
-        <div className='w-[50%] h-44 mt-12'>
-          <h1 className='font-bold text-[#ff565c] text-2xl'>
-            MEMPERBAIKI <br/> KUALITAS TIDUR
-          </h1>
-          <p className='text-[#464646] mt-8'>
-            <span className='font-bold'>Kualitas tidur yang baik</span> adalah salah satu faktor <br/> pendukung terapi. <span className='font-bold'>90% pengguna Dr Laser merasakan <br/> tidur
-            yang lebih nyenyak</span>, tidak lagi merasakan <br/> insomnia sehingga merasa segar ketika bangun tidur. <br/> Tidur yang berkualitas
-            membuat imunitas tetap terjaga <br/> dan gula darah lebih terkontrol.
-          </p>
-        </div>
-      </div>
-      {/* Product Section */}
-      <div className='mt-48'>
-        <div className='flex flex-col items-center justify-center mb-4'>
-          <h1 className='text-[#ff565c] font-bold text-[20pt]'>DAPATKAN SEKARANG</h1>
-        </div>
-        <div className='flex text-[12pt] gap-20 mt-[70px] mx-[150px]'>
-        {product.map((item, index) => {
-          const nameLines = item.name.split('\n');
-          return (
-            <div key={index}>
-              <Image
-                className='mb-5'
-                src={item.image}
-                width={280}
-                height={230}
-                alt="Product Supreme"
-              />
-              {nameLines.map((line, lineIndex) => (
-                <p key={lineIndex} className='text-center text-[#ff565c] font-bold'>
-                  {line}
-                </p>
-              ))}
-            </div>
-          );
-        })}
+        {/* Product Section */}
+        <div className='mt-48'>
+          <div className='flex flex-col items-center justify-center mb-4'>
+            <h1 className='text-[#ff565c] font-bold text-[20pt]'>DAPATKAN SEKARANG</h1>
+          </div>
+          <div className='flex text-[12pt] gap-20 mt-[50px] mx-[150px] pb-[40px]'>
+            {product.map((item, index) => {
+              const nameLines = item.name.split('\n');
+              return (
+                <div key={index} className='bg-white rounded-[30px]'>
+                  <Image
+                    className='mb-5'
+                    src={item.image}
+                    width={280}
+                    height={230}
+                    alt="Product Supreme"
+                  />
+                  {nameLines.map((line, lineIndex) => (
+                    <>
+                      <p key={lineIndex} className='flex justify-center text-[#ff565c] font-bold'>
+                        {line}
+                      </p>
+                    </>
+                  ))}
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
       {/* Those Who Have Section */}
