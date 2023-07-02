@@ -1,28 +1,40 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
     <>
       <Image
-        className='absolute'
+        className='absolute z-[-10]'
         src="/hero-section.png"
         width={1926}
         height={1284}
-        alt="Picture of the author"
+        alt="Background Hero"
       />
+      <div className='flex justify-center gap-60'>
+        <div className='mt-10'>
+          <Image
+            src="/logo.png"
+            width={220}
+            height={20}
+            alt="Dr Laser Logo"
+          />
+        </div>
+        <div className='h-[130px] bg-white w-[600px] rounded-b-[40px]'>
+          <ul className='flex justify-center align-end gap-20 text-[12px] mt-16'>
+            <a>HOME</a>
+            <a>PRODUCT</a>
+            <a>TESTIMONI</a>
+            <a>CONTACT US</a>
+          </ul>
+        </div>
+      </div>
       <div className='flex justify-center gap-20'>
-        <div className='w-[400px]'>
-          <h1 className='text-[20pt] mb-7'>
-            <span className='text-[#464646]'>
-              <span className='font-bold'>CEGAH STROKE</span> <br/>
-              <span className='font-light'>DAN {""}</span><span className='font-bold'>SERANGAN JANTUNG</span> <br/>
-              <span className='font-light'>DENGAN {""}</span>
-              <span className='text-[#ff565c] font-bold'>
-                LOW LEVEL LASER <br/>
-                TECHNOLOGY 
-              </span>
+        <div className='w-[400px] mt-16'>
+          <h1 className='text-[20pt] mb-7 leading-8'>
+            <span className='text-[#464646] font-bold'>
+              CEGAH STROKE <br/> <span className='font-light'>DAN {""} </span> SERANGAN JANTUNG <br/>
+              <span className='font-light'>DENGAN {""}</span> <span className='text-[#ff565c]'> LOW LEVEL LASER TECHNOLOGY<br/> </span>
             </span> 
           </h1>
           <p className='text-[#4e4e4e] mb-7 text-[10pt]'>
@@ -36,6 +48,7 @@ export default function Home() {
         </div>
         <div>
           <Image
+            className='mt-[140px]'
             src="/image-hero.png"
             width={500}
             height={226}
@@ -96,24 +109,29 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex justify-center">
+      <div className='flex'>
+        <div className='w-[50%] h-44'>
           <Image
-            className="mt-[-200px] ml-[-220px] bg-red-500"
+            className='mb-5'
             src="/wakeup.png"
-            width={1080}
-            height={801}
-            alt="Picture of the author"
+            width={1050}
+            height={722}
+            alt="Icon Heart"
           />
-        <h1 className='mt-10  text-2xl font-bold bg-yellow-100' >  MEMPERBAIKI
-        <span className='block'>KUALITAS TIDUR</span>
-        <p className='text-[#4e4e4e] mb-7 text-[10pt]'>
-            Low Level Laser membantu mengencerkan darah sehingga mencegah terbentuknya trombus (gumpalan darah), 
-            dengan mekanisme menghambat agregasi trombosit, serta dapat mengaktifkan fibrinolisis sehingga membantu 
-            menguraikan trombus/gumpalan darah pemicu STROKE dan SERANGAN JANTUNG.
+        </div>
+        <div className='w-[50%] h-44 mt-12'>
+          <h1 className='font-bold text-[#ff565c] text-2xl'>
+            MEMPERBAIKI <br/>
+            KUALITAS TIDUR
+          </h1>
+          <p className='text-[#464646] mt-8'>
+            <span className='font-bold'>Kualitas tidur yang baik</span> adalah salah satu faktor <br/> pendukung terapi. <span className='font-bold'>90% pengguna Dr Laser merasakan <br/> tidur
+            yang lebih nyenyak</span>, tidak lagi merasakan <br/> insomnia sehingga merasa segar ketika bangun tidur. <br/> Tidur yang berkualitas
+            membuat imunitas tetap terjaga <br/> dan gula darah lebih terkontrol.
           </p>
-        </h1>
+        </div>
       </div>
-      <div className='mt-[10pt]'>
+      <div className='mt-48'>
         <div className='flex flex-col items-center justify-center mb-4'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>DAPATKAN SEKARANG</h1>
         </div>
@@ -235,7 +253,7 @@ export default function Home() {
         </div> 
         <div className='flex flex-col items-center'>
               <Image
-                  className='mb-5 mt-10'
+                  className='mt-10 mb-5'
                   src="/metrotv.png"
                   width={574}
                   height={144}
