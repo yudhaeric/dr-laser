@@ -21,8 +21,11 @@ export default function Home() {
       "name" : "DR QYU\nLUMBAR TRACTION\nDEVICE",
     },
   ]
+  
   const thoseWhoHave = ["Yeyen Lidya", "Lulu Kamal", "Melisa Karim", "Okan Kornelius"];
+  
   const mediaLiput = ["/media-liput/medialiput1.png", "/media-liput/medialiput2.png", "/media-liput/medialiput3.png", "/media-liput/medialiput4.png", "/media-liput/medialiput5.png"];
+  
   const location = [
     {
       "address" : "Komplek ruko roxy mas blok D4 No.1, Daerah Khusus Ibukota Jakarta 10150",
@@ -37,6 +40,44 @@ export default function Home() {
       "maps" : "/maps.png"
     }
   ]
+  
+  const article = [
+    {
+      "image" : "/article/article.png",
+      "title" : "Jangan Anggap Remeh! inilah Gejala Stroke Ringan"
+    },
+    {
+      "image" : "/article/article.png",
+      "title" : "Jangan Anggap Remeh! inilah Gejala Stroke Ringan"
+    },
+    {
+      "image" : "/article/article.png",
+      "title" : "Jangan Anggap Remeh! inilah Gejala Stroke Ringan"
+    },
+    {
+      "image" : "/article/article.png",
+      "title" : "Jangan Anggap Remeh! inilah Gejala Stroke Ringan"
+    },
+  ];
+  
+  const theySaid = [
+    {
+      "say" : "Saya tidak pakai, tpi saya pakaikan ke orang tua dan mertua saya, sejauh ini alatnya membantu, tensi mereka stabil, Pelayanan baik, di anter ke rumah dan di ajari cara pakainya.",
+      "name" : "Tri May Shandy"
+    },
+    {
+      "say" : "Saya tidak pakai, tpi saya pakaikan ke orang tua dan mertua saya, sejauh ini alatnya membantu, tensi mereka stabil, Pelayanan baik, di anter ke rumah dan di ajari cara pakainya.",
+      "name" : "Tri May Shandy"
+    },
+    {
+      "say" : "Saya tidak pakai, tpi saya pakaikan ke orang tua dan mertua saya, sejauh ini alatnya membantu, tensi mereka stabil, Pelayanan baik, di anter ke rumah dan di ajari cara pakainya.",
+      "name" : "Tri May Shandy"
+    },
+    {
+      "say" : "Saya tidak pakai, tpi saya pakaikan ke orang tua dan mertua saya, sejauh ini alatnya membantu, tensi mereka stabil, Pelayanan baik, di anter ke rumah dan di ajari cara pakainya.",
+      "name" : "Tri May Shandy"
+    },
+  ];
 
   return (
     <>
@@ -263,7 +304,7 @@ export default function Home() {
       </div>
       {/* Media Liput */}
       <div className='flex justify-center items-center mt-[50px] w-[80%] mx-[140px] gap-5'>
-        <p className='w-full font-bold'>
+        <p className='w-full font-bold text-[#464646]'>
           Dr Laser telah diliput <br/>
           oleh berbagai media nasional
         </p>
@@ -297,22 +338,117 @@ export default function Home() {
                     src="/shop.png"
                     width={70}
                     height={60}
-                    alt="..."
+                    alt="Shop Icon"
                   />
-                  <p className='mb-10 font-bold text-center w-[70%] leading-4'>
+                  <p className='mb-10 font-bold text-center w-[70%] leading-4 text-[#464646]'>
                     {item.address}
                   </p>
                   <Image
                     src={item.maps}
                     width={300}
                     height={300}
-                    alt="..."
+                    alt="Maps"
                   />
                 </div>
               </>
             )
           })}
         </div>
+      </div>
+      {/* Article */}
+      <div className='flex flex-col items-center justify-center bg-[#464646] w-full py-7 mt-20'>
+        <div className='flex justify-between w-[80%]'>
+          <h1 className='text-lg font-bold text-white'>Artikel Menarik Tentang Kesehatan</h1>
+          <div className='flex gap-2'>
+            <Image
+              src="/arrow-left-article.png"
+              width={28}
+              height={28}
+              alt="Arrow Left Icon"
+            />
+            <Image
+              src="/arrow-right-article.png"
+              width={28}
+              height={28}
+              alt="Arrow Right Icon"
+            />
+          </div>
+        </div>
+        <div className='flex items-center justify-center w-[80%] mt-10 gap-5'>
+          {article.map((item) => {
+            return (
+              <>
+                <div className='flex flex-col justify-center'>
+                  <Image
+                    src={item.image}
+                    width={235}
+                    height={142}
+                    alt="Arrow Right Icon"
+                  />
+                  <div className='flex items-center mt-5'>
+                    <div className='w-[75%] text-white leading-5'>
+                      {item.title}
+                    </div>
+                    <Image
+                      className='ml-6'
+                      src="/arrow-red-right-article.png"
+                      width={24}
+                      height={24}
+                      alt="Arrow Right Icon"
+                    />
+                  </div>
+                </div>
+              </>
+            )
+          })}
+        </div>
+        <div></div>
+      </div>
+      {/* They Said */}
+      <div className='flex flex-col items-center justify-center mt-14'>
+        <div className='flex justify-between w-[80%]'>
+          <h1 className='text-lg font-bold text-[#464646]'>Apa Kata Mereka Tentang DR LASER?</h1>
+          <div className='flex gap-2'>
+            <Image
+              src="/arrow-left-said.png"
+              width={28}
+              height={28}
+              alt="Arrow Left Icon"
+            />
+            <Image
+              src="/arrow-right-said.png"
+              width={28}
+              height={28}
+              alt="Arrow Right Icon"
+            />
+          </div>
+        </div>
+        <div className='flex justify-center mt-10 w-[85%] gap-12'>
+          {theySaid.map((item) => {
+            return (
+              <>
+                <div className='w-[20%]'>
+                  <Image
+                    src="/star.png"
+                    width={105}
+                    height={19}
+                    alt="Rating"
+                  />
+                  <p className='text-[#464646] leading-5 mt-4'>
+                    {item.say}
+                  </p>
+                  <p className='text-[#ff565c] text-lg font-bold mt-4'>
+                    {item.name}
+                  </p>
+                </div>
+              </>
+            )
+          })}
+        </div>
+      </div>
+      {/* Copy Right */}
+      <div className='flex justify-center mt-20 mb-5'>
+        <p>&copy; 2023 DR.Laser. All Rights Reserved.</p>
       </div>
     </>
   )
