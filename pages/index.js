@@ -10,6 +10,7 @@ export default function Home() {
       "desc" : "Dr Laser Supreme 16 Titik Mata Laser - Terapi Melancarkan Aliran Darah Untuk Membantu Mencegah Diabetes Stroke Hipertensi Kolesterol.",
       "disc" : "Rp 8.880.000",
       "price" : "Rp 6.880.000",
+      "icon"  : "/buy.png"
     },
     {
       "image" : "/product/plus.png",
@@ -17,6 +18,7 @@ export default function Home() {
       "desc" : "Dr Laser Hi Plus 7 Titik Mata Laser - Terapi Melancarkan Aliran Darah Untuk Membantu Mencegah Diabetes Stroke Hipertensi Kolesterol.",
       "disc" : "Rp 4.880.000",
       "price" : "Rp 3.880.000",
+      "icon"  : "/buy.png"
     },
     {
       "image" : "/product/perfect.png",
@@ -24,6 +26,7 @@ export default function Home() {
       "desc" : "Dr Laser Perfect 10 Plus 10 Titik Mata Laser - Terapi Melancarkan Aliran Darah Untuk Membantu Mencegah Diabetes Stroke Hipertensi Kolesterol.",
       "disc" : "Rp 6.880.000",
       "price" : "Rp 5.980.000",
+      "icon"  : "/buy.png"
     },
     {
       "image" : "/product/traction.png",
@@ -31,6 +34,7 @@ export default function Home() {
       "desc" : "Dr Qyu Lumbar Traction Device - Membantu Mengatasi Nyeri Pinggang Saraf Terjepit.",
       "disc" : "Rp 4.980.000",
       "price" : "Rp 2.999.000",
+      "icon"  : "/buy.png"
     },
   ]
   
@@ -152,7 +156,7 @@ export default function Home() {
         <div className='flex flex-col items-center justify-center mb-4'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>MANFAAT</h1>
           <Image
-              className='mt-5'
+              className='mb-5'
               src="/down-arrow.png"
               width={34}
               height={34}
@@ -235,10 +239,10 @@ export default function Home() {
               return (
                 <div key={index} className='bg-white rounded-[30px]'>
                   <Image
-                    className='mb-5'
+                    className='mb-5 ml-7 mt-4'
                     src={item.image}
-                    width={280}
-                    height={230}
+                    width={184}
+                    height={150}
                     alt="Product Supreme"
                   />
                   {nameLines.map((line, lineIndex) => (
@@ -247,7 +251,24 @@ export default function Home() {
                         {line}
                       </p>
                     </>
+                    
                   ))}
+                      <p className='text-[#464646] text-[8pt] ml-10 mr-10 w-40 mt-4 '>{item.desc}</p>
+                  <div className='flex justify-center mt-20 text-[10pt]'>
+                      <p className='text-[#464646] font-bold line-through'>{item.disc}</p>
+                  </div>
+                  <div className='flex justify-center'>
+                      <p className='text-[#ff565c] font-bold text-[14pt]'>{item.price}</p>
+                  </div>
+                  <div className='flex justify-center mt-4 mb-4'>
+                  <Image
+                    src={item.icon}
+                    width={160}
+                    height={38}
+                    alt="Product Supreme"
+                  />
+                  </div>
+              
                 </div>
               );
             })}
