@@ -197,8 +197,46 @@ export default function Home() {
           />
         </div>
       </div>
-      {/* Benefit Section */}
-      <div className='mt-[60pt]'>
+      {/* Benefit Section Mobile */}
+      <div className='lg:hidden mt-[30pt]'>
+        <div className='flex flex-col items-center justify-center bg-[#ff565c] py-8 px-6'>
+          <h1 className='text-[#ffffff] font-bold text-[20pt] mb-10'>MANFAAT</h1>
+          <div className='flex flex-col text-[12pt] text-white z-10'>
+            <div className='flex flex-col items-center'>
+              <Image
+                  className='mb-5'
+                  src="/heart.png"
+                  width={52}
+                  height={38}
+                  alt="Icon Heart"
+              />
+              <p className='text-justify text-center'>Teknologi laser membantu menurunkan kadar gula darah dengan cara merangsang sel tubuh (mitokondria) untuk mengubah gula darah menjadi energi sehingga penderita diabetes yang umumnya lemas dan mengantuk akan lebih bernergi.</p>
+            </div>
+            <div className='flex flex-col items-center mt-7'>
+              <Image
+                  className='mb-5'
+                  src="/heart.png"
+                  width={52}
+                  height={38}
+                  alt="Icon Heart"
+              />
+              <p className='text-justify text-center'>Teknologi laser merangsang tubuh untuk memperoduksi nitric oxide yang berfungsi melebarkan pembuluh darah dan membuatnya lebih elastis sehingga membantu menurunkan tekanan darah. Nitric oxide juga berfungsi untuk meningkatkan aliran darah ke seluruh tubuh sehingga membantu mencegah dan mengatas impotensi.</p>
+            </div>
+            <div className='flex flex-col items-center mt-7'>
+              <Image
+                  className='mb-5'
+                  src="/heart.png"
+                  width={52}
+                  height={38}
+                  alt="Icon Heart"
+              />
+              <p className='text-justify text-center'>Teknologi laser mengaktifkan enzim dalam tubuh yang bertugas untuk mingkatkan pembakaran kolesterol. Kolesterol akan menurun dan mencegah terjadinya plak kolesterol.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Benefit Section Desktop */}
+      <div className='mobile:hidden lg:inline mt-[60pt]'>
         <div className='flex flex-col items-center justify-center mb-4'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>MANFAAT</h1>
           <Image
