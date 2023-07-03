@@ -290,9 +290,27 @@ export default function Home() {
         </div>
       </div>
       <div className='w-full bg-[#f4f4f4]'>
-        {/* Sleep Quality Section */}
+        {/* Sleep Quality Section Mobile */}
+        <div className='lg:hidden flex flex-col pt-10 items-center'>
+          <h1 className='font-bold text-[#ff565c] text-xl text-center'>
+            MEMPERBAIKI <br/> KUALITAS TIDUR
+          </h1>
+          <Image
+            className='mt-5'
+            src="/wakeup.png"
+            width={1050}
+            height={722}
+            alt="Icon Heart"
+          />
+          <p className='text-[#464646] text-justify mt-8 px-6'>
+            <span className='font-bold'>Kualitas tidur yang baik</span> adalah salah satu faktor pendukung terapi. <span className='font-bold'>90% pengguna Dr Laser merasakan tidur
+            yang lebih nyenyak</span>, tidak lagi merasakan insomnia sehingga merasa segar ketika bangun tidur. Tidur yang berkualitas
+            membuat imunitas tetap terjaga dan gula darah lebih terkontrol.
+          </p>
+        </div>
+        {/* Sleep Quality Section Desktop */}
         <div className='flex'>
-          <div className='w-[50%] h-44'>
+          <div className='mobile:hidden lg:inline w-[50%] h-44'>
             <Image
               className='mt-10'
               src="/wakeup.png"
@@ -301,7 +319,7 @@ export default function Home() {
               alt="Icon Heart"
             />
           </div>
-          <div className='w-[50%] h-44 mt-24'>
+          <div className='mobile:hidden lg:inline w-[50%] h-44 mt-24'>
             <h1 className='font-bold text-[#ff565c] text-2xl'>
               MEMPERBAIKI <br/> KUALITAS TIDUR
             </h1>
@@ -313,7 +331,7 @@ export default function Home() {
           </div>
         </div>
         {/* Product Section */}
-        <div className='mt-48'>
+        <div className='mobile:hidden mt-48'>
           <div className='flex flex-col items-center justify-center mb-4'>
             <h1 className='text-[#ff565c] font-bold text-[20pt]'>DAPATKAN SEKARANG</h1>
           </div>
@@ -363,7 +381,7 @@ export default function Home() {
         </div>
       </div>
       {/* Those Who Have Section */}
-      <div className='mt-10'>
+      <div className='mobile:hidden mt-10'>
         <div className='flex flex-col items-center justify-center mb-4'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>MEREKA YANG PERNAH</h1>
         </div>
@@ -395,7 +413,7 @@ export default function Home() {
         </div>
       </div>
       {/* Media Partner */}
-      <div className='mt-12'>
+      <div className='mobile:hidden mt-12'>
         <div className='flex items-center justify-center mb-4'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>MEDIA PARTNER OF</h1>
         </div> 
@@ -427,7 +445,7 @@ export default function Home() {
         </div>
       </div>
       {/* Media Liput */}
-      <div className='flex justify-center items-center mt-[50px] w-[80%] mx-[140px] gap-5'>
+      <div className='mobile:hidden flex justify-center items-center mt-[50px] w-[80%] mx-[140px] gap-5'>
         <p className='w-full font-bold text-[#464646]'>
           Dr Laser telah diliput <br/>
           oleh berbagai media nasional
@@ -448,7 +466,7 @@ export default function Home() {
         </div>
       </div>
       {/* Find Us */}
-      <div className='mt-20'>
+      <div className='mobile:hidden mt-20'>
         <div className='flex items-center justify-center mb-12'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>TEMUKAN KAMI</h1>
         </div>
@@ -480,7 +498,7 @@ export default function Home() {
         </div>
       </div>
       {/* Article */}
-      <div className='flex flex-col items-center justify-center bg-[#464646] w-full py-7 mt-20'>
+      <div className='mobile:hidden flex flex-col items-center justify-center bg-[#464646] w-full py-7 mt-20'>
         <div className='flex justify-between w-[80%]'>
           <h1 className='text-lg font-bold text-white'>Artikel Menarik Tentang Kesehatan</h1>
           <div className='flex gap-2'>
@@ -529,7 +547,7 @@ export default function Home() {
         <div></div>
       </div>
       {/* They Said */}
-      <div className='flex flex-col items-center justify-center mt-14'>
+      <div className='mobile:hidden flex flex-col items-center justify-center mt-14'>
         <div className='flex justify-between w-[80%]'>
           <h1 className='text-lg font-bold text-[#464646]'>Apa Kata Mereka Tentang DR LASER?</h1>
           <div className='flex gap-2'>
@@ -571,7 +589,7 @@ export default function Home() {
         </div>
       </div>
       {/* Copy Right */}
-      <div className='flex justify-center mt-20 mb-5'>
+      <div className='mobile:hidden flex justify-center mt-20 mb-5'>
         <p>&copy; 2023 DR.Laser. All Rights Reserved.</p>
       </div>
     </>
