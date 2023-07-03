@@ -6,27 +6,24 @@ export default function Home() {
   const product = [
     {
       "image" : "/product/supreme.png",
-      "name" : "DR LASER\nSUPREME",
+      "name" : "DR LASER\nSUPREME\n ㅤㅤㅤ",
       "desc" : "Dr Laser Supreme 16 Titik Mata Laser - Terapi Melancarkan Aliran Darah Untuk Membantu Mencegah Diabetes Stroke Hipertensi Kolesterol.",
       "disc" : "Rp 8.880.000",
       "price" : "Rp 6.880.000",
-      "icon"  : "/buy.png"
     },
     {
       "image" : "/product/plus.png",
-      "name" : "DR LASER\nHI PLUS",
+      "name" : "DR LASER\nHI PLUS\n ㅤㅤㅤ",
       "desc" : "Dr Laser Hi Plus 7 Titik Mata Laser - Terapi Melancarkan Aliran Darah Untuk Membantu Mencegah Diabetes Stroke Hipertensi Kolesterol.",
       "disc" : "Rp 4.880.000",
       "price" : "Rp 3.880.000",
-      "icon"  : "/buy.png"
     },
     {
       "image" : "/product/perfect.png",
-      "name" : "DR LASER\nPERFECT 10 PLUS",
+      "name" : "DR LASER\nPERFECT 10 PLUS\n ㅤㅤㅤ",
       "desc" : "Dr Laser Perfect 10 Plus 10 Titik Mata Laser - Terapi Melancarkan Aliran Darah Untuk Membantu Mencegah Diabetes Stroke Hipertensi Kolesterol.",
       "disc" : "Rp 6.880.000",
       "price" : "Rp 5.980.000",
-      "icon"  : "/buy.png"
     },
     {
       "image" : "/product/traction.png",
@@ -34,7 +31,6 @@ export default function Home() {
       "desc" : "Dr Qyu Lumbar Traction Device - Membantu Mengatasi Nyeri Pinggang Saraf Terjepit.",
       "disc" : "Rp 4.980.000",
       "price" : "Rp 2.999.000",
-      "icon"  : "/buy.png"
     },
   ]
   
@@ -156,7 +152,7 @@ export default function Home() {
         <div className='flex flex-col items-center justify-center mb-4'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>MANFAAT</h1>
           <Image
-              className='mb-5'
+              className='my-5'
               src="/down-arrow.png"
               width={34}
               height={34}
@@ -171,7 +167,7 @@ export default function Home() {
               height={580}
               alt="Icon Arrow"
           />
-          <div className='flex text-[8pt] text-white gap-36 z-10 mt-[70px]'>
+          <div className='flex text-[8pt] text-white gap-36 z-10 mt-[30px]'>
             <div className='flex flex-col items-center'>
               <Image
                   className='mb-5'
@@ -210,14 +206,14 @@ export default function Home() {
         <div className='flex'>
           <div className='w-[50%] h-44'>
             <Image
-              className='mb-5'
+              className='mt-10'
               src="/wakeup.png"
               width={1050}
               height={722}
               alt="Icon Heart"
             />
           </div>
-          <div className='w-[50%] h-44 mt-12'>
+          <div className='w-[50%] h-44 mt-24'>
             <h1 className='font-bold text-[#ff565c] text-2xl'>
               MEMPERBAIKI <br/> KUALITAS TIDUR
             </h1>
@@ -233,13 +229,13 @@ export default function Home() {
           <div className='flex flex-col items-center justify-center mb-4'>
             <h1 className='text-[#ff565c] font-bold text-[20pt]'>DAPATKAN SEKARANG</h1>
           </div>
-          <div className='flex text-[12pt] gap-20 mt-[50px] mx-[150px] pb-[40px]'>
+          <div className='flex text-[12pt] gap-5 mt-[50px] mx-[150px] pb-[40px]'>
             {product.map((item, index) => {
               const nameLines = item.name.split('\n');
               return (
-                <div key={index} className='bg-white rounded-[30px]'>
+                <div key={index} className='flex flex-col items-center bg-white rounded-[30px]'>
                   <Image
-                    className='mb-5 ml-7 mt-4'
+                    className='mt-4 mb-5'
                     src={item.image}
                     width={184}
                     height={150}
@@ -251,24 +247,27 @@ export default function Home() {
                         {line}
                       </p>
                     </>
-                    
                   ))}
-                      <p className='text-[#464646] text-[8pt] ml-10 mr-10 w-40 mt-4 '>{item.desc}</p>
-                  <div className='flex justify-center mt-20 text-[10pt]'>
-                      <p className='text-[#464646] font-bold line-through'>{item.disc}</p>
+                  <p className='text-[#464646] text-[8pt] mx-10 w-36 h-28 mt-4'>
+                    {item.desc}
+                  </p>
+                  <div className='flex flex-col items-center text-[10pt] mt-2 mb-5'>
+                    <p className='text-[#464646] font-bold line-through'>
+                      {item.disc}
+                    </p>
+                    <p className='text-[#ff565c] font-bold text-[15pt]'>
+                      {item.price}
+                    </p>
+                    <div className='flex bg-[#ff565c] py-2 px-4 rounded-2xl gap-2 mt-6'>
+                      <p className='font-bold text-white'>Beli Sekarang</p>
+                      <Image
+                        src="/shopping-bag.png"
+                        width={18}
+                        height={21}
+                        alt="Product Supreme"
+                      />
+                    </div>
                   </div>
-                  <div className='flex justify-center'>
-                      <p className='text-[#ff565c] font-bold text-[14pt]'>{item.price}</p>
-                  </div>
-                  <div className='flex justify-center mt-4 mb-4'>
-                  <Image
-                    src={item.icon}
-                    width={160}
-                    height={38}
-                    alt="Product Supreme"
-                  />
-                  </div>
-              
                 </div>
               );
             })}
