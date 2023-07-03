@@ -93,35 +93,85 @@ export default function Home() {
 
   return (
     <>
-      <Image
-        className='absolute z-[-10]'
-        src="/hero-section.png"
-        width={1926}
-        height={1284}
-        alt="Background Hero"
-      />
-      {/* Header */}
-      <div className='flex justify-center gap-60'>
-        <div className='mt-10'>
+      {/* Header Mobile */}
+      <div className='lg:hidden'>
+        {/* <Image
+          className='absolute z-[-10]'
+          src="/hero-section.png"
+          width={1926}
+          height={1284}
+          alt="Background Hero"
+        /> */}
+        <div className='flex justify-between w-full p-6'>
+          <Image
+            className='lg:hidden'
+            src="/logo.png"
+            width={190}
+            height={47}
+            alt="Dr Laser Logo"
+          />
+          <button className='lg:hidden'>
+            <Image
+              src="/hamburger.png"
+              width={24}
+              height={24}
+              alt="Icon"
+            />
+          </button>
+        </div>
+      </div>
+      {/* Header Desktop */}
+      <div className='mobile:hidden lg:inline'>
+        <Image
+          className='mobile:hidden lg:inline absolute z-[-10]'
+          src="/hero-section.png"
+          width={1926}
+          height={1284}
+          alt="Background Hero"
+        />
+        <div className='flex items-center justify-center gap-52'>
           <Image
             src="/logo.png"
             width={220}
             height={20}
             alt="Dr Laser Logo"
           />
-        </div>
-        <div className='h-[130px] bg-white w-[600px] rounded-b-[40px]'>
-          <ul className='flex justify-center align-end gap-20 text-[12px] mt-16'>
-            <a>HOME</a>
-            <a>PRODUCT</a>
-            <a>TESTIMONI</a>
-            <a>CONTACT US</a>
-          </ul>
+          <div className='h-[130px] bg-white w-[600px] rounded-b-[40px]'>
+            <ul className='flex justify-center align-end gap-20 text-[12px] mt-16'>
+              <a>HOME</a>
+              <a>PRODUCT</a>
+              <a>TESTIMONI</a>
+              <a>CONTACT US</a>
+            </ul>
+          </div>
         </div>
       </div>
-      {/* Hero Section */}
+      {/* Hero Section Mobile */}
+      <div className='lg:hidden mobile:visible flex flex-col items-center justify-center gap-8 px-6 mt-4'>
+        <h1 className='text-[20pt] leading-8'>
+          <span className='text-[#464646] font-bold'>
+            CEGAH STROKE <br/> <span className='font-light'>DAN {""} </span> SERANGAN JANTUNG <br/>
+            <span className='font-light'>DENGAN {""}</span> <span className='text-[#ff565c]'> LOW LEVEL LASER TECHNOLOGY<br/> </span>
+          </span> 
+        </h1>
+        <Image
+          src="/hero.png"
+          width={350}
+          height={152}
+          alt="Picture of the author"
+        />
+        <p className='text-[#4e4e4e] text-[10pt] text-justify'>
+          Low Level Laser membantu mengencerkan darah sehingga mencegah terbentuknya trombus (gumpalan darah), 
+          dengan mekanisme menghambat agregasi trombosit, serta dapat mengaktifkan fibrinolisis sehingga membantu 
+          menguraikan trombus/gumpalan darah pemicu STROKE dan SERANGAN JANTUNG.
+        </p>
+        <div className='flex justify-center justify-items-center w-[200px] h-[45px] bg-[#ff565c] rounded-full text-white'>
+          <h1 className='mt-2 text-[12pt]'>PESAN SEKARANG</h1>
+        </div>
+      </div>
+      {/* Hero Section Desktop */}
       <div className='flex justify-center gap-20'>
-        <div className='w-[400px] mt-16'>
+        <div className='mobile:hidden lg:inline w-[400px] mt-16'>
           <h1 className='text-[20pt] mb-7 leading-8'>
             <span className='text-[#464646] font-bold'>
               CEGAH STROKE <br/> <span className='font-light'>DAN {""} </span> SERANGAN JANTUNG <br/>
@@ -137,17 +187,17 @@ export default function Home() {
             <h1 className='mt-2 text-[12pt]'>PESAN SEKARANG</h1>
           </div>
         </div>
-        <div>
+        <div className='mobile:hidden lg:inline'>
           <Image
             className='mt-[140px]'
-            src="/image-hero.png"
+            src="/hero.png"
             width={500}
-            height={226}
+            height={217}
             alt="Picture of the author"
           />
         </div>
       </div>
-       {/* Benefit Section */}
+      {/* Benefit Section */}
       <div className='mt-[60pt]'>
         <div className='flex flex-col items-center justify-center mb-4'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>MANFAAT</h1>
