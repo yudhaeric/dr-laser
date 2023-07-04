@@ -526,8 +526,8 @@ export default function Home() {
         </div>
       </div>
       {/* Media Partner */}
-      <div className='mobile:hidden lg:inline mt-12'>
-        <div className='flex items-center justify-center mb-4'>
+      <div className='mobile:hidden lg:inline'>
+        <div className='flex items-center justify-center mb-4 mt-12'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>MEDIA PARTNER OF</h1>
         </div> 
         <div className='flex justify-center'>
@@ -558,29 +558,31 @@ export default function Home() {
         </div>
       </div>
       {/* Media Liput */}
-      <div className='mobile:hidden lg:inline flex justify-center items-center mt-[50px] w-[80%] mx-[140px] gap-5'>
-        <p className='w-full font-bold text-[#464646]'>
-          Dr Laser telah diliput <br/>
-          oleh berbagai media nasional
-        </p>
-        <div className='flex'>
-          {mediaLiput.map((item) => {
-            return (
-              <>
-                <Image
-                  src={item}
-                  width={530}
-                  height={215}
-                  alt="..."
-                />
-              </>
-            );
-          })}
+      <div className='mobile:hidden lg:inline'>
+        <div className='flex justify-center items-center mt-[50px] w-[80%] mx-[140px] gap-5'>
+          <p className='w-full font-bold text-[#464646]'>
+            Dr Laser telah diliput <br/>
+            oleh berbagai media nasional
+          </p>
+          <div className='flex'>
+            {mediaLiput.map((item) => {
+              return (
+                <>
+                  <Image
+                    src={item}
+                    width={530}
+                    height={215}
+                    alt="..."
+                  />
+                </>
+              );
+            })}
+          </div>
         </div>
       </div>
       {/* Find Us */}
-      <div className='mobile:hidden lg:inline mt-20'>
-        <div className='flex items-center justify-center mb-12'>
+      <div className='mobile:hidden lg:inline'>
+        <div className='flex items-center justify-center mb-12 mt-20'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>TEMUKAN KAMI</h1>
         </div>
         <div className='flex justify-center w-[80%] mx-[130px]'>
@@ -611,99 +613,104 @@ export default function Home() {
         </div>
       </div>
       {/* Article */}
-      <div className='mobile:hidden lg:inline flex flex-col items-center justify-center bg-[#464646] w-full py-7 mt-20'>
-        <div className='flex justify-between w-[80%]'>
-          <h1 className='text-lg font-bold text-white'>Artikel Menarik Tentang Kesehatan</h1>
-          <div className='flex gap-2'>
-            <Image
-              src="/arrow-left-article.png"
-              width={28}
-              height={28}
-              alt="Arrow Left Icon"
-            />
-            <Image
-              src="/arrow-right-article.png"
-              width={28}
-              height={28}
-              alt="Arrow Right Icon"
-            />
+      <div className='mobile:hidden lg:inline'>
+        <div className='flex flex-col items-center justify-center bg-[#464646] w-full py-7 mt-20'>
+          <div className='flex justify-between w-[80%]'>
+            <h1 className='text-lg font-bold text-white'>Artikel Menarik Tentang Kesehatan</h1>
+            <div className='flex gap-2'>
+              <Image
+                src="/arrow-left-article.png"
+                width={28}
+                height={28}
+                alt="Arrow Left Icon"
+              />
+              <Image
+                src="/arrow-right-article.png"
+                width={28}
+                height={28}
+                alt="Arrow Right Icon"
+              />
+            </div>
           </div>
-        </div>
-        <div className='flex items-center justify-center w-[80%] mt-10 gap-5'>
-          {article.map((item) => {
-            return (
-              <>
-                <div className='flex flex-col justify-center'>
-                  <Image
-                    src={item.image}
-                    width={235}
-                    height={142}
-                    alt="Arrow Right Icon"
-                  />
-                  <div className='flex items-center mt-5'>
-                    <div className='w-[75%] text-white leading-5'>
-                      {item.title}
-                    </div>
+          <div className='flex items-center justify-center w-[80%] mt-10 gap-5'>
+            {article.map((item) => {
+              return (
+                <>
+                  <div className='flex flex-col justify-center'>
                     <Image
-                      className='ml-6'
-                      src="/arrow-red-right-article.png"
-                      width={24}
-                      height={24}
+                      src={item.image}
+                      width={235}
+                      height={142}
                       alt="Arrow Right Icon"
                     />
+                    <div className='flex items-center mt-5'>
+                      <div className='w-[75%] text-white leading-5'>
+                        {item.title}
+                      </div>
+                      <Image
+                        className='ml-6'
+                        src="/arrow-red-right-article.png"
+                        width={24}
+                        height={24}
+                        alt="Arrow Right Icon"
+                      />
+                    </div>
                   </div>
-                </div>
-              </>
-            )
-          })}
-        </div>
-        <div></div>
-      </div>
-      {/* They Said */}
-      <div className='mobile:hidden lg:inline flex flex-col items-center justify-center mt-14'>
-        <div className='flex justify-between w-[80%]'>
-          <h1 className='text-lg font-bold text-[#464646]'>Apa Kata Mereka Tentang DR LASER?</h1>
-          <div className='flex gap-2'>
-            <Image
-              src="/arrow-left-said.png"
-              width={28}
-              height={28}
-              alt="Arrow Left Icon"
-            />
-            <Image
-              src="/arrow-right-said.png"
-              width={28}
-              height={28}
-              alt="Arrow Right Icon"
-            />
+                </>
+              )
+            })}
           </div>
         </div>
-        <div className='flex justify-center mt-10 w-[85%] gap-12'>
-          {theySaid.map((item) => {
-            return (
-              <>
-                <div className='w-[20%]'>
-                  <Image
-                    src="/star.png"
-                    width={105}
-                    height={19}
-                    alt="Rating"
-                  />
-                  <p className='text-[#464646] leading-5 mt-4'>
-                    {item.say}
-                  </p>
-                  <p className='text-[#ff565c] text-lg font-bold mt-4'>
-                    {item.name}
-                  </p>
-                </div>
-              </>
-            )
-          })}
+      </div>
+      {/* They Said */}
+      <div className='mobile:hidden lg:inline'>
+        <div className='flex flex-col items-center justify-center mt-14'>
+          <div className='flex justify-between w-[80%]'>
+            <h1 className='text-lg font-bold text-[#464646]'>Apa Kata Mereka Tentang DR LASER?</h1>
+            <div className='flex gap-2'>
+              <Image
+                src="/arrow-left-said.png"
+                width={28}
+                height={28}
+                alt="Arrow Left Icon"
+              />
+              <Image
+                src="/arrow-right-said.png"
+                width={28}
+                height={28}
+                alt="Arrow Right Icon"
+              />
+            </div>
+          </div>
+          <div className='flex justify-center mt-10 w-[85%] gap-12'>
+            {theySaid.map((item) => {
+              return (
+                <>
+                  <div className='w-[20%]'>
+                    <Image
+                      src="/star.png"
+                      width={105}
+                      height={19}
+                      alt="Rating"
+                    />
+                    <p className='text-[#464646] leading-5 mt-4'>
+                      {item.say}
+                    </p>
+                    <p className='text-[#ff565c] text-lg font-bold mt-4'>
+                      {item.name}
+                    </p>
+                  </div>
+                </>
+              )
+            })}
+          </div>
         </div>
       </div>
       {/* Copy Right */}
-      <div className='mobile:hidden lg:inline flex justify-center mt-20 mb-5'>
-        <p>&copy; 2023 DR.Laser. All Rights Reserved.</p>
+      <div className='mobile:hidden lg:inline'>
+        <div className='flex justify-center mt-20 mb-5'>
+          <p>&copy; 2023 DR.Laser. All Rights Reserved.</p>
+        </div>
       </div>
     </div>
   )
