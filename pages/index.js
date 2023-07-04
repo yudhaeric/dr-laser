@@ -1,8 +1,64 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { useState } from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 export default function Home() {
+  const ArrowLeft = (props) => (
+    <button
+      {...props}
+      style={{ zIndex: 2 }}
+    >
+      <Image
+        className='absolute mobile:left-20 lg:left-0 lg:-top-0'
+        src="/arrow-red-left-article.png"
+        width={props.width || 40}
+        height={props.height || 40}
+        alt=''
+      />
+    </button>
+  );
+
+  const ArrowRight = (props) => (
+    <button
+      {...props}
+      style={{ zIndex: 1 }}
+    >
+      <Image
+        className='absolute mobile:right-20 lg:right-0 lg:-top-0'
+        src="/arrow-red-right-article.png"
+        width={props.width || 40}
+        height={props.height || 40}
+        alt=''
+      />
+    </button>
+  );
+
+  let productMobileSettings = {
+    arrow:true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    prevArrow: <ArrowLeft width={40} height={40} />,
+    nextArrow: <ArrowRight width={40} height={40} />
+  };
+
+  let productDesktopSettings = {
+    arrow:false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    prevArrow: <ArrowLeft width={40} height={40} />,
+    nextArrow: <ArrowRight width={40} height={40} />
+  };
+
   const product = [
     {
       "image" : "/product/supreme.png",
@@ -24,6 +80,13 @@ export default function Home() {
       "desc" : "Dr Laser Perfect 10 Plus 10 Titik Mata Laser - Terapi Melancarkan Aliran Darah Untuk Membantu Mencegah Diabetes Stroke Hipertensi Kolesterol.",
       "disc" : "Rp 6.880.000",
       "price" : "Rp 5.980.000",
+    },
+    {
+      "image" : "/product/aculaser.png",
+      "name" : "ACULASER\nULTIMATE\n ㅤㅤㅤ",
+      "desc" : "Aculaser Ultimate 14 Titik Mata Laser + NMES Therapy Device – Melancarkan Aliran Darah Untuk Membantu Pemulihan Stroke Diabetes Kolesterol Hipertensi.",
+      "disc" : "Rp 7.880.000",
+      "price" : "Rp 7.880.000",
     },
     {
       "image" : "/product/traction.png",
@@ -92,16 +155,9 @@ export default function Home() {
   ];
 
   return (
-    <>
+    <div className='overflow-hidden'>
       {/* Header Mobile */}
       <div className='lg:hidden'>
-        {/* <Image
-          className='absolute z-[-10]'
-          src="/hero-section.png"
-          width={1926}
-          height={1284}
-          alt="Background Hero"
-        /> */}
         <div className='flex justify-between w-full p-6'>
           <Image
             className='lg:hidden'
@@ -124,10 +180,10 @@ export default function Home() {
       <div className='mobile:hidden lg:inline'>
         <Image
           className='mobile:hidden lg:inline absolute z-[-10]'
-          src="/hero-section.png"
+          src="/bg-hero.png"
           width={1926}
           height={1284}
-          alt="Background Hero"
+          alt=""
         />
         <div className='flex items-center justify-center gap-52'>
           <Image
@@ -158,7 +214,7 @@ export default function Home() {
           src="/hero.png"
           width={350}
           height={152}
-          alt="Picture of the author"
+          alt=""
         />
         <p className='text-[#4e4e4e] text-[10pt] text-justify'>
           Low Level Laser membantu mengencerkan darah sehingga mencegah terbentuknya trombus (gumpalan darah), 
@@ -193,7 +249,7 @@ export default function Home() {
             src="/hero.png"
             width={500}
             height={217}
-            alt="Picture of the author"
+            alt=""
           />
         </div>
       </div>
@@ -236,11 +292,11 @@ export default function Home() {
         </div>
       </div>
       {/* Benefit Section Desktop */}
-      <div className='mobile:hidden lg:inline mt-[60pt]'>
-        <div className='flex flex-col items-center justify-center mb-4'>
+      <div className='mobile:hidden lg:inline'>
+        <div className='flex flex-col items-center justify-center mb-4 mt-20'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>MANFAAT</h1>
           <Image
-              className='my-5'
+              className='my-10'
               src="/down-arrow.png"
               width={34}
               height={34}
@@ -330,62 +386,119 @@ export default function Home() {
             </p>
           </div>
         </div>
-        {/* Product Section */}
-        <div className='mobile:hidden mt-48'>
+        {/* Product Section Mobile */}
+        <div className='lg:hidden mt-12'>
           <div className='flex flex-col items-center justify-center mb-4'>
             <h1 className='text-[#ff565c] font-bold text-[20pt]'>DAPATKAN SEKARANG</h1>
           </div>
-          <div className='flex text-[12pt] gap-5 mt-[50px] mx-[150px] pb-[40px]'>
+          <Slider {...productMobileSettings}>
             {product.map((item, index) => {
               const nameLines = item.name.split('\n');
               return (
-                <div key={index} className='flex flex-col items-center bg-white rounded-[30px]'>
-                  <Image
-                    className='mt-4 mb-5'
-                    src={item.image}
-                    width={184}
-                    height={150}
-                    alt="Product Supreme"
-                  />
-                  {nameLines.map((line, lineIndex) => (
-                    <>
-                      <p key={lineIndex} className='flex justify-center text-[#ff565c] font-bold'>
-                        {line}
+                <div key={index} className='mt-3 mb-10'>
+                  <div className='flex flex-col items-center bg-white rounded-[25px] w-[80%] mx-10'>
+                    <Image
+                      className='pt-10 mb-5'
+                      src={item.image}
+                      width={184}
+                      height={150}
+                      alt=""
+                    />
+                    {nameLines.map((line, lineIndex) => (
+                      <>
+                        <p key={lineIndex} className='flex justify-center text-[#ff565c] font-bold justify-center text-xl'>
+                          {line}
+                        </p>
+                      </>
+                    ))}
+                    <p className='text-[#464646] text-center text-[10pt] w-48 h-28 mt-4'>
+                      {item.desc}
+                    </p>
+                    <div className='flex flex-col items-center text-[10pt] mt-8 mb-5 w-[80%]'>
+                      <p className='text-[#464646] font-bold line-through text-[14pt]'>
+                        {item.disc}
                       </p>
-                    </>
-                  ))}
-                  <p className='text-[#464646] text-[8pt] mx-10 w-36 h-28 mt-4'>
-                    {item.desc}
-                  </p>
-                  <div className='flex flex-col items-center text-[10pt] mt-2 mb-5'>
-                    <p className='text-[#464646] font-bold line-through'>
-                      {item.disc}
-                    </p>
-                    <p className='text-[#ff565c] font-bold text-[15pt]'>
-                      {item.price}
-                    </p>
-                    <div className='flex bg-[#ff565c] py-2 px-4 rounded-2xl gap-2 mt-6'>
-                      <p className='font-bold text-white'>Beli Sekarang</p>
-                      <Image
-                        src="/shopping-bag.png"
-                        width={18}
-                        height={21}
-                        alt="Product Supreme"
-                      />
-                    </div>
+                      <p className='text-[#ff565c] font-bold text-[20pt]'>
+                        {item.price}
+                      </p>
+                      <div className='flex bg-[#ff565c] py-3 px-8 rounded-2xl gap-3 mt-6'>
+                        <p className='font-bold text-white text-[16px]'>Beli Sekarang</p>
+                        <Image
+                          src="/shopping-bag.png"
+                          width={18}
+                          height={21}
+                          alt="Product Supreme"
+                        />
+                      </div>
+                  </div>
                   </div>
                 </div>
               );
             })}
+          </Slider>
+        </div>
+        {/* Product Section Desktop */}
+        <div className='mobile:hidden lg:inline mt-60'>
+          <div className='flex flex-col items-center justify-center mb-4 mt-64'>
+            <h1 className='text-[#ff565c] font-bold text-[20pt]'>DAPATKAN SEKARANG</h1>
+          </div>
+          <div className='mx-[150px] w-[80%]'>
+            <Slider {...productDesktopSettings}>
+              {product.map((item, index) => {
+                const nameLines = item.name.split('\n');
+                return (
+                  <div key={index} className='mt-3 mb-10'>
+                    <div className='flex mx-3'>
+                      <div className='flex flex-col items-center bg-white rounded-[25px] w-full'>
+                        <Image
+                          className='pt-10 mb-5'
+                          src={item.image}
+                          width={184}
+                          height={150}
+                          alt=""
+                        />
+                        {nameLines.map((line, lineIndex) => (
+                          <>
+                            <p key={lineIndex} className='flex justify-center text-[#ff565c] font-bold justify-center text-xl'>
+                              {line}
+                            </p>
+                          </>
+                        ))}
+                        <p className='text-[#464646] text-center text-[10pt] w-48 h-28 mt-4'>
+                          {item.desc}
+                        </p>
+                        <div className='flex flex-col items-center text-[10pt] mt-8 mb-5 w-[80%]'>
+                          <p className='text-[#464646] font-bold line-through text-[14pt]'>
+                            {item.disc}
+                          </p>
+                          <p className='text-[#ff565c] font-bold text-[20pt]'>
+                            {item.price}
+                          </p>
+                          <div className='flex bg-[#ff565c] py-3 px-8 rounded-2xl gap-3 mt-6'>
+                            <p className='font-bold text-white text-[16px]'>Beli Sekarang</p>
+                            <Image
+                              src="/shopping-bag.png"
+                              width={18}
+                              height={21}
+                              alt="Product Supreme"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </Slider>
           </div>
         </div>
       </div>
       {/* Those Who Have Section */}
-      <div className='mobile:hidden mt-10'>
-        <div className='flex flex-col items-center justify-center mb-4'>
+      <div className='mobile:hidden lg:inline'>
+        <div className='flex flex-col items-center justify-center mb-4 mt-10'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>MEREKA YANG PERNAH</h1>
         </div>
-        <div className='flex text-[12pt] text-red gap-20 mt-[30px] ml-[150px] mr-[150px]'>
+        <div className='flex text-[12pt] text-red gap-12 mt-[30px] ml-[200px] mr-[200px]'>
           {thoseWhoHave.map((item, index) => (
             <>
               <div className='flex flex-col items-center'>
@@ -413,7 +526,7 @@ export default function Home() {
         </div>
       </div>
       {/* Media Partner */}
-      <div className='mobile:hidden mt-12'>
+      <div className='mobile:hidden lg:inline mt-12'>
         <div className='flex items-center justify-center mb-4'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>MEDIA PARTNER OF</h1>
         </div> 
@@ -445,7 +558,7 @@ export default function Home() {
         </div>
       </div>
       {/* Media Liput */}
-      <div className='mobile:hidden flex justify-center items-center mt-[50px] w-[80%] mx-[140px] gap-5'>
+      <div className='mobile:hidden lg:inline flex justify-center items-center mt-[50px] w-[80%] mx-[140px] gap-5'>
         <p className='w-full font-bold text-[#464646]'>
           Dr Laser telah diliput <br/>
           oleh berbagai media nasional
@@ -466,7 +579,7 @@ export default function Home() {
         </div>
       </div>
       {/* Find Us */}
-      <div className='mobile:hidden mt-20'>
+      <div className='mobile:hidden lg:inline mt-20'>
         <div className='flex items-center justify-center mb-12'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>TEMUKAN KAMI</h1>
         </div>
@@ -498,7 +611,7 @@ export default function Home() {
         </div>
       </div>
       {/* Article */}
-      <div className='mobile:hidden flex flex-col items-center justify-center bg-[#464646] w-full py-7 mt-20'>
+      <div className='mobile:hidden lg:inline flex flex-col items-center justify-center bg-[#464646] w-full py-7 mt-20'>
         <div className='flex justify-between w-[80%]'>
           <h1 className='text-lg font-bold text-white'>Artikel Menarik Tentang Kesehatan</h1>
           <div className='flex gap-2'>
@@ -547,7 +660,7 @@ export default function Home() {
         <div></div>
       </div>
       {/* They Said */}
-      <div className='mobile:hidden flex flex-col items-center justify-center mt-14'>
+      <div className='mobile:hidden lg:inline flex flex-col items-center justify-center mt-14'>
         <div className='flex justify-between w-[80%]'>
           <h1 className='text-lg font-bold text-[#464646]'>Apa Kata Mereka Tentang DR LASER?</h1>
           <div className='flex gap-2'>
@@ -589,9 +702,9 @@ export default function Home() {
         </div>
       </div>
       {/* Copy Right */}
-      <div className='mobile:hidden flex justify-center mt-20 mb-5'>
+      <div className='mobile:hidden lg:inline flex justify-center mt-20 mb-5'>
         <p>&copy; 2023 DR.Laser. All Rights Reserved.</p>
       </div>
-    </>
+    </div>
   )
 }
