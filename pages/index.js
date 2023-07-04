@@ -615,7 +615,7 @@ export default function Home() {
         </div>
       </div>
       {/* Article */}
-      <div className='mobile:hidden lg:inline'>
+      <div className='mobile:hidden lg:hidden'>
         <div className='flex flex-col items-center justify-center bg-[#464646] w-full py-7 mt-20'>
           <div className='flex justify-between w-[80%]'>
             <h1 className='text-lg font-bold text-white'>Artikel Menarik Tentang Kesehatan</h1>
