@@ -493,7 +493,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* Those Who Have Section */}
+      {/* Those Who Have Section Desktop */}
       <div className='mobile:hidden lg:inline'>
         <div className='flex flex-col items-center justify-center mb-4 mt-10'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>MEREKA YANG PERNAH</h1>
@@ -526,7 +526,7 @@ export default function Home() {
         </div>
       </div>
       {/* Media Partner */}
-      <div className='mobile:hidden lg:inline'>
+      <div>
         <div className='flex items-center justify-center mb-4 mt-12'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>MEDIA PARTNER OF</h1>
         </div> 
@@ -538,7 +538,7 @@ export default function Home() {
             alt="Metro TV"
           />
         </div>
-        <div className='flex justify-center text-[12pt] gap-5 mt-[40px] bg-[#ff565c] py-7'>
+        <div className='flex justify-center text-[12pt] gap-5 py-7 lg:mt-[40px] lg:bg-[#ff565c] mobile:flex-wrap mobile:px-10'>
           <div>
             <Image
               src="/media1.png"
