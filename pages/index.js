@@ -532,6 +532,7 @@ export default function Home() {
         </div> 
         <div className='flex justify-center'>
           <Image
+            className='mobile:w-[200px] mobile:h-[50px]'
             src="/metrotv.png"
             width={300}
             height={75}
@@ -558,20 +559,21 @@ export default function Home() {
         </div>
       </div>
       {/* Media Liput */}
-      <div className='mobile:hidden lg:inline'>
-        <div className='flex justify-center items-center mt-[50px] w-[80%] mx-[140px] gap-5'>
-          <p className='w-full font-bold text-[#464646]'>
+      <div>
+        <div className='px-10 lg:flex lg:items-center lg:w-[60%] lg:mx-[145px] lg:px-16 lg:mt-5'>
+          <p className='w-full font-bold text-[#464646] mb-10 lg:mb-0'>
             Dr Laser telah diliput <br/>
             oleh berbagai media nasional
           </p>
-          <div className='flex'>
+          <div className='lg:flex grid grid-cols-2 gap-7 lg:gap-0'>
             {mediaLiput.map((item) => {
               return (
                 <>
                   <Image
+                    className='lg:w-[230px] lg:h-[35px]'
                     src={item}
-                    width={530}
-                    height={215}
+                    width={1000}
+                    height={100}
                     alt="..."
                   />
                 </>
@@ -582,7 +584,7 @@ export default function Home() {
       </div>
       {/* Find Us */}
       <div className='mobile:hidden lg:inline'>
-        <div className='flex items-center justify-center mb-12 mt-20'>
+        <div className='flex items-center justify-center mb-12 mt-16'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>TEMUKAN KAMI</h1>
         </div>
         <div className='flex justify-center w-[80%] mx-[130px]'>
