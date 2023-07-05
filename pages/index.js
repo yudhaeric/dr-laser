@@ -59,6 +59,18 @@ export default function Home() {
     nextArrow: <ArrowRight width={40} height={40} />
   };
 
+  let testimoniDesktopSettings = {
+    arrow:false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    prevArrow: null,
+    nextArrow: null
+  };
+
   const product = [
     {
       "image" : "/product/supreme.png",
@@ -95,11 +107,37 @@ export default function Home() {
       "disc" : "Rp 4.980.000",
       "price" : "Rp 2.999.000",
     },
+    {
+      "image" : "/product/sterillizer.png",
+      "name" : "DR AIR \nAir Sterilizer PLUS\n ㅤㅤㅤ",
+      "desc" : "Efektif Menyaring & Memusnahkan partikel debu, pollen, allergen, jamur, bakteri hingga VIRUS (berukuran 0,3 mikrometer) baik di udara maupun di permukaan benda.",
+      "disc" : "Rp 9.890.000",
+      "price" : "Rp 8.890.000",
+    },
+    {
+      "image" : "/product/painbox.png",
+      "name" : "DR LASER\nPAIN BOX\n ㅤㅤㅤ",
+      "desc" : "Alat terapi kesehatan Low Level Laser Therapy Portable yang memiliki 36 mata laser dan menggunakan 2 jenis gelombang laser yang dapat menjangkau area luka lebih luas dan lebih dalam.",
+      "disc" : "Rp 8.380.000",
+      "price" : "Rp 6.380.000",
+    },
+    {
+      "image" : "/product/perfect10.png",
+      "name" : "DR LASER\nPERFECT 10\n ㅤㅤㅤ",
+      "desc" : "DR LASER PERFECT 10 alat terapi Kesehatan untuk membantu mencegah penyakit Diabetes, Jantung Koroner, Stroke, Darah Tinggi & Kolesterol dll..",
+      "disc" : "Rp 8.380.000",
+      "price" : "Rp 6.380.000",
+    },
   ]
   
   const thoseWhoHave = ["Yeyen Lidya", "Lulu Kamal", "Melisa Karim", "Okan Kornelius"];
   
   const mediaLiput = ["/media-liput/medialiput1.png", "/media-liput/medialiput2.png", "/media-liput/medialiput3.png", "/media-liput/medialiput4.png", "/media-liput/medialiput5.png"];
+
+  const testimoni = ["/testimoni/testimoni1.png", "/testimoni/testimoni2.jpg", "/testimoni/testimoni3.jpg", 
+                      "/testimoni/testimoni4.jpg", "/testimoni/testimoni5.jpg", "/testimoni/testimoni6.jpg",
+                      "/testimoni/testimoni7.jpg", "/testimoni/testimoni8.jpg", "/testimoni/testimoni9.jpg",
+                      "/testimoni/testimoni10.jpg", "/testimoni/testimoni11.jpg" ];
   
   const location = [
     {
@@ -464,6 +502,14 @@ export default function Home() {
                             </p>
                           </>
                         ))}
+                        <div className='flex flex-col items-center'>
+                        <Image
+                          src="/line.png"
+                          width={62}
+                          height={2}
+                          alt=""
+                        />
+                        </div>
                         <p className='text-[#464646] text-center text-[10pt] w-48 h-28 mt-4'>
                           {item.desc}
                         </p>
@@ -516,18 +562,29 @@ export default function Home() {
             </>
           ))}
         </div>
-        <div className='flex justify-center mt-14'>
-          <Image
-            src="/testimoni.png"
-            width={960}
-            height={545}
-            alt="Testimoni"
-          />
-        </div>
+        <div className='mx-[150px] w-[80%]'>
+            <Slider {...testimoniDesktopSettings}>
+              {testimoni.map((testimoni, index) => {
+                return (
+                  <div key={index} className='mt-3 mb-10'>
+                    <div className='flex justify-center mt-14'>
+                        <Image
+                          className='mb-5'
+                          src={testimoni}
+                          width={960}
+                          height={545}
+                          alt=""
+                        />
+                    </div>
+                  </div>
+                );
+              })}
+            </Slider>
+          </div>
       </div>
       {/* Media Partner */}
       <div>
-        <div className='flex items-center justify-center mb-4 mt-12'>
+        <div className='flex items-center justify-center mb-4'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>MEDIA PARTNER OF</h1>
         </div> 
         <div className='flex justify-center'>
@@ -548,6 +605,7 @@ export default function Home() {
               alt="..."
             />
           </div>
+          
           <div>
             <Image
               src="/media2.png"
