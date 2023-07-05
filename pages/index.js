@@ -130,7 +130,29 @@ export default function Home() {
     },
   ]
   
-  const thoseWhoHave = ["Yeyen Lidya", "Lulu Kamal", "Melisa Karim", "Okan Kornelius"];
+  const thoseWhoHave = [
+    {
+      "image" : "/video1.png",
+      "nama" : "Yeyen Lidya", 
+      "link" : "https://www.youtube.com/watch?v=mifxN47KxcY"
+      
+    },
+    {
+      "image" : "/video2.png",
+      "nama" : "Lula Kamal", 
+      "link" : "https://www.youtube.com/watch?v=gvFa_TStOZ4"
+    },
+    {
+      "image" : "/video3.png",
+      "nama" : "Melisa Karim", 
+      "link" : "https://www.youtube.com/watch?v=SGCk4IE35ok"
+    },
+    {
+      "image" : "/video4.png",
+      "nama" : "Okan Kornelius", 
+      "link" : "https://www.youtube.com/watch?v=FDEsb9-BLy8"
+    }
+  ];
   
   const mediaLiput = ["/media-liput/medialiput1.png", "/media-liput/medialiput2.png", "/media-liput/medialiput3.png", "/media-liput/medialiput4.png", "/media-liput/medialiput5.png"];
 
@@ -548,15 +570,18 @@ export default function Home() {
           {thoseWhoHave.map((item, index) => (
             <>
               <div className='flex flex-col items-center'>
+              <a href={item.link}target="_blank" rel="noopener noreferrer">
                 <Image
                     className='mb-5'
-                    src={`/video${index + 1}.png`}
+                    src={item.image}
                     width={344}
                     height={196}
                     alt="Review"
                 />
+                
+                </a>
                 <p className='w-38 text-center text-[#464646] font-bold'>
-                  {item} (Artis)
+                  {item.nama} (Artis)
                 </p>
               </div>
             </>
