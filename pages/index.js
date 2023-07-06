@@ -178,12 +178,16 @@ export default function Home() {
     }
   ];
   
-  const mediaLiput = ["/media-liput/medialiput1.png", "/media-liput/medialiput2.png", "/media-liput/medialiput3.png", "/media-liput/medialiput4.png", "/media-liput/medialiput5.png"];
+  const mediaLiput = [
+                      "/media-liput/medialiput1.png", "/media-liput/medialiput2.png", "/media-liput/medialiput3.png", "/media-liput/medialiput4.png", "/media-liput/medialiput5.png"
+                    ];
 
-  const testimoni = ["/testimoni/testimoni1.png", "/testimoni/testimoni2.jpg", "/testimoni/testimoni3.jpg", 
+  const testimoni = [
+                      "/testimoni/testimoni1.png", "/testimoni/testimoni2.jpg", "/testimoni/testimoni3.jpg", 
                       "/testimoni/testimoni4.jpg", "/testimoni/testimoni5.jpg", "/testimoni/testimoni6.jpg",
                       "/testimoni/testimoni7.jpg", "/testimoni/testimoni8.jpg", "/testimoni/testimoni9.jpg",
-                      "/testimoni/testimoni10.jpg", "/testimoni/testimoni11.jpg" ];
+                      "/testimoni/testimoni10.jpg", "/testimoni/testimoni11.jpg"
+                    ];
   
   const location = [
     {
@@ -309,8 +313,10 @@ export default function Home() {
           dengan mekanisme menghambat agregasi trombosit, serta dapat mengaktifkan fibrinolisis sehingga membantu 
           menguraikan trombus/gumpalan darah pemicu STROKE dan SERANGAN JANTUNG.
         </p>
-        <div className='flex justify-center justify-items-center w-[200px] h-[45px] bg-[#ff565c] rounded-full text-white'>
-          <h1 className='mt-2 text-[12pt]'>PESAN SEKARANG</h1>
+        <div className='flex justify-center justify-items-center w-[200px] h-[45px] bg-[#ff565c] hover:bg-[#EE3D43] cursor-pointer rounded-full text-white'>
+          <a href='#product' className='mt-[10px] text-[12pt] font-bold'>
+            PESAN SEKARANG
+          </a>
         </div>
       </div>
       {/* Hero Section Desktop */}
@@ -327,8 +333,10 @@ export default function Home() {
             dengan mekanisme menghambat agregasi trombosit, serta dapat mengaktifkan fibrinolisis sehingga membantu 
             menguraikan trombus/gumpalan darah pemicu STROKE dan SERANGAN JANTUNG.
           </p>
-          <div className='flex justify-center justify-items-center w-[200px] h-[45px] bg-[#ff565c] rounded-full text-white'>
-            <h1 className='mt-2 text-[12pt]'>PESAN SEKARANG</h1>
+          <div className='flex justify-center justify-items-center w-[200px] h-[45px] bg-[#ff565c] hover:bg-[#EE3D43] cursor-pointer rounded-full text-white'>
+            <a href='#produk' className='mt-[10px] text-[12pt] font-bold'>
+              PESAN SEKARANG
+            </a>
           </div>
         </div>
         <div className='mobile:hidden lg:inline'>
@@ -475,7 +483,7 @@ export default function Home() {
           </div>
         </div>
         {/* Product Section Mobile */}
-        <div className='lg:hidden mt-12'>
+        <div id='product' className='lg:hidden mt-12'>
           <div className='flex flex-col items-center justify-center mb-4'>
             <h1 className='text-[#ff565c] font-bold text-[20pt]'>DAPATKAN SEKARANG</h1>
           </div>
@@ -509,7 +517,7 @@ export default function Home() {
                       <p className='text-[#ff565c] font-bold text-[20pt]'>
                         {item.price}
                       </p>
-                      <div className='flex bg-[#ff565c] py-3 px-8 rounded-2xl gap-3 mt-6'>
+                      <div className='flex bg-[#ff565c] hover:bg-[#EE3D43] cursor-pointer py-3 px-8 rounded-2xl gap-3 mt-6'>
                         <p className='font-bold text-white text-[16px]'>Beli Sekarang</p>
                         <Image
                           src="/shopping-bag.png"
@@ -526,7 +534,7 @@ export default function Home() {
           </Slider>
         </div>
         {/* Product Section Desktop */}
-        <div className='mobile:hidden lg:inline mt-60'>
+        <div id='produk' className='mobile:hidden lg:inline mt-60'>
           <div className='flex flex-col items-center justify-center mb-4 mt-64'>
             <h1 className='text-[#ff565c] font-bold text-[20pt]'>DAPATKAN SEKARANG</h1>
           </div>
@@ -570,12 +578,12 @@ export default function Home() {
                           <p className='text-[#ff565c] font-bold text-[20pt]'>
                             {item.price}
                           </p>
-                          <div className='flex bg-[#ff565c] py-3 px-8 rounded-2xl gap-3 mt-6'>
+                          <div className='flex bg-[#ff565c] hover:bg-[#EE3D43] cursor-pointer py-3 px-8 rounded-2xl gap-3 mt-6'>
                             <p className='font-bold text-white text-[16px]'>Beli Sekarang</p>
                             <Image
                               src="/shopping-bag.png"
-                              width={18}
-                              height={21}
+                              width={20}
+                              height={22}
                               alt="Product Supreme"
                             />
                           </div>
