@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -95,6 +95,18 @@ export default function Home() {
     nextArrow: null
   };
 
+  const benefit = [
+    {
+      "benefit" : "Teknologi laser membantu menurunkan kadar gula darah dengan cara merangsang sel tubuh (mitokondria) untuk mengubah gula darah menjadi energi sehingga penderita diabetes yang umumnya lemas dan mengantuk akan lebih bernergi."
+    },
+    {
+      "benefit" : "Teknologi laser merangsang tubuh untuk memperoduksi nitric oxide yang berfungsi melebarkan pembuluh darah dan membuatnya lebih elastis sehingga membantu menurunkan tekanan darah. Nitric oxide juga berfungsi untuk meningkatkan aliran darah ke seluruh tubuh sehingga membantu mencegah dan mengatas impotensi."
+    },
+    {
+      "benefit" : "Teknologi laser mengaktifkan enzim dalam tubuh yang bertugas untuk mingkatkan pembakaran kolesterol. Kolesterol akan menurun dan mencegah terjadinya plak kolesterol."
+    },
+  ];
+
   const product = [
     {
       "image" : "/product/supreme.png",
@@ -152,7 +164,7 @@ export default function Home() {
       "disc" : "Rp 8.380.000",
       "price" : "Rp 6.380.000",
     },
-  ]
+  ];
   
   const thoseWhoHave = [
     {
@@ -179,15 +191,15 @@ export default function Home() {
   ];
   
   const mediaLiput = [
-                      "/media-liput/medialiput1.png", "/media-liput/medialiput2.png", "/media-liput/medialiput3.png", "/media-liput/medialiput4.png", "/media-liput/medialiput5.png"
-                    ];
+    "/media-liput/medialiput1.png", "/media-liput/medialiput2.png", "/media-liput/medialiput3.png", "/media-liput/medialiput4.png", "/media-liput/medialiput5.png"
+  ];
 
   const testimoni = [
-                      "/testimoni/testimoni1.png", "/testimoni/testimoni2.jpg", "/testimoni/testimoni3.jpg", 
-                      "/testimoni/testimoni4.jpg", "/testimoni/testimoni5.jpg", "/testimoni/testimoni6.jpg",
-                      "/testimoni/testimoni7.jpg", "/testimoni/testimoni8.jpg", "/testimoni/testimoni9.jpg",
-                      "/testimoni/testimoni10.jpg", "/testimoni/testimoni11.jpg"
-                    ];
+    "/testimoni/testimoni1.png", "/testimoni/testimoni2.jpg", "/testimoni/testimoni3.jpg", 
+    "/testimoni/testimoni4.jpg", "/testimoni/testimoni5.jpg", "/testimoni/testimoni6.jpg",
+    "/testimoni/testimoni7.jpg", "/testimoni/testimoni8.jpg", "/testimoni/testimoni9.jpg",
+    "/testimoni/testimoni10.jpg", "/testimoni/testimoni11.jpg"
+  ];
   
   const location = [
     {
@@ -202,7 +214,7 @@ export default function Home() {
       "address" : "Komplek ruko roxy mas blok D4 No.1, Daerah Khusus Ibukota Jakarta 10150",
       "maps" : "/maps.png"
     }
-  ]
+  ];
   
   const article = [
     {
@@ -270,23 +282,24 @@ export default function Home() {
       </div>
       {/* Header Desktop */}
       <div className='mobile:hidden lg:inline'>
-        <Image
-          className='mobile:hidden lg:inline absolute z-[-10]'
-          src="/bg-hero.png"
-          width={1926}
-          height={1284}
-          alt=""
-        />
+        <div className='mobile:hidden lg:inline lg:absolute -z-10'>
+          <Image
+            src="/bg-hero.png"
+            width={1920}
+            height={1281}
+            alt=""
+          />
+        </div>
         <div className='flex items-center justify-center gap-52'>
           <Image
             src="/logo.png"
             width={220}
-            height={20}
+            height={55}
             alt="Dr Laser Logo"
           />
           <div className='h-[130px] bg-white w-[600px] rounded-b-[40px]'>
             <ul className='flex justify-center align-end gap-20 text-[12px] mt-16'>
-              <a>HOME</a>
+              <a href='#produk'>HOME</a>
               <a>PRODUCT</a>
               <a>TESTIMONI</a>
               <a>CONTACT US</a>
@@ -295,8 +308,8 @@ export default function Home() {
         </div>
       </div>
       {/* Hero Section Mobile */}
-      <div className='lg:hidden mobile:visible flex flex-col items-center justify-center gap-8 px-6 mt-4'>
-        <h1 className='text-[20pt] leading-8'>
+      <div className='lg:hidden mobile:visible flex flex-col items-center justify-center gap-8 px-8 mt-4'>
+        <h1 className='text-[19pt] leading-8'>
           <span className='text-[#464646] font-bold'>
             CEGAH STROKE <br/> <span className='font-light'>DAN {""} </span> SERANGAN JANTUNG <br/>
             <span className='font-light'>DENGAN {""}</span> <span className='text-[#ff565c]'> LOW LEVEL LASER TECHNOLOGY<br/> </span>
@@ -308,7 +321,7 @@ export default function Home() {
           height={152}
           alt=""
         />
-        <p className='text-[#4e4e4e] text-[10pt] text-justify'>
+        <p className='text-[#4e4e4e] text-[11pt] text-justify'>
           Low Level Laser membantu mengencerkan darah sehingga mencegah terbentuknya trombus (gumpalan darah), 
           dengan mekanisme menghambat agregasi trombosit, serta dapat mengaktifkan fibrinolisis sehingga membantu 
           menguraikan trombus/gumpalan darah pemicu STROKE dan SERANGAN JANTUNG.
@@ -320,9 +333,9 @@ export default function Home() {
         </div>
       </div>
       {/* Hero Section Desktop */}
-      <div className='flex justify-center gap-20'>
+      <div className='flex justify-center gap-20 mb-[7%]'>
         <div className='mobile:hidden lg:inline w-[400px] mt-16'>
-          <h1 className='text-[20pt] mb-7 leading-8'>
+          <h1 className='text-[22pt] mb-7 leading-8'>
             <span className='text-[#464646] font-bold'>
               CEGAH STROKE <br/> <span className='font-light'>DAN {""} </span> SERANGAN JANTUNG <br/>
               <span className='font-light'>DENGAN {""}</span> <span className='text-[#ff565c]'> LOW LEVEL LASER TECHNOLOGY<br/> </span>
@@ -339,9 +352,8 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className='mobile:hidden lg:inline'>
+        <div className='mobile:hidden lg:inline mt-[140px]'>
           <Image
-            className='mt-[140px]'
             src="/hero.png"
             width={500}
             height={217}
@@ -351,94 +363,54 @@ export default function Home() {
       </div>
       {/* Benefit Section Mobile */}
       <div className='lg:hidden mt-[30pt]'>
-        <div className='flex flex-col items-center justify-center bg-[#ff565c] py-8 px-6'>
+        <div className='flex flex-col items-center justify-center bg-[#ff565c] py-8 px-8'>
           <h1 className='text-[#ffffff] font-bold text-[20pt] mb-10'>MANFAAT</h1>
           <div className='flex flex-col text-[12pt] text-white z-10'>
-            <div className='flex flex-col items-center'>
-              <Image
-                  className='mb-5'
-                  src="/heart.png"
-                  width={52}
-                  height={38}
-                  alt="Icon Heart"
-              />
-              <p className='text-justify text-center'>Teknologi laser membantu menurunkan kadar gula darah dengan cara merangsang sel tubuh (mitokondria) untuk mengubah gula darah menjadi energi sehingga penderita diabetes yang umumnya lemas dan mengantuk akan lebih bernergi.</p>
-            </div>
-            <div className='flex flex-col items-center mt-7'>
-              <Image
-                  className='mb-5'
-                  src="/heart.png"
-                  width={52}
-                  height={38}
-                  alt="Icon Heart"
-              />
-              <p className='text-justify text-center'>Teknologi laser merangsang tubuh untuk memperoduksi nitric oxide yang berfungsi melebarkan pembuluh darah dan membuatnya lebih elastis sehingga membantu menurunkan tekanan darah. Nitric oxide juga berfungsi untuk meningkatkan aliran darah ke seluruh tubuh sehingga membantu mencegah dan mengatas impotensi.</p>
-            </div>
-            <div className='flex flex-col items-center mt-7'>
-              <Image
-                  className='mb-5'
-                  src="/heart.png"
-                  width={52}
-                  height={38}
-                  alt="Icon Heart"
-              />
-              <p className='text-justify text-center'>Teknologi laser mengaktifkan enzim dalam tubuh yang bertugas untuk mingkatkan pembakaran kolesterol. Kolesterol akan menurun dan mencegah terjadinya plak kolesterol.</p>
+            <div className='flex flex-col justify-center text-[8pt] text-white gap-10 z-10'>
+              {benefit.map((item) => {
+                return (
+                  // eslint-disable-next-line react/jsx-key
+                  <div className='flex flex-col items-center'>
+                    <Image
+                    src="/heart.png"
+                    width={52}
+                    height={38}
+                    alt="Icon Heart"
+                    />
+                    <p className='mt-5 text-justify text-[12pt]'>{item.benefit}</p>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </div>
       </div>
       {/* Benefit Section Desktop */}
       <div className='mobile:hidden lg:inline'>
-        <div className='flex flex-col items-center justify-center mb-4 mt-20'>
-          <h1 className='text-[#ff565c] font-bold text-[20pt]'>MANFAAT</h1>
+        <h1 className='flex justify-center text-[#ff565c] font-bold text-[20pt] mb-5'>MANFAAT</h1>
+        <div className='absolute -z-10'>
           <Image
-              className='my-10'
-              src="/down-arrow.png"
-              width={34}
-              height={34}
-              alt="Icon Arrow"
+            src="/benefit-bg.png"
+            width={1918}
+            height={628}
+            alt="Icon Arrow"
           />
         </div>
-        <div className='flex flex-col items-center justify-center'>
-          <Image
-              className='absolute'
-              src="/bg-benefit.png"
-              width={1918}
-              height={580}
-              alt="Icon Arrow"
-          />
-          <div className='flex text-[8pt] text-white gap-36 z-10 mt-[30px]'>
-            <div className='flex flex-col items-center'>
-              <Image
-                  className='mb-5'
-                  src="/heart.png"
-                  width={52}
-                  height={38}
-                  alt="Icon Heart"
-              />
-              <p className='w-32 text-center'>Teknologi laser membantu menurunkan kadar gula darah dengan cara merangsang sel tubuh (mitokondria) untuk mengubah gula darah menjadi energi sehingga penderita diabetes yang umumnya lemas dan mengantuk akan lebih bernergi.</p>
-            </div>
-            <div className='flex flex-col items-center ml-3'>
-              <Image
-                  className='mb-5'
-                  src="/heart.png"
-                  width={52}
-                  height={38}
-                  alt="Icon Heart"
-              />
-              <p className='text-center w-36'>Teknologi laser merangsang tubuh untuk memperoduksi nitric oxide yang berfungsi melebarkan pembuluh darah dan membuatnya lebih elastis sehingga membantu menurunkan tekanan darah. Nitric oxide juga berfungsi untuk meningkatkan aliran darah ke seluruh tubuh sehingga membantu mencegah dan mengatas impotensi.</p>
-            </div>
-            <div className='flex flex-col items-center'>
-              <Image
-                  className='mb-5'
-                  src="/heart.png"
-                  width={52}
-                  height={38}
-                  alt="Icon Heart"
-              />
-              <p className='text-center w-36'>Teknologi laser mengaktifkan enzim dalam tubuh yang bertugas untuk mingkatkan pembakaran kolesterol. Kolesterol akan menurun dan mencegah terjadinya plak kolesterol.</p>
-            </div>
-          </div>
+        <div className='flex justify-center text-[8pt] text-white gap-36 z-10 mt-[10%]'>
+          {benefit.map((item) => {
+            return (
+              // eslint-disable-next-line react/jsx-key
+              <div className='flex flex-col items-center'>
+                <Image
+                src="/heart.png"
+                width={52}
+                height={38}
+                alt="Icon Heart"
+                />
+                <p className='mt-5 w-44 text-center text-[10pt] leading-4'>{item.benefit}</p>
+              </div>
+            )
+          })}
         </div>
       </div>
       <div className='w-full bg-[#f4f4f4]'>
@@ -461,7 +433,7 @@ export default function Home() {
           </p>
         </div>
         {/* Sleep Quality Section Desktop */}
-        <div className='flex'>
+        <div className='flex mt-[5%]'>
           <div className='mobile:hidden lg:inline w-[50%] h-44'>
             <Image
               className='mt-10'
@@ -498,11 +470,11 @@ export default function Home() {
                       src={item.image}
                       width={184}
                       height={150}
-                      alt=""
+                      alt="Product Image"
                     />
                     {nameLines.map((line, lineIndex) => (
                       <>
-                        <p key={lineIndex} className='flex justify-center text-[#ff565c] font-bold justify-center text-xl'>
+                        <p key={lineIndex} className='flex text-[#ff565c] font-bold justify-center text-xl'>
                           {line}
                         </p>
                       </>
@@ -551,11 +523,11 @@ export default function Home() {
                           src={item.image}
                           width={184}
                           height={150}
-                          alt=""
+                          alt="Product Image"
                         />
                         {nameLines.map((line, lineIndex) => (
                           <>
-                            <p key={lineIndex} className='flex justify-center text-[#ff565c] font-bold justify-center text-xl'>
+                            <p key={lineIndex} className='flex text-[#ff565c] font-bold justify-center text-xl'>
                               {line}
                             </p>
                           </>
