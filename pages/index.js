@@ -70,6 +70,30 @@ export default function Home() {
     prevArrow: null,
     nextArrow: null
   };
+  
+  let TheySaidMobileSettings = {
+    arrow:true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    prevArrow: null,
+    nextArrow: null
+  };
+
+  let TheySaidDesktopSettings = {
+    arrow:true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    prevArrow: null,
+    nextArrow: null
+  };
 
   const product = [
     {
@@ -212,6 +236,10 @@ export default function Home() {
       "say" : "Saya tidak pakai, tpi saya pakaikan ke orang tua dan mertua saya, sejauh ini alatnya membantu, tensi mereka stabil, Pelayanan baik, di anter ke rumah dan di ajari cara pakainya.",
       "name" : "Tri May Shandy"
     },
+    {
+      "say" : "Saya tidak pakai, tpi saya pakaikan ke orang tua dan mertua saya, sejauh ini alatnya membantu, tensi mereka stabil, Pelayanan baik, di anter ke rumah dan di ajari cara pakainya.",
+      "name" : "Tri May Shandy"
+    }
   ];
 
   return (
@@ -608,7 +636,7 @@ export default function Home() {
           </div>
       </div>
       {/* Media Partner */}
-      <div>
+      <div className='mt-6'>
         <div className='flex items-center justify-center mb-4'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>MEDIA PARTNER OF</h1>
         </div> 
@@ -644,7 +672,7 @@ export default function Home() {
       {/* Media Liput */}
       <div>
         <div className='px-10 lg:flex lg:items-center lg:w-[60%] lg:mx-[145px] lg:px-16 lg:mt-5'>
-          <p className='w-full font-bold text-[#464646] mb-10 lg:mb-0'>
+          <p className='lg:mb-0 mobile:text-lg w-full font-bold text-[#464646] mb-10'>
             Dr Laser telah diliput <br/>
             oleh berbagai media nasional
           </p>
@@ -655,8 +683,8 @@ export default function Home() {
                   <Image
                     className='lg:w-[230px] lg:h-[35px]'
                     src={item}
-                    width={1000}
-                    height={100}
+                    width={200}
+                    height={80}
                     alt="..."
                   />
                 </>
@@ -666,26 +694,39 @@ export default function Home() {
         </div>
       </div>
       {/* Find Us */}
-      <div className='mobile:hidden lg:inline'>
-        <div className='flex items-center justify-center mb-12 mt-16'>
+      <div className='lg:mt-16 mt-12'>
+        <div className='lg:mb-12 flex items-center justify-center mb-8'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>TEMUKAN KAMI</h1>
         </div>
-        <div className='flex justify-center w-[80%] mx-[130px]'>
+        <div className='lg:flex lg:mx-[130px] justify-center w-[80%] mx-[10%]'>
           {location.map((item) => {
             return (
               <>
                 <div className='flex flex-col items-center'>
                   <Image
-                    className='mb-10'
+                    className='mobile:hidden lg:inline mb-10'
                     src="/shop.png"
                     width={70}
                     height={60}
                     alt="Shop Icon"
                   />
-                  <p className='mb-10 font-bold text-center w-[70%] leading-4 text-[#464646]'>
+                  <div className='lg:hidden flex items-center gap-5'>
+                    <p className='lg:mb-10 lg:w-[70%] lg:text-lg lg:text-center text-[#464646] text-sm font-bold leading-4 mb-4'>
+                      {item.address}
+                    </p>
+                    <Image
+                      className='lg:hidden -mt-7'
+                      src="/map.png"
+                      width={34}
+                      height={34}
+                      alt="Maps Icon"
+                    />
+                  </div>
+                  <p className='mobile:hidden text-lg lg:inline mb-10 w-[70%] text-[#464646] text-center font-bold leading-6'>
                     {item.address}
                   </p>
                   <Image
+                    className='mobile:hidden lg:inline'
                     src={item.maps}
                     width={300}
                     height={300}
@@ -748,53 +789,79 @@ export default function Home() {
         </div>
       </div>
       {/* They Said */}
-      <div className='mobile:hidden lg:inline'>
-        <div className='flex flex-col items-center justify-center mt-14'>
-          <div className='flex justify-between w-[80%]'>
-            <h1 className='text-lg font-bold text-[#464646]'>Apa Kata Mereka Tentang DR LASER?</h1>
-            <div className='flex gap-2'>
-              <Image
-                src="/arrow-left-said.png"
-                width={28}
-                height={28}
-                alt="Arrow Left Icon"
-              />
-              <Image
-                src="/arrow-right-said.png"
-                width={28}
-                height={28}
-                alt="Arrow Right Icon"
-              />
-            </div>
+      <div className='mt-8 lg:mt-20'>
+        <div className='flex justify-between w-[80%] mx-[10%] mb-5'>
+          <h1 className='lg:text-lg text-lg font-bold text-[#464646]'>Apa Kata Mereka Tentang DR.LASER?</h1>
+          <div className='mobile:hidden lg:inline lg:flex lg:gap-3'>
+            <Image
+              src="/arrow-left-said.png"
+              width={28}
+              height={28}
+              alt="Arrow Left Icon"
+            />
+            <Image
+              src="/arrow-right-said.png"
+              width={28}
+              height={28}
+              alt="Arrow Right Icon"
+            />
           </div>
-          <div className='flex justify-center mt-10 w-[85%] gap-12'>
-            {theySaid.map((item) => {
-              return (
-                <>
-                  <div className='w-[20%]'>
-                    <Image
-                      src="/star.png"
-                      width={105}
-                      height={19}
-                      alt="Rating"
-                    />
-                    <p className='text-[#464646] leading-5 mt-4'>
-                      {item.say}
-                    </p>
-                    <p className='text-[#ff565c] text-lg font-bold mt-4'>
-                      {item.name}
-                    </p>
+        </div>
+        <div className='w-[80%] mx-[10%]'>
+          <div className='lg:hidden'>
+            <Slider {...TheySaidMobileSettings}>
+              {theySaid.map((item, index) => {
+                return (
+                  <div key={index}>
+                    <div className=''>
+                      <Image
+                        src="/star.png"
+                        width={105}
+                        height={19}
+                        alt="Rating"
+                      />
+                      <p className='text-[#464646] leading-5 mt-4'>
+                        {item.say}
+                      </p>
+                      <p className='text-[#ff565c] text-lg font-bold mt-4'>
+                        {item.name}
+                      </p>
+                    </div>
                   </div>
-                </>
-              )
-            })}
+                )
+              })}
+            </Slider>
+          </div>
+          <div className='mobile:hidden lg:inline'>
+            <Slider {...TheySaidDesktopSettings}>
+              {theySaid.map((item, index) => {
+                return (
+                  <div key={index}>
+                    <div className='w-[95%]'>
+                      <Image
+                        src="/star.png"
+                        width={105}
+                        height={19}
+                        alt="Rating"
+                      />
+                      <p className='text-[#464646] leading-5 mt-4'>
+                        {item.say}
+                      </p>
+                      <p className='text-[#ff565c] text-lg font-bold mt-4'>
+                        {item.name}
+                      </p>
+                    </div>
+                  </div>
+                )
+              })}
+            </Slider>
           </div>
         </div>
       </div>
       {/* Copy Right */}
-      <div className='mobile:hidden lg:inline'>
-        <div className='flex justify-center mt-20 mb-5'>
-          <p>&copy; 2023 DR.Laser. All Rights Reserved.</p>
+      <div>
+        <div className='lg:mt-20 flex justify-center mt-16 mb-5'>
+          <p>&copy; 2023 DR.LASER. All Rights Reserved.</p>
         </div>
       </div>
     </div>
