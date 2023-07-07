@@ -26,7 +26,7 @@ export default function Home() {
       style={{ zIndex: 1 }}
     >
       <Image
-        className='absolute mobile:right-20 lg:right-0 lg:-top-0'
+        className='absolute mobile:right-20 lg:right-10 lg:-top-20'
         src="/arrow-red-right-article.png"
         width={props.width || 40}
         height={props.height || 40}
@@ -48,7 +48,6 @@ export default function Home() {
   };
 
   let productDesktopSettings = {
-    arrow:false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
@@ -574,7 +573,7 @@ export default function Home() {
         <div className='flex flex-col items-center justify-center mb-4 mt-10'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>MEREKA YANG PERNAH</h1>
         </div>
-        <div className='flex text-[12pt] text-red gap-12 mt-[30px] ml-[200px] mr-[200px]'>
+        <div className='flex text-[12pt] text-red gap-12 mt-[30px] w-[70%] mx-[15%]'>
           {thoseWhoHave.map((item, index) => (
             <>
               <div className='flex flex-col items-center'>
@@ -595,25 +594,25 @@ export default function Home() {
             </>
           ))}
         </div>
-        <div className='mx-[150px] w-[80%]'>
-            <Slider {...testimoniDesktopSettings}>
-              {testimoni.map((testimoni, index) => {
-                return (
-                  <div key={index} className='mt-3 mb-10'>
-                    <div className='flex justify-center mt-14'>
-                        <Image
-                          className='mb-5'
-                          src={testimoni}
-                          width={960}
-                          height={545}
-                          alt=""
-                        />
-                    </div>
+        <div className='mx-[15%] w-[70%]'>
+          <Slider {...testimoniDesktopSettings}>
+            {testimoni.map((testimoni, index) => {
+              return (
+                <div key={index} className='mt-3 mb-10'>
+                  <div className='flex justify-center mt-14'>
+                      <Image
+                        className='mb-5'
+                        src={testimoni}
+                        width={1518}
+                        height={545}
+                        alt=""
+                      />
                   </div>
-                );
-              })}
-            </Slider>
-          </div>
+                </div>
+              );
+            })}
+          </Slider>
+        </div>
       </div>
       {/* Media Partner */}
       <div className='mt-6'>
@@ -683,35 +682,38 @@ export default function Home() {
             return (
               <>
                 <div className='flex flex-col items-center'>
-                  <Image
-                    className='mobile:hidden lg:inline mb-10'
-                    src="/shop.png"
-                    width={70}
-                    height={60}
-                    alt="Shop Icon"
-                  />
+                  <div className='mobile:hidden lg:inline mb-5'>
+                    <Image
+                      src="/shop.png"
+                      width={50}
+                      height={45}
+                      alt="Shop Icon"
+                    />
+                  </div>
                   <div className='lg:hidden flex items-center gap-5'>
-                    <p className='lg:mb-10 lg:w-[70%] lg:text-lg lg:text-center text-[#464646] text-sm font-bold leading-4 mb-4'>
+                    <p className='lg:mb-10 lg:w-[70%] lg:text-lg lg:text-center w-[80%] text-[#464646] text-sm font-bold leading-4 mb-4'>
                       {item.address}
                     </p>
-                    <Image
-                      className='lg:hidden -mt-7'
-                      src="/map.png"
-                      width={34}
-                      height={34}
-                      alt="Maps Icon"
-                    />
+                    <div className='lg:hidden -mt-5 w-[10%]'>
+                      <Image
+                        src="/map.png"
+                        width={34}
+                        height={34}
+                        alt="Maps Icon"
+                      />
+                    </div>
                   </div>
                   <p className='mobile:hidden text-lg lg:inline mb-10 w-[70%] text-[#464646] text-center font-bold leading-6'>
                     {item.address}
                   </p>
-                  <Image
-                    className='mobile:hidden lg:inline'
-                    src={item.maps}
-                    width={300}
-                    height={300}
-                    alt="Maps"
-                  />
+                  <div className='mobile:hidden lg:inline'>
+                    <Image
+                      src={item.maps}
+                      width={300}
+                      height={300}
+                      alt="Maps"
+                    />
+                  </div>
                 </div>
               </>
             )
@@ -772,7 +774,7 @@ export default function Home() {
       <div className='mt-8 lg:mt-20'>
         <div className='flex justify-between w-[80%] mx-[10%] mb-5'>
           <h1 className='lg:text-lg text-lg font-bold text-[#464646]'>Apa Kata Mereka Tentang DR.LASER?</h1>
-          <div className='mobile:hidden lg:inline lg:flex lg:gap-3'>
+          <div className='mobile:hidden lg:inline lg:gap-3'>
             <Image
               src="/arrow-left-said.png"
               width={28}
@@ -820,8 +822,8 @@ export default function Home() {
                     <div className='w-[95%]'>
                       <Image
                         src="/star.png"
-                        width={105}
-                        height={19}
+                        width={80}
+                        height={14}
                         alt="Rating"
                       />
                       <p className='text-[#464646] leading-5 mt-4'>
