@@ -10,7 +10,7 @@ export default function Home() {
   const PrevProduct = ({ onClick }) => (
     <button 
       onClick={onClick}
-      className='custom-prev-arrow absolute top-[45vh] lg:left-[-5vw] mobile:bg-white mobile:rounded-full mobile:px-3 pt-3 pb-2 mobile:z-10'
+      className='custom-prev-arrow absolute top-[45vh] lg:left-[-5vw] mobile:left-[5vw] mobile:bg-white mobile:rounded-full mobile:px-3 pt-3 pb-2 mobile:z-10'
     >
       <Image
         src="/arrow-red-left-article.png"
