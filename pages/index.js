@@ -458,7 +458,7 @@ export default function Home() {
         {/* Product Section Mobile */}
         <div id='product' className='lg:hidden mt-12'>
           <div className='flex flex-col items-center justify-center mb-4'>
-            <h1 className='text-[#ff565c] font-bold text-[20pt]'>DAPATKAN SEKARANG</h1>
+            <h1 className='text-[#ff565c] font-bold text-[18pt]'>DAPATKAN SEKARANG</h1>
           </div>
           <Slider {...productMobileSettings}>
             {product.map((item, index) => {
@@ -466,13 +466,14 @@ export default function Home() {
               return (
                 <div key={index} className='mt-3 mb-10'>
                   <div className='flex flex-col items-center bg-white rounded-[25px] w-[80%] mx-10'>
-                    <Image
-                      className='pt-10 mb-5'
-                      src={item.image}
-                      width={184}
-                      height={150}
-                      alt="Product Image"
-                    />
+                    <div className='pt-10 mb-5'>
+                      <Image
+                        src={item.image}
+                        width={184}
+                        height={150}
+                        alt="Product Image"
+                      />
+                    </div>
                     {nameLines.map((line, lineIndex) => (
                       <>
                         <p key={lineIndex} className='flex text-[#ff565c] font-bold justify-center text-xl'>
@@ -519,13 +520,14 @@ export default function Home() {
                   <div key={index} className='mt-3 mb-10'>
                     <div className='flex mx-3'>
                       <div className='flex flex-col items-center bg-white rounded-[25px] w-full'>
-                        <Image
-                          className='pt-10 mb-5'
-                          src={item.image}
-                          width={184}
-                          height={150}
-                          alt="Product Image"
-                        />
+                        <div className='pt-10 mb-5'>
+                          <Image
+                            src={item.image}
+                            width={184}
+                            height={150}
+                            alt="Product Image"
+                          />
+                        </div>
                         {nameLines.map((line, lineIndex) => (
                           <>
                             <p key={lineIndex} className='flex text-[#ff565c] font-bold justify-center text-xl'>
