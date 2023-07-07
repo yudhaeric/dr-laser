@@ -651,16 +651,16 @@ export default function Home() {
       </div>
       {/* Media Liput */}
       <div>
-        <div className='px-10 lg:flex lg:items-center lg:w-[80%] lg:mx-[15%] lg:mt-5 lg:gap-5 lg:px-0'>
+        <div className='px-10 lg:flex lg:items-center lg:w-[80%] lg:mx-[15%] lg:mt-5 lg:gap-[7%] lg:px-0'>
           <p className='lg:mb-0 lg:w-[30%] mobile:text-lg w-full font-bold text-[#464646] mb-10'>
             Dr Laser telah diliput <br/>
             oleh berbagai media nasional
           </p>
-          <div className='lg:flex grid grid-cols-2 gap-7 lg:gap-0 lg:w-[55%]'>
+          <div className='lg:flex grid grid-cols-2 gap-7 lg:gap-0 lg:w-[50%] 2xl:w-[45%]'>
             {mediaLiput.map((item) => {
               return (
                 <>
-                  {/* <div className='lg:w-[200px] lg:h-[80px]'> */}
+                  {/* <div className=''> */}
                     <Image
                       src={item}
                       width={200}
@@ -679,7 +679,7 @@ export default function Home() {
         <div className='lg:mb-12 flex items-center justify-center mb-8'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>TEMUKAN KAMI</h1>
         </div>
-        <div className='lg:flex lg:mx-[130px] justify-center w-[80%] mx-[10%]'>
+        <div className='lg:flex justify-center w-[80%] mx-[10%]'>
           {location.map((item) => {
             return (
               <>
