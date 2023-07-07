@@ -505,11 +505,11 @@ export default function Home() {
           </Slider>
         </div>
         {/* Product Section Desktop */}
-        <div id='produk' className='mobile:hidden lg:inline mt-60'>
-          <div className='flex flex-col items-center justify-center mb-4 mt-64'>
+        <div id='produk' className='mobile:hidden lg:inline'>
+          <div className='flex flex-col items-center justify-center mb-[3%] mt-[20%]'>
             <h1 className='text-[#ff565c] font-bold text-[20pt]'>DAPATKAN SEKARANG</h1>
           </div>
-          <div className='mx-[150px] w-[80%]'>
+          <div className='w-[80%] mx-[10%]'>
             <Slider {...productDesktopSettings}>
               {product.map((item, index) => {
                 const nameLines = item.name.split('\n');
