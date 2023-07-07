@@ -573,23 +573,21 @@ export default function Home() {
         </div>
       </div>
       {/* Those Who Have Section Desktop */}
-      <div id='testimoni' className='mobile:hidden lg:inline'>
+      <div id='testimoni' className='lg:w-[70%] lg:mx-[15%] w-[80%] mx-[10%]'>
         <div className='flex flex-col items-center justify-center mb-4 mt-10'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>MEREKA YANG PERNAH</h1>
         </div>
-        <div className='flex text-[12pt] text-red gap-12 mt-[30px] w-[70%] mx-[15%]'>
+        <div className='lg:flex grid grid-cols-2 text-[12pt] text-red gap-5 mt-[30px]'>
           {thoseWhoHave.map((item, index) => (
             <>
-              <div className='flex flex-col items-center'>
-              <a href={item.link}target="_blank" rel="noopener noreferrer">
-                <Image
-                    className='mb-5'
+              <div>
+                <a href={item.link}target="_blank" rel="noopener noreferrer">
+                  <Image
                     src={item.image}
                     width={344}
                     height={196}
                     alt="Review"
-                />
-                
+                  />
                 </a>
                 <p className='w-38 text-center text-[#464646] font-bold'>
                   {item.nama} (Artis)
@@ -598,19 +596,18 @@ export default function Home() {
             </>
           ))}
         </div>
-        <div className='mx-[15%] w-[70%]'>
+        <div>
           <Slider {...testimoniDesktopSettings}>
             {testimoni.map((testimoni, index) => {
               return (
                 <div key={index} className='mt-3 mb-10'>
-                  <div className='flex justify-center mt-14'>
-                      <Image
-                        className='mb-5'
-                        src={testimoni}
-                        width={1518}
-                        height={545}
-                        alt=""
-                      />
+                  <div className='flex justify-center mt-5'>
+                    <Image
+                      src={testimoni}
+                      width={1518}
+                      height={545}
+                      alt=""
+                    />
                   </div>
                 </div>
               );
