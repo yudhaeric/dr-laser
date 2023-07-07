@@ -629,7 +629,7 @@ export default function Home() {
       {/* Those Who Have Section */}
       <div id='testimoni' className='lg:w-[70%] lg:mx-[15%] w-[80%] mx-[10%]'>
         <div className='flex flex-col items-center justify-center mb-4 mt-10'>
-          <h1 className='text-[#ff565c] font-bold text-[20pt]'>MEREKA YANG PERNAH</h1>
+          <h1 className='text-[#ff565c] font-bold text-[18pt] lg:text-[20pt]'>MEREKA YANG PERNAH</h1>
         </div>
         <div className='lg:flex grid grid-cols-2 text-[12pt] text-red gap-5 mt-[30px]'>
           {thoseWhoHave.map((item, index) => (
@@ -734,7 +734,7 @@ export default function Home() {
         <div className='lg:mb-12 flex items-center justify-center mb-8'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>TEMUKAN KAMI</h1>
         </div>
-        <div className='lg:flex justify-center w-[80%] mx-[10%]'>
+        <div className='lg:flex lg:w-[70%] lg:mx-[15%] justify-center w-[80%] mx-[10%]'>
           {location.map((item) => {
             return (
               <>
@@ -756,11 +756,11 @@ export default function Home() {
                         src="/map.png"
                         width={34}
                         height={34}
-                        alt="Maps Icon"
+                        alt="Maps"
                       />
                     </div>
                   </div>
-                  <p className='mobile:hidden text-lg lg:inline mb-10 w-[70%] text-[#464646] text-center font-bold leading-6'>
+                  <p className='mobile:hidden text-lg lg:inline mb-10 w-[80%] text-[#464646] text-center font-bold leading-6'>
                     {item.address}
                   </p>
                   <div className='mobile:hidden lg:inline'>
@@ -768,7 +768,7 @@ export default function Home() {
                       src={item.maps}
                       width={300}
                       height={300}
-                      alt="Maps"
+                      alt=""
                     />
                   </div>
                 </div>
