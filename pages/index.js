@@ -1,8 +1,10 @@
 import Head from 'next/head'
+import { useState } from 'react';
 import Image from 'next/legacy/image'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import ArticlePopup from '../components/article';
 
 export default function Home() {
   const ArrowLeft = (props) => (
@@ -70,52 +72,6 @@ export default function Home() {
     autoplaySpeed: 5000,
     prevArrow: null,
     nextArrow: null
-  };
-
-  const NextArticle = ({ onClick }) => (
-    <button className="custom-next-arrow absolute -top-[22%] right-[0%]" onClick={onClick}>
-      <Image
-        src="/arrow-right-article.png"
-        width={26}
-        height={26}
-        alt=""
-      />
-    </button>
-  );
-  
-  const PrevArticle = ({ onClick }) => (
-    <button className="custom-prev-arrow absolute -top-[22%] right-[10%] lg:right-[4%]" onClick={onClick}>
-      <Image
-        src="/arrow-left-article.png"
-        width={26}
-        height={26}
-        alt=""
-      />
-    </button>
-  );
-
-  let articleMobileSettings = {
-    arrows: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    nextArrow: <NextArticle />,
-    prevArrow: <PrevArticle />
-  };
-  
-  let articleDesktopSettings = {
-    arrows: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    prevArrow: <PrevArticle />,
-    nextArrow: <NextArticle />
   };
   
   let TheySaidMobileSettings = {
@@ -241,13 +197,6 @@ export default function Home() {
     "/media-liput/medialiput1.png", "/media-liput/medialiput2.png", "/media-liput/medialiput3.png", "/media-liput/medialiput4.png", "/media-liput/medialiput5.png"
   ];
 
-  const testimoni = [
-    "/testimoni/testimoni1.png", "/testimoni/testimoni2.jpg", "/testimoni/testimoni3.jpg", 
-    "/testimoni/testimoni4.jpg", "/testimoni/testimoni5.jpg", "/testimoni/testimoni6.jpg",
-    "/testimoni/testimoni7.jpg", "/testimoni/testimoni8.jpg", "/testimoni/testimoni9.jpg",
-    "/testimoni/testimoni10.jpg", "/testimoni/testimoni11.jpg"
-  ];
-  
   const location = [
     {
       "address" : "Komplek ruko roxy mas blok D4 No.1, Daerah Khusus Ibukota Jakarta 10150",
@@ -262,7 +211,60 @@ export default function Home() {
       "maps" : "/maps.png"
     }
   ];
+
+  const testimoni = [
+    "/testimoni/testimoni1.png", "/testimoni/testimoni2.jpg", "/testimoni/testimoni3.jpg", 
+    "/testimoni/testimoni4.jpg", "/testimoni/testimoni5.jpg", "/testimoni/testimoni6.jpg",
+    "/testimoni/testimoni7.jpg", "/testimoni/testimoni8.jpg", "/testimoni/testimoni9.jpg",
+    "/testimoni/testimoni10.jpg", "/testimoni/testimoni11.jpg"
+  ];
+
+  const NextArticle = ({ onClick }) => (
+    <button className="custom-next-arrow absolute -top-[22%] right-[0%]" onClick={onClick}>
+      <Image
+        src="/arrow-right-article.png"
+        width={26}
+        height={26}
+        alt=""
+      />
+    </button>
+  );
+      
+  const PrevArticle = ({ onClick }) => (
+    <button className="custom-prev-arrow absolute -top-[22%] right-[10%] lg:right-[4%]" onClick={onClick}>
+      <Image
+        src="/arrow-left-article.png"
+        width={26}
+        height={26}
+        alt=""
+      />
+    </button>
+  );
+
+  let articleMobileSettings = {
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    nextArrow: <NextArticle />,
+    prevArrow: <PrevArticle />
+  };
   
+  let articleDesktopSettings = {
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    prevArrow: <PrevArticle />,
+    nextArrow: <NextArticle />
+  };
+
   const article = [
     {
       "image" : "/article/article.png",
@@ -313,8 +315,19 @@ export default function Home() {
     }
   ];
 
+  const [showArticlePopup, setShowArticlePopup] = useState(false);
+
+  const handleCloseArticle = () => {
+    setShowArticlePopup(!showArticlePopup)
+  }
+
   return (
     <div className='overflow-hidden'>
+      {showArticlePopup && (
+        <>
+          <ArticlePopup handleCloseArticle={handleCloseArticle}/>
+        </>
+      )}
       {/* Header Mobile */}
       <div className='lg:hidden'>
         <div className='flex justify-between w-full p-6'>
@@ -781,7 +794,7 @@ export default function Home() {
       <div className='mt-10 bg-[#464646] w-full py-7'>
         <div className='lg:w-[70%] lg:mx-[15%] w-[80%] mx-[10%]'>
           <h1 className='text-lg font-bold text-white mb-5 w-[70%]'>Artikel Menarik Tentang Kesehatan</h1>
-          <div className='lg:hidden'>
+          <div onClick={() => {setShowArticlePopup(true)}} className='lg:hidden'>
             <Slider {...articleMobileSettings}>
               {article.map((item, index) => {
                 return (
