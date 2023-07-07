@@ -620,13 +620,14 @@ export default function Home() {
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>MEDIA PARTNER OF</h1>
         </div> 
         <div className='flex justify-center'>
-          <Image
-            className='mobile:w-[200px] mobile:h-[50px]'
-            src="/metrotv.png"
-            width={300}
-            height={75}
-            alt="Metro TV"
-          />
+          <div className='mobile:w-[200px] mobile:h-[50px]'>
+            <Image
+              src="/metrotv.png"
+              width={300}
+              height={75}
+              alt="Metro TV"
+            />
+          </div>
         </div>
         <div className='flex justify-center text-[12pt] gap-5 py-7 lg:mt-[40px] lg:bg-[#ff565c] mobile:flex-wrap mobile:px-10'>
           <div>
@@ -650,22 +651,23 @@ export default function Home() {
       </div>
       {/* Media Liput */}
       <div>
-        <div className='px-10 lg:flex lg:items-center lg:w-[60%] lg:mx-[145px] lg:px-16 lg:mt-5'>
-          <p className='lg:mb-0 mobile:text-lg w-full font-bold text-[#464646] mb-10'>
+        <div className='px-10 lg:flex lg:items-center lg:w-[80%] lg:mx-[15%] lg:mt-5 lg:gap-5 lg:px-0'>
+          <p className='lg:mb-0 lg:w-[30%] mobile:text-lg w-full font-bold text-[#464646] mb-10'>
             Dr Laser telah diliput <br/>
             oleh berbagai media nasional
           </p>
-          <div className='lg:flex grid grid-cols-2 gap-7 lg:gap-0'>
+          <div className='lg:flex grid grid-cols-2 gap-7 lg:gap-0 lg:w-[55%]'>
             {mediaLiput.map((item) => {
               return (
                 <>
-                  <Image
-                    className='lg:w-[230px] lg:h-[35px]'
-                    src={item}
-                    width={200}
-                    height={80}
-                    alt="..."
-                  />
+                  {/* <div className='lg:w-[200px] lg:h-[80px]'> */}
+                    <Image
+                      src={item}
+                      width={200}
+                      height={80}
+                      alt="..."
+                    />
+                  {/* </div> */}
                 </>
               );
             })}
