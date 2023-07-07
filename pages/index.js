@@ -263,13 +263,12 @@ export default function Home() {
       <div className='lg:hidden'>
         <div className='flex justify-between w-full p-6'>
           <Image
-            className='lg:hidden'
             src="/logo.png"
             width={190}
             height={47}
             alt="Dr Laser Logo"
           />
-          <button className='lg:hidden'>
+          <button>
             <Image
               src="/hamburger.png"
               width={24}
@@ -297,11 +296,11 @@ export default function Home() {
             alt="Dr Laser Logo"
           />
           <div className='h-[130px] bg-white w-[600px] rounded-b-[40px]'>
-            <ul className='flex justify-center align-end gap-20 text-[12px] mt-16'>
-              <a href='#produk'>HOME</a>
-              <a>PRODUCT</a>
-              <a>TESTIMONI</a>
-              <a>CONTACT US</a>
+            <ul className='flex justify-center align-end gap-20 text-[12px] mt-16 font-bold text-[#464646]'>
+              <a href='#' className='hover:text-[#ff565c]'>HOME</a>
+              <a href='#produk' className='hover:text-[#ff565c]'>PRODUCT</a>
+              <a href='#testimoni' className='hover:text-[#ff565c]'>TESTIMONI</a>
+              <a href='#contact' className='hover:text-[#ff565c]'>CONTACT US</a>
             </ul>
           </div>
         </div>
@@ -569,7 +568,7 @@ export default function Home() {
         </div>
       </div>
       {/* Those Who Have Section Desktop */}
-      <div className='mobile:hidden lg:inline'>
+      <div id='testimoni' className='mobile:hidden lg:inline'>
         <div className='flex flex-col items-center justify-center mb-4 mt-10'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>MEREKA YANG PERNAH</h1>
         </div>
@@ -675,7 +674,7 @@ export default function Home() {
         </div>
       </div>
       {/* Find Us */}
-      <div className='lg:mt-16 mt-12'>
+      <div id='contact' className='lg:mt-16 mt-12'>
         <div className='lg:mb-12 flex items-center justify-center mb-8'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>TEMUKAN KAMI</h1>
         </div>
