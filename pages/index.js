@@ -10,13 +10,14 @@ export default function Home() {
       {...props}
       style={{ zIndex: 2 }}
     >
-      <Image
-        className='absolute mobile:left-20 lg:left-0 lg:-top-0'
-        src="/arrow-red-left-article.png"
-        width={props.width || 40}
-        height={props.height || 40}
-        alt=''
-      />
+      <div className='absolute mobile:left-20 lg:left-0 lg:-top-0'>
+        <Image
+          src="/arrow-red-left-article.png"
+          width={props.width || 40}
+          height={props.height || 40}
+          alt=''
+        />
+      </div>
     </button>
   );
 
@@ -25,13 +26,14 @@ export default function Home() {
       {...props}
       style={{ zIndex: 1 }}
     >
-      <Image
-        className='absolute mobile:right-20 lg:right-10 lg:-top-20'
-        src="/arrow-red-right-article.png"
-        width={props.width || 40}
-        height={props.height || 40}
-        alt=''
-      />
+      <div className='absolute mobile:right-20 lg:right-0 lg:-top-0'>
+        <Image
+          src="/arrow-red-right-article.png"
+          width={props.width || 40}
+          height={props.height || 40}
+          alt=''
+        />
+      </div>
     </button>
   );
 
