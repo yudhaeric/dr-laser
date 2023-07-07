@@ -10,7 +10,7 @@ export default function Home() {
       {...props}
       style={{ zIndex: 2 }}
     >
-      <div className='absolute mobile:left-20 lg:left-0 lg:-top-0'>
+      <div className='absolute lg:left-0 lg:-top-0 mobile:w-full mobile:left-14 mobile:bg-white mobile:rounded-full'>
         <Image
           src="/arrow-red-left-article.png"
           width={props.width || 40}
@@ -26,7 +26,7 @@ export default function Home() {
       {...props}
       style={{ zIndex: 1 }}
     >
-      <div className='absolute mobile:right-20 lg:right-0 lg:-top-0'>
+      <div className='absolute lg:right-0 lg:-top-0 mobile:w-full mobile:right-12 mobile:bg-white mobile:rounded-full'>
         <Image
           src="/arrow-red-right-article.png"
           width={props.width || 40}
@@ -45,8 +45,8 @@ export default function Home() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
-    prevArrow: <ArrowLeft width={40} height={40} />,
-    nextArrow: <ArrowRight width={40} height={40} />
+    prevArrow: <ArrowLeft width={50} height={50} />,
+    nextArrow: <ArrowRight width={50} height={50} />
   };
 
   let productDesktopSettings = {
@@ -417,16 +417,17 @@ export default function Home() {
         {/* Sleep Quality Section Mobile */}
         <div className='lg:hidden flex flex-col pt-10 items-center'>
           <h1 className='font-bold text-[#ff565c] text-xl text-center'>
-            MEMPERBAIKI <br/> KUALITAS TIDUR
+            MEMPERBAIKI KUALITAS TIDUR
           </h1>
-          <Image
-            className='mt-5'
-            src="/wakeup.png"
-            width={1050}
-            height={722}
-            alt="Icon Heart"
-          />
-          <p className='text-[#464646] text-justify mt-8 px-6'>
+          <div className='mt-8'>
+            <Image
+              src="/wakeup.png"
+              width={1050}
+              height={722}
+              alt="Icon Heart"
+            />
+          </div>
+          <p className='text-[#464646] text-justify mt-8 w-[80%] mx-[10%]'>
             <span className='font-bold'>Kualitas tidur yang baik</span> adalah salah satu faktor pendukung terapi. <span className='font-bold'>90% pengguna Dr Laser merasakan tidur
             yang lebih nyenyak</span>, tidak lagi merasakan insomnia sehingga merasa segar ketika bangun tidur. Tidur yang berkualitas
             membuat imunitas tetap terjaga dan gula darah lebih terkontrol.
