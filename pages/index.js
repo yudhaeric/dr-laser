@@ -7,90 +7,63 @@ import 'slick-carousel/slick/slick-theme.css';
 import ArticlePopup from '../components/article';
 
 export default function Home() {
-  const ArrowLeft = (props) => (
-    <button
-      {...props}
-      style={{ zIndex: 2 }}
+  const PrevProduct = ({ onClick }) => (
+    <button 
+      onClick={onClick}
+      className='custom-prev-arrow absolute top-[45vh] lg:left-[-5vw] mobile:bg-white mobile:rounded-full mobile:px-3 pt-3 pb-2 mobile:z-10'
     >
-      <div className='absolute lg:left-0 lg:-top-0 mobile:w-full mobile:left-14 mobile:bg-white mobile:rounded-full'>
-        <Image
-          src="/arrow-red-left-article.png"
-          width={props.width || 40}
-          height={props.height || 40}
-          alt=''
-        />
-      </div>
+      <Image
+        src="/arrow-red-left-article.png"
+        width={30}
+        height={30}
+        alt=''
+      />
     </button>
   );
 
-  const ArrowRight = (props) => (
+  const NextProduct = ({ onClick }) => (
     <button
-      {...props}
-      style={{ zIndex: 1 }}
+      onClick={onClick}
+      className='custom-next-arrow absolute top-[45vh] lg:right-[-5vw] mobile:right-[5vw] mobile:bg-white mobile:rounded-full mobile:px-3 pt-3 pb-2 mobile:z-10'
     >
-      <div className='absolute lg:right-0 lg:-top-0 mobile:w-full mobile:right-12 mobile:bg-white mobile:rounded-full'>
-        <Image
-          src="/arrow-red-right-article.png"
-          width={props.width || 40}
-          height={props.height || 40}
-          alt=''
-        />
-      </div>
+      <Image
+        src="/arrow-red-right-article.png"
+        width={30}
+        height={30}
+        alt=''
+      />
     </button>
   );
 
   let productMobileSettings = {
-    arrow:true,
+    arrows: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
-    prevArrow: <ArrowLeft width={50} height={50} />,
-    nextArrow: <ArrowRight width={50} height={50} />
+    nextArrow: <NextProduct />,
+    prevArrow: <PrevProduct />,
   };
 
   let productDesktopSettings = {
+    arrows: true,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
-    prevArrow: <ArrowLeft width={40} height={40} />,
-    nextArrow: <ArrowRight width={40} height={40} />
+    nextArrow: <NextProduct />,
+    prevArrow: <PrevProduct />,
   };
 
   let testimoniDesktopSettings = {
-    arrow:false,
+    arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    prevArrow: null,
-    nextArrow: null
-  };
-  
-  let TheySaidMobileSettings = {
-    arrow:true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    prevArrow: null,
-    nextArrow: null
-  };
-
-  let TheySaidDesktopSettings = {
-    arrow:true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
@@ -219,21 +192,21 @@ export default function Home() {
     "/testimoni/testimoni10.jpg", "/testimoni/testimoni11.jpg"
   ];
 
-  const NextArticle = ({ onClick }) => (
-    <button className="custom-next-arrow absolute -top-[28%] right-[0%] px-2 pt-1" onClick={onClick}>
+  const PrevArticle = ({ onClick }) => (
+    <button className="custom-prev-arrow absolute -top-[28%] right-[15%] lg:right-[4%] px-2 pt-1" onClick={onClick}>
       <Image
-        src="/arrow-right-article.png"
+        src="/arrow-left-article.png"
         width={26}
         height={26}
         alt=""
       />
     </button>
   );
-      
-  const PrevArticle = ({ onClick }) => (
-    <button className="custom-prev-arrow absolute -top-[28%] right-[15%] lg:right-[4%] px-2 pt-1" onClick={onClick}>
+
+  const NextArticle = ({ onClick }) => (
+    <button className="custom-next-arrow absolute -top-[28%] right-[0%] px-2 pt-1" onClick={onClick}>
       <Image
-        src="/arrow-left-article.png"
+        src="/arrow-right-article.png"
         width={26}
         height={26}
         alt=""
@@ -249,8 +222,8 @@ export default function Home() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
+    prevArrow: <PrevArticle />,
     nextArrow: <NextArticle />,
-    prevArrow: <PrevArticle />
   };
   
   let articleDesktopSettings = {
@@ -262,7 +235,7 @@ export default function Home() {
     autoplay: true,
     autoplaySpeed: 5000,
     prevArrow: <PrevArticle />,
-    nextArrow: <NextArticle />
+    nextArrow: <NextArticle />,
   };
 
   const article = [
@@ -292,6 +265,30 @@ export default function Home() {
     },
   ];
   
+  let TheySaidMobileSettings = {
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    prevArrow: null,
+    nextArrow: null
+  };
+
+  let TheySaidDesktopSettings = {
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    prevArrow: null,
+    nextArrow: null
+  };
+
   const theySaid = [
     {
       "say" : "Saya tidak pakai, tpi saya pakaikan ke orang tua dan mertua saya, sejauh ini alatnya membantu, tensi mereka stabil, Pelayanan baik, di anter ke rumah dan di ajari cara pakainya.",
