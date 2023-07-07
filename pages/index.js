@@ -71,6 +71,52 @@ export default function Home() {
     prevArrow: null,
     nextArrow: null
   };
+
+  const NextArticle = ({ onClick }) => (
+    <button className="custom-next-arrow absolute -top-[22%] right-[0%]" onClick={onClick}>
+      <Image
+        src="/arrow-right-article.png"
+        width={26}
+        height={26}
+        alt=""
+      />
+    </button>
+  );
+  
+  const PrevArticle = ({ onClick }) => (
+    <button className="custom-prev-arrow absolute -top-[22%] right-[10%] lg:right-[4%]" onClick={onClick}>
+      <Image
+        src="/arrow-left-article.png"
+        width={26}
+        height={26}
+        alt=""
+      />
+    </button>
+  );
+
+  let articleMobileSettings = {
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    nextArrow: <NextArticle />,
+    prevArrow: <PrevArticle />
+  };
+  
+  let articleDesktopSettings = {
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    prevArrow: <PrevArticle />,
+    nextArrow: <NextArticle />
+  };
   
   let TheySaidMobileSettings = {
     arrow:true,
@@ -218,6 +264,14 @@ export default function Home() {
   ];
   
   const article = [
+    {
+      "image" : "/article/article.png",
+      "title" : "Jangan Anggap Remeh! inilah Gejala Stroke Ringan"
+    },
+    {
+      "image" : "/article/article.png",
+      "title" : "Jangan Anggap Remeh! inilah Gejala Stroke Ringan"
+    },
     {
       "image" : "/article/article.png",
       "title" : "Jangan Anggap Remeh! inilah Gejala Stroke Ringan"
@@ -572,7 +626,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* Those Who Have Section Desktop */}
+      {/* Those Who Have Section */}
       <div id='testimoni' className='lg:w-[70%] lg:mx-[15%] w-[80%] mx-[10%]'>
         <div className='flex flex-col items-center justify-center mb-4 mt-10'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>MEREKA YANG PERNAH</h1>
@@ -724,60 +778,54 @@ export default function Home() {
         </div>
       </div>
       {/* Article */}
-      <div className='mobile:hidden lg:hidden'>
-        <div className='flex flex-col items-center justify-center bg-[#464646] w-full py-7 mt-20'>
-          <div className='flex justify-between w-[80%]'>
-            <h1 className='text-lg font-bold text-white'>Artikel Menarik Tentang Kesehatan</h1>
-            <div className='flex gap-2'>
-              <Image
-                src="/arrow-left-article.png"
-                width={28}
-                height={28}
-                alt="Arrow Left Icon"
-              />
-              <Image
-                src="/arrow-right-article.png"
-                width={28}
-                height={28}
-                alt="Arrow Right Icon"
-              />
-            </div>
+      <div className='mt-10 bg-[#464646] w-full py-7'>
+        <div className='lg:w-[70%] lg:mx-[15%] w-[80%] mx-[10%]'>
+          <h1 className='text-lg font-bold text-white mb-5 w-[70%]'>Artikel Menarik Tentang Kesehatan</h1>
+          <div className='lg:hidden'>
+            <Slider {...articleMobileSettings}>
+              {article.map((item, index) => {
+                return (
+                  <div key={index}>
+                    <Image
+                      src={item.image}
+                      width={320}
+                      height={188}
+                      alt=""
+                    />
+                    <div className='text-white leading-5 mt-5 px-3'>
+                      {item.title}
+                    </div>
+                  </div>
+                )
+              })}
+            </Slider>
           </div>
-          <div className='flex items-center justify-center w-[80%] mt-10 gap-5'>
-            {article.map((item) => {
-              return (
-                <>
-                  <div className='flex flex-col justify-center'>
+          <div className='mobile:hidden lg:inline'>
+            <Slider {...articleDesktopSettings}>
+              {article.map((item, index) => {
+                return (
+                  <div key={index}>
                     <Image
                       src={item.image}
                       width={235}
                       height={142}
-                      alt="Arrow Right Icon"
+                      alt=""
                     />
-                    <div className='flex items-center mt-5'>
-                      <div className='w-[75%] text-white leading-5'>
-                        {item.title}
-                      </div>
-                      <Image
-                        className='ml-6'
-                        src="/arrow-red-right-article.png"
-                        width={24}
-                        height={24}
-                        alt="Arrow Right Icon"
-                      />
+                    <div className='text-white leading-5 mt-5'>
+                      {item.title}
                     </div>
                   </div>
-                </>
-              )
-            })}
+                )
+              })}
+            </Slider>
           </div>
         </div>
       </div>
       {/* They Said */}
-      <div className='mt-8 lg:mt-20'>
-        <div className='flex justify-between w-[80%] mx-[10%] mb-5'>
+      <div className='lg:mt-20 lg:w-[70%] lg:mx-[15%] w-[80%] mx-[10%] mt-8'>
+        <div className='flex justify-between mb-5'>
           <h1 className='lg:text-lg text-lg font-bold text-[#464646]'>Apa Kata Mereka Tentang DR.LASER?</h1>
-          <div className='mobile:hidden lg:inline lg:gap-3'>
+          <div className='mobile:hidden lg:hidden lg:gap-3'>
             <Image
               src="/arrow-left-said.png"
               width={28}
@@ -792,7 +840,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className='w-[80%] mx-[10%]'>
+        <div className=''>
           <div className='lg:hidden'>
             <Slider {...TheySaidMobileSettings}>
               {theySaid.map((item, index) => {
