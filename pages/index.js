@@ -220,7 +220,7 @@ export default function Home() {
   ];
 
   const NextArticle = ({ onClick }) => (
-    <button className="custom-next-arrow absolute -top-[22%] right-[0%]" onClick={onClick}>
+    <button className="custom-next-arrow absolute -top-[28%] right-[0%] px-2 pt-1" onClick={onClick}>
       <Image
         src="/arrow-right-article.png"
         width={26}
@@ -231,7 +231,7 @@ export default function Home() {
   );
       
   const PrevArticle = ({ onClick }) => (
-    <button className="custom-prev-arrow absolute -top-[22%] right-[10%] lg:right-[4%]" onClick={onClick}>
+    <button className="custom-prev-arrow absolute -top-[28%] right-[15%] lg:right-[4%] px-2 pt-1" onClick={onClick}>
       <Image
         src="/arrow-left-article.png"
         width={26}
@@ -794,11 +794,11 @@ export default function Home() {
       <div className='mt-10 bg-[#464646] w-full py-7'>
         <div className='lg:w-[70%] lg:mx-[15%] w-[80%] mx-[10%]'>
           <h1 className='text-lg font-bold text-white mb-5 w-[70%]'>Artikel Menarik Tentang Kesehatan</h1>
-          <div onClick={() => {setShowArticlePopup(true)}} className='lg:hidden'>
+          <div className='lg:hidden cursor-pointer'>
             <Slider {...articleMobileSettings}>
               {article.map((item, index) => {
                 return (
-                  <div key={index}>
+                  <div key={index} onClick={() => {setShowArticlePopup(true)}}>
                     <Image
                       src={item.image}
                       width={320}
@@ -813,11 +813,11 @@ export default function Home() {
               })}
             </Slider>
           </div>
-          <div className='mobile:hidden lg:inline'>
+          <div className='mobile:hidden lg:inline cursor-pointer'>
             <Slider {...articleDesktopSettings}>
               {article.map((item, index) => {
                 return (
-                  <div key={index}>
+                  <div key={index} onClick={() => {setShowArticlePopup(true)}}>
                     <Image
                       src={item.image}
                       width={235}
