@@ -90,6 +90,7 @@ export default function Home() {
       "desc" : "Dr Laser Supreme 16 Titik Mata Laser - Terapi Melancarkan Aliran Darah Untuk Membantu Mencegah Diabetes Stroke Hipertensi Kolesterol.",
       "disc" : "Rp 8.880.000",
       "price" : "Rp 6.880.000",
+      "link" : "http://wa.me/+6282170003007"
     },
     {
       "image" : "/product/plus.png",
@@ -97,6 +98,7 @@ export default function Home() {
       "desc" : "Dr Laser Hi Plus 7 Titik Mata Laser - Terapi Melancarkan Aliran Darah Untuk Membantu Mencegah Diabetes Stroke Hipertensi Kolesterol.",
       "disc" : "Rp 4.880.000",
       "price" : "Rp 3.880.000",
+      "link" : "http://wa.me/+6282170003007"
     },
     {
       "image" : "/product/perfect.png",
@@ -104,13 +106,15 @@ export default function Home() {
       "desc" : "Dr Laser Perfect 10 Plus 10 Titik Mata Laser - Terapi Melancarkan Aliran Darah Untuk Membantu Mencegah Diabetes Stroke Hipertensi Kolesterol.",
       "disc" : "Rp 6.880.000",
       "price" : "Rp 5.980.000",
+      "link" : "http://wa.me/+6282170003007"
     },
     {
       "image" : "/product/aculaser.png",
       "name" : "ACULASER\nULTIMATE\n ㅤㅤㅤ",
       "desc" : "Aculaser Ultimate 14 Titik Mata Laser + NMES Therapy Device – Melancarkan Aliran Darah Untuk Membantu Pemulihan Stroke Diabetes Kolesterol Hipertensi.",
       "disc" : "Rp 7.880.000",
-      "price" : "Rp 7.880.000",
+      "price" : "Rp 6.880.000",
+      "link" : "http://wa.me/+6282170003007"
     },
     {
       "image" : "/product/traction.png",
@@ -118,6 +122,7 @@ export default function Home() {
       "desc" : "Dr Qyu Lumbar Traction Device - Membantu Mengatasi Nyeri Pinggang Saraf Terjepit.",
       "disc" : "Rp 4.980.000",
       "price" : "Rp 2.999.000",
+      "link" : "http://wa.me/+6282170003007"
     },
     {
       "image" : "/product/sterillizer.png",
@@ -125,6 +130,7 @@ export default function Home() {
       "desc" : "Efektif Menyaring & Memusnahkan partikel debu, pollen, allergen, jamur, bakteri hingga VIRUS (berukuran 0,3 mikrometer) baik di udara maupun di permukaan benda.",
       "disc" : "Rp 9.890.000",
       "price" : "Rp 8.890.000",
+      "link" : "http://wa.me/+6282170003007"
     },
     {
       "image" : "/product/painbox.png",
@@ -132,6 +138,7 @@ export default function Home() {
       "desc" : "Alat terapi kesehatan Low Level Laser Therapy Portable yang memiliki 36 mata laser dan menggunakan 2 jenis gelombang laser yang dapat menjangkau area luka lebih luas dan lebih dalam.",
       "disc" : "Rp 8.380.000",
       "price" : "Rp 6.380.000",
+      "link" : "http://wa.me/+6282170003007"
     },
     {
       "image" : "/product/perfect10.png",
@@ -139,6 +146,15 @@ export default function Home() {
       "desc" : "DR LASER PERFECT 10 alat terapi Kesehatan untuk membantu mencegah penyakit Diabetes, Jantung Koroner, Stroke, Darah Tinggi & Kolesterol dll..",
       "disc" : "Rp 8.380.000",
       "price" : "Rp 6.380.000",
+      "link" : "http://wa.me/+6282170003007"
+    },
+    {
+      "image" : "/product/tractiondevice.png",
+      "name" : "DR QYU\nCERVICAL TRACTION\nDEVICE\n",
+      "desc" : "Dr Qyu Cervical Traction Device – Terapi Nyeri Leher dan Saraf Terjepit di Leher.",
+      "disc" : "Rp 4.980.000",
+      "price" : "Rp 3.990.000",
+      "link" : "http://wa.me/+6282170003007"
     },
   ];
   
@@ -172,16 +188,19 @@ export default function Home() {
 
   const location = [
     {
-      "address" : "Komplek ruko roxy mas blok D4 No.1, Daerah Khusus Ibukota Jakarta 10150",
-      "maps" : "/maps.png"
+      "city" : "Jakarta",
+      "address" : "Komplek ruko roxy mas blok D2 No.1, Daerah Khusus Ibukota Jakarta 10150",
+      "iframe" : "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3966.717803783965!2d106.8010111147689!3d-6.168529995534074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwMTAnMDYuNyJTIDEwNsKwNDgnMTEuNSJF!5e0!3m2!1sen!2sid!4v1688787640742!5m2!1sen!2sid"
     },
     {
-      "address" : "Komplek ruko roxy mas blok D4 No.1, Daerah Khusus Ibukota Jakarta 10150",
-      "maps" : "/maps.png"
+      "city" : "Makassar",
+      "address" : "Ruko Eks-Bioskop Artis,Jl. Gn. Lompobattang No.1 i, Pisang Utara, Kec. Ujung Pandang, Kota Makassar, Sulawesi Selatan 90157",
+      "iframe" : "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3973.8179438004945!2d119.41314031476415!3d-5.133001796274922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNcKwMDcnNTguOCJTIDExOcKwMjQnNTUuMiJF!5e0!3m2!1sen!2sid!4v1688791209468!5m2!1sen!2sid"
     },
     {
-      "address" : "Komplek ruko roxy mas blok D4 No.1, Daerah Khusus Ibukota Jakarta 10150",
-      "maps" : "/maps.png"
+      "city" : "Medan",
+      "address" : "Jl. Catur 11-31, Ps. Merah Bar., Kec. Medan Kota, Kota Medan, Sumatera Utara 20216",
+      "iframe" : "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3982.0787567318457!2d98.69316961475852!3d3.56935329740249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zM8KwMzQnMDkuNyJOIDk4wrA0MSc0My4zIkU!5e0!3m2!1sen!2sid!4v1688791312210!5m2!1sen!2sid"
     }
   ];
 
@@ -380,7 +399,7 @@ export default function Home() {
           </span> 
         </h1>
         <Image
-          src="/hero.png"
+          src="/hero1.png"
           width={350}
           height={152}
           alt=""
@@ -418,7 +437,7 @@ export default function Home() {
         </div>
         <div className='mobile:hidden lg:inline mt-[140px]'>
           <Image
-            src="/hero.png"
+            src="/hero1.png"
             width={500}
             height={217}
             alt=""
@@ -555,15 +574,17 @@ export default function Home() {
                       <p className='text-[#ff565c] font-bold text-[20pt]'>
                         {item.price}
                       </p>
-                      <div className='flex bg-[#ff565c] hover:bg-[#EE3D43] cursor-pointer py-3 px-8 rounded-2xl gap-3 mt-6'>
-                        <p className='font-bold text-white text-[16px]'>Beli Sekarang</p>
-                        <Image
-                          src="/shopping-bag.png"
-                          width={18}
-                          height={21}
-                          alt="Product Supreme"
-                        />
-                      </div>
+                      <a href={item.link} target="_blank" rel="noopener noreferrer">
+                        <div className='flex bg-[#ff565c] hover:bg-[#EE3D43] cursor-pointer py-3 px-8 rounded-2xl gap-3 mt-6'>
+                          <p className='font-bold text-white text-[16px]'>Beli Sekarang</p>
+                          <Image
+                            src="/shopping-bag.png"
+                            width={18}
+                            height={21}
+                            alt="Product Supreme"
+                          />
+                        </div>
+                      </a>
                   </div>
                   </div>
                 </div>
@@ -617,15 +638,17 @@ export default function Home() {
                           <p className='text-[#ff565c] font-bold text-[20pt]'>
                             {item.price}
                           </p>
-                          <div className='flex bg-[#ff565c] hover:bg-[#EE3D43] cursor-pointer py-3 px-8 rounded-2xl gap-3 mt-6'>
-                            <p className='font-bold text-white text-[16px]'>Beli Sekarang</p>
-                            <Image
-                              src="/shopping-bag.png"
-                              width={20}
-                              height={22}
-                              alt="Product Supreme"
-                            />
-                          </div>
+                          <a href={item.link} target="_blank" rel="noopener noreferrer">
+                            <div className='flex bg-[#ff565c] hover:bg-[#EE3D43] cursor-pointer py-3 px-8 rounded-2xl gap-3 mt-6'>
+                              <p className='font-bold text-white text-[16px]'>Beli Sekarang</p> 
+                              <Image
+                                src="/shopping-bag.png"
+                                width={18}
+                                height={20}
+                                alt="Product Supreme"
+                              />
+                            </div>
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -639,7 +662,7 @@ export default function Home() {
       {/* Those Who Have Section */}
       <div id='testimoni' className='lg:w-[70%] lg:mx-[15%] w-[80%] mx-[10%]'>
         <div className='flex flex-col items-center justify-center mb-4 mt-10'>
-          <h1 className='text-[#ff565c] font-bold text-[18pt] lg:text-[20pt]'>MEREKA YANG PERNAH</h1>
+          <h1 className='text-[#ff565c] font-bold text-[18pt] lg:text-[20pt]'>MEREKA YANG PERNAH MERASAKAN</h1>
         </div>
         <div className='lg:flex grid grid-cols-2 text-[12pt] text-red gap-5 mt-[30px]'>
           {thoseWhoHave.map((item, index) => (
@@ -761,9 +784,9 @@ export default function Home() {
                     <p className='lg:mb-10 lg:w-[70%] lg:text-lg lg:text-center w-[80%] text-[#464646] text-sm font-bold leading-4 mb-4'>
                       {item.address}
                     </p>
-                    <div className='lg:hidden -mt-5 w-[10%]'>
+                    <div className='lg:hidden -mt-3 w-[10%]'>
                       <Image
-                        src="/map.png"
+                        src="/map1.png"
                         width={34}
                         height={34}
                         alt="Maps"
@@ -771,14 +794,18 @@ export default function Home() {
                     </div>
                   </div>
                   <p className='mobile:hidden text-lg lg:inline mb-10 w-[80%] text-[#464646] text-center font-bold leading-6'>
+                    {item.city}
+                  </p>
+                  <p className='mobile:hidden text-lg lg:inline mb-10 w-[80%] text-[#464646] text-center font-bold leading-6'>
                     {item.address}
                   </p>
                   <div className='mobile:hidden lg:inline'>
-                    <Image
-                      src={item.maps}
-                      width={300}
-                      height={300}
-                      alt=""
+                    <iframe
+                       src={item.iframe}
+                       width={300}
+                       height={300}
+                       style={{ borderRadius: "30px" }}
+                       alt=""
                     />
                   </div>
                 </div>
