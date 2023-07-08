@@ -12,8 +12,9 @@ module.exports = {
     extend: {
       screens: {
         'mobile': '360px', 
+        'large-desktop': '1580px'
       }
     },
-  },
+  },  
   plugins: [],
 }

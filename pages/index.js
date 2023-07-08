@@ -517,7 +517,7 @@ export default function Home() {
           </p>
         </div>
         {/* Sleep Quality Section Desktop */}
-        <div className='flex mt-[5%]'>
+        <div className='flex mt-[5vh] large-desktop:mt-[15vh]'>
           <div className='mobile:hidden lg:inline w-[50%] h-44'>
             <Image
               className='mt-10'
@@ -767,7 +767,7 @@ export default function Home() {
         <div className='lg:mb-12 flex items-center justify-center mb-8'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>TEMUKAN KAMI</h1>
         </div>
-        <div className='lg:flex lg:w-[70%] lg:mx-[15%] justify-center w-[80%] mx-[10%]'>
+        <div className='lg:flex lg:w-[70%] lg:mx-[15%] justify-center w-[80%] mx-[10%] gap-5'>
           {location.map((item) => {
             return (
               <>
@@ -784,7 +784,7 @@ export default function Home() {
                     <p className='lg:mb-10 lg:w-[70%] lg:text-lg lg:text-center w-[80%] text-[#464646] text-sm font-bold leading-4 mb-4'>
                       {item.address}
                     </p>
-                    <div className='lg:hidden -mt-3 w-[10%]'>
+                    <div className='lg:hidden -mt-7 w-[10%]'>
                       <Image
                         src="/map1.png"
                         width={34}
@@ -793,20 +793,24 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                  <p className='mobile:hidden text-lg lg:inline mb-10 w-[80%] text-[#464646] text-center font-bold leading-6'>
-                    {item.city}
-                  </p>
-                  <p className='mobile:hidden text-lg lg:inline mb-10 w-[80%] text-[#464646] text-center font-bold leading-6'>
-                    {item.address}
-                  </p>
-                  <div className='mobile:hidden lg:inline'>
-                    <iframe
-                      src={item.iframe}
-                      width={300}
-                      height={300}
-                      style={{ borderRadius: "30px" }}
-                      alt=""
-                    />
+                  <div className='flex flex-col items-center w-full'>
+                    <p className='mobile:hidden text-lg lg:inline mb-10 text-[#464646] text-center font-bold leading-6'>
+                      {item.city}
+                    </p>
+                    <div className='lg:h-[17vh] lg:w-[20vw] lg:mb-7 mb-5 text-center'>
+                      <p className='mobile:hidden text-lg lg:inline text-[#464646] font-bold leading-6'>
+                        {item.address}
+                      </p>
+                    </div>
+                    <div className='mobile:hidden lg:inline'>
+                      <iframe
+                        src={item.iframe}
+                        width={280}
+                        height={280}
+                        style={{ borderRadius: "30px" }}
+                        alt=""
+                      />
+                    </div>
                   </div>
                 </div>
               </>
