@@ -801,11 +801,11 @@ export default function Home() {
                   </p>
                   <div className='mobile:hidden lg:inline'>
                     <iframe
-                       src={item.iframe}
-                       width={300}
-                       height={300}
-                       style={{ borderRadius: "30px" }}
-                       alt=""
+                      src={item.iframe}
+                      width={300}
+                      height={300}
+                      style={{ borderRadius: "30px" }}
+                      alt=""
                     />
                   </div>
                 </div>
@@ -933,6 +933,17 @@ export default function Home() {
         <div className='lg:mt-20 flex justify-center mt-16 mb-5'>
           <p>&copy; 2023 DR.LASER. All Rights Reserved.</p>
         </div>
+      </div>
+      {/* WhatsApp */}
+      <div className='fixed right-5 bottom-5 z-10'>
+        <a href='http://wa.me/+6282170003007'>
+          <Image
+            src={"/whatsapp.png"}
+            width={44}
+            height={44}
+            alt=''
+          />
+        </a>
       </div>
     </div>
   )
