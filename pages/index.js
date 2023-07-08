@@ -181,7 +181,7 @@ export default function Home() {
   const location = [
     {
       "city" : "Jakarta",
-      "address" : "Komplek ruko roxy mas blok D2 No.1, Daerah Khusus Ibukota Jakarta 10150",
+      "address" : "Komplek ruko roxy mas blok D2 No.31, Daerah Khusus Ibukota Jakarta 10150",
       "iframe" : "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3966.717803783965!2d106.8010111147689!3d-6.168529995534074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwMTAnMDYuNyJTIDEwNsKwNDgnMTEuNSJF!5e0!3m2!1sen!2sid!4v1688787640742!5m2!1sen!2sid"
     },
     {
@@ -193,7 +193,13 @@ export default function Home() {
       "city" : "Medan",
       "address" : "Jl. Catur 11-31, Ps. Merah Bar., Kec. Medan Kota, Kota Medan, Sumatera Utara 20216",
       "iframe" : "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3982.0787567318457!2d98.69316961475852!3d3.56935329740249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zM8KwMzQnMDkuNyJOIDk4wrA0MSc0My4zIkU!5e0!3m2!1sen!2sid!4v1688791312210!5m2!1sen!2sid"
+    },
+    {
+      "city" : "Bandung",
+      "address" : "Jl. Halimun No.30, Malabar, Kec. Lengkong, Kota Bandung, Jawa Barat 40262",
+      "iframe" : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15842.79831227907!2d107.6225688!3d-6.9264685!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7d53f4ee067%3A0x39286e7137e40e7e!2sPT.Dimarco%20Mitra%20Utama!5e0!3m2!1sen!2sid!4v1688836540628!5m2!1sen!2sid"
     }
+    
   ];
 
   const testimoni = [
@@ -255,20 +261,16 @@ export default function Home() {
       "title" : "Jangan Anggap Remeh! inilah Gejala Stroke Ringan"
     },
     {
-      "image" : "/article/article.png",
-      "title" : "Jangan Anggap Remeh! inilah Gejala Stroke Ringan"
+      "image" : "/article/article_2.png",
+      "title" : "Hanya Orang Gemuk Yang Beresiko Terkena Kolestrol?"
     },
     {
-      "image" : "/article/article.png",
-      "title" : "Jangan Anggap Remeh! inilah Gejala Stroke Ringan"
+      "image" : "/article/article_3.png",
+      "title" : "Penyebab Luka Diabetes Sulit Sembuh"
     },
     {
-      "image" : "/article/article.png",
-      "title" : "Jangan Anggap Remeh! inilah Gejala Stroke Ringan"
-    },
-    {
-      "image" : "/article/article.png",
-      "title" : "Jangan Anggap Remeh! inilah Gejala Stroke Ringan"
+      "image" : "/article/article_4.png",
+      "title" : "Low Back Pain"
     },
     {
       "image" : "/article/article.png",
@@ -306,20 +308,20 @@ export default function Home() {
       "name" : "Tri May Shandy"
     },
     {
-      "say" : "Saya tidak pakai, tpi saya pakaikan ke orang tua dan mertua saya, sejauh ini alatnya membantu, tensi mereka stabil, Pelayanan baik, di anter ke rumah dan di ajari cara pakainya.",
-      "name" : "Tri May Shandy"
+      "say" : "Alhamdulillah saya sudah pakai Aculaser Ultimate ini setiap hari, sekarang saya sudah jarang berobat ke Rumah Sakit karena kolesterol dan tensi darahnya sudah tidak tinggi lagi.",
+      "name" : "Adi Nurdiansyah"
     },
     {
-      "say" : "Saya tidak pakai, tpi saya pakaikan ke orang tua dan mertua saya, sejauh ini alatnya membantu, tensi mereka stabil, Pelayanan baik, di anter ke rumah dan di ajari cara pakainya.",
-      "name" : "Tri May Shandy"
+      "say" : "Alhamdulillah sangat bermanfaat banget udh beli 3 unit untuk orang tua, mertua dan saya pribadi, rekomendasi sekali pokoknya untuk kesehatan.",
+      "name" : "Syaifullah Epol"
     },
     {
-      "say" : "Saya tidak pakai, tpi saya pakaikan ke orang tua dan mertua saya, sejauh ini alatnya membantu, tensi mereka stabil, Pelayanan baik, di anter ke rumah dan di ajari cara pakainya.",
-      "name" : "Tri May Shandy"
+      "say" : "Saya pakai dr laser 1tahun, udah jarang insomnia lagi suka saya bawa kemana mana soalnya membantu banget",
+      "name" : "Irfani Novitasari"
     },
     {
-      "say" : "Saya tidak pakai, tpi saya pakaikan ke orang tua dan mertua saya, sejauh ini alatnya membantu, tensi mereka stabil, Pelayanan baik, di anter ke rumah dan di ajari cara pakainya.",
-      "name" : "Tri May Shandy"
+      "say" : "Orang tua saya kelihatan senang sekali pakai Dr Laser, dan orang tua saya bilang jadi enak tidurnya, kesempitannya juga udah mulai berkurang",
+      "name" : "Ahmad Rizal"
     }
   ];
 
@@ -886,7 +888,7 @@ export default function Home() {
                         height={19}
                         alt="Rating"
                       />
-                      <p className='text-[#464646] leading-5 mt-4'>
+                      <p className='text-[#464646] leading-5 mt-4 h-[130px]'>
                         {item.say}
                       </p>
                       <p className='text-[#ff565c] text-lg font-bold mt-4'>
@@ -910,7 +912,7 @@ export default function Home() {
                         height={14}
                         alt="Rating"
                       />
-                      <p className='text-[#464646] leading-5 mt-4'>
+                      <p className='text-[#464646] leading-5 mt-4 h-[150px]'>
                         {item.say}
                       </p>
                       <p className='text-[#ff565c] text-lg font-bold mt-4'>
