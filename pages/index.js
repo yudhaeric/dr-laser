@@ -386,12 +386,12 @@ export default function Home() {
       <div className='lg:hidden mobile:visible flex flex-col items-center justify-center gap-8 px-8 mt-4'>
         <h1 className='text-[19pt] leading-8'>
           <span className='text-[#464646] font-bold'>
-            CEGAH STROKE <br/> <span className='font-light'>DAN {""} </span> SERANGAN JANTUNG <br/>
+            CEGAH STROKE, <br/> SERANGAN JANTUNG <br/> <span className='font-light'> DAN {""} </span> DIABETES <br/>
             <span className='font-light'>DENGAN {""}</span> <span className='text-[#ff565c]'> LOW LEVEL LASER TECHNOLOGY<br/> </span>
           </span> 
         </h1>
         <Image
-          src="/hero1.png"
+          src="/hero-product.png"
           width={350}
           height={152}
           alt=""
@@ -412,7 +412,7 @@ export default function Home() {
         <div className='mobile:hidden lg:inline w-[400px] mt-16'>
           <h1 className='text-[22pt] mb-7 leading-8'>
             <span className='text-[#464646] font-bold'>
-              CEGAH STROKE, <br/> <span className='font-light'> </span> SERANGAN JANTUNG <br/> <span className='font-light'> DAN {""} </span> DIABETES <br/>
+              CEGAH STROKE, <br/> SERANGAN JANTUNG <br/> <span className='font-light'> DAN {""} </span> DIABETES <br/>
               <span className='font-light'>DENGAN {""}</span> <span className='text-[#ff565c]'> LOW LEVEL LASER TECHNOLOGY<br/> </span>
             </span> 
           </h1>
