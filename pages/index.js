@@ -10,7 +10,7 @@ export default function Home() {
   const PrevProduct = ({ onClick }) => (
     <button 
       onClick={onClick}
-      className='custom-prev-arrow absolute top-[45vh] lg:left-[-5vw] mobile:left-[5vw] mobile:bg-white mobile:rounded-full mobile:px-3 pt-3 pb-2 mobile:z-10'
+      className='lg:left-[-5vw] custom-prev-arrow absolute top-1/2 left-[5vw] transform -translate-y-1/2 bg-white rounded-full px-3 pt-3 pb-2 z-10'
     >
       <Image
         src="/arrow-red-left-article.png"
@@ -24,7 +24,7 @@ export default function Home() {
   const NextProduct = ({ onClick }) => (
     <button
       onClick={onClick}
-      className='custom-next-arrow absolute top-[45vh] lg:right-[-5vw] mobile:right-[5vw] mobile:bg-white mobile:rounded-full mobile:px-3 pt-3 pb-2 mobile:z-10'
+      className='lg:right-[-5vw] custom-next-arrow absolute top-1/2 right-[5vw] transform -translate-y-1/2 bg-white rounded-full px-3 pt-3 pb-2 z-10'
     >
       <Image
         src="/arrow-red-right-article.png"
