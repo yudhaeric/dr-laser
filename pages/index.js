@@ -129,15 +129,7 @@ export default function Home() {
       "name" : "DR AIR \nAir Sterilizer PLUS\n ㅤㅤㅤ",
       "desc" : "Efektif Menyaring & Memusnahkan partikel debu, pollen, allergen, jamur, bakteri hingga VIRUS (berukuran 0,3 mikrometer) baik di udara maupun di permukaan benda.",
       "disc" : "Rp 9.890.000",
-      "price" : "Rp 8.890.000",
-      "link" : "http://wa.me/+6282170003007"
-    },
-    {
-      "image" : "/product/painbox.png",
-      "name" : "DR LASER\nPAIN BOX\n ㅤㅤㅤ",
-      "desc" : "Alat terapi kesehatan Low Level Laser Therapy Portable yang memiliki 36 mata laser dan menggunakan 2 jenis gelombang laser yang dapat menjangkau area luka lebih luas dan lebih dalam.",
-      "disc" : "Rp 8.380.000",
-      "price" : "Rp 6.380.000",
+      "price" : "Rp 7,890,000",
       "link" : "http://wa.me/+6282170003007"
     },
     {
@@ -420,7 +412,7 @@ export default function Home() {
         <div className='mobile:hidden lg:inline w-[400px] mt-16'>
           <h1 className='text-[22pt] mb-7 leading-8'>
             <span className='text-[#464646] font-bold'>
-              CEGAH STROKE <br/> <span className='font-light'>DAN {""} </span> SERANGAN JANTUNG <br/>
+              CEGAH STROKE, <br/> <span className='font-light'> </span> SERANGAN JANTUNG <br/> <span className='font-light'> DAN {""} </span> DIABETES <br/>
               <span className='font-light'>DENGAN {""}</span> <span className='text-[#ff565c]'> LOW LEVEL LASER TECHNOLOGY<br/> </span>
             </span> 
           </h1>
@@ -437,7 +429,7 @@ export default function Home() {
         </div>
         <div className='mobile:hidden lg:inline mt-[140px]'>
           <Image
-            src="/hero1.png"
+            src="/hero-product.png"
             width={500}
             height={217}
             alt=""
