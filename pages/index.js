@@ -575,7 +575,7 @@ export default function Home() {
                         {item.price}
                       </p>
                       <a href={item.link} target="_blank" rel="noopener noreferrer">
-                        <div className='flex bg-[#ff565c] hover:bg-[#EE3D43] cursor-pointer py-3 px-8 rounded-2xl gap-3 mt-6'>
+                        <div className='flex items-center bg-[#ff565c] hover:bg-[#EE3D43] cursor-pointer py-3 px-8 rounded-2xl gap-3 mt-6'>
                           <p className='font-bold text-white text-[16px]'>Beli Sekarang</p>
                           <Image
                             src="/shopping-bag.png"
@@ -639,12 +639,12 @@ export default function Home() {
                             {item.price}
                           </p>
                           <a href={item.link} target="_blank" rel="noopener noreferrer">
-                            <div className='flex bg-[#ff565c] hover:bg-[#EE3D43] cursor-pointer py-3 px-8 rounded-2xl gap-3 mt-6'>
-                              <p className='font-bold text-white text-[16px]'>Beli Sekarang</p> 
+                            <div className='flex items-center bg-[#ff565c] hover:bg-[#EE3D43] cursor-pointer rounded-2xl mt-[2vh] px-[3vh] h-14'>
+                              <p className='font-bold text-white text-[14pt] mr-1'>Beli Sekarang</p>
                               <Image
                                 src="/shopping-bag.png"
                                 width={18}
-                                height={20}
+                                height={21}
                                 alt="Product Supreme"
                               />
                             </div>
