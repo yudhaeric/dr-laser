@@ -209,6 +209,11 @@ export default function Home() {
     "/testimoni/testimoni10.jpg", "/testimoni/testimoni11.jpg"
   ];
 
+  const testimoniMobile = [
+    "/testimoni/testi1mobile.png", "/testimoni/testi2mobile.jpg", "/testimoni/testi3mobile.jpg", 
+    "/testimoni/testi4mobile.jpg", "/testimoni/testi5mobile.jpg", "/testimoni/testi6mobile.jpg",
+  ];
+
   const PrevArticle = ({ onClick }) => (
     <button className="custom-prev-arrow absolute -top-[28%] right-[15%] lg:right-[4%] px-2 pt-1" onClick={onClick}>
       <Image
@@ -677,7 +682,25 @@ export default function Home() {
             </>
           ))}
         </div>
-        <div>
+        <div className='lg:hidden'>
+          <Slider {...testimoniDesktopSettings}>
+            {testimoniMobile.map((testimoni, index) => {
+              return (
+                <div key={index} className='mt-3 mb-10'>
+                  <div className='flex justify-center mt-5'>
+                    <Image
+                      src={testimoni}
+                      width={951}
+                      height={1366}
+                      alt=""
+                    />
+                  </div>
+                </div>
+              );
+            })}
+          </Slider>
+        </div>
+        <div className='mobile:hidden lg:inline'>
           <Slider {...testimoniDesktopSettings}>
             {testimoni.map((testimoni, index) => {
               return (
