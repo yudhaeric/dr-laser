@@ -277,10 +277,6 @@ export default function Home() {
       "image" : "/article/article_4.png",
       "title" : "Low Back Pain"
     },
-    {
-      "image" : "/article/article.png",
-      "title" : "Jangan Anggap Remeh! inilah Gejala Stroke Ringan"
-    },
   ];
   
   let TheySaidMobileSettings = {
@@ -336,11 +332,17 @@ export default function Home() {
     setShowArticlePopup(!showArticlePopup)
   }
 
+  const [articleIndex, setArticleIndex] = useState(null);
+
+  const handleArticleIndex = (index) => {
+    setArticleIndex(index);
+  };
+
   return (
     <div className='overflow-hidden'>
       {showArticlePopup && (
         <>
-          <ArticlePopup handleCloseArticle={handleCloseArticle}/>
+          <ArticlePopup handleCloseArticle={handleCloseArticle} articleIndex={articleIndex} />
         </>
       )}
       {/* Header Mobile */}
@@ -843,7 +845,7 @@ export default function Home() {
             <Slider {...articleMobileSettings}>
               {article.map((item, index) => {
                 return (
-                  <div key={index} onClick={() => {setShowArticlePopup(true)}}>
+                  <div key={index} onClick={() => {handleArticleIndex(index); setShowArticlePopup(true)}}>
                     <Image
                       src={item.image}
                       width={320}
@@ -862,11 +864,11 @@ export default function Home() {
             <Slider {...articleDesktopSettings}>
               {article.map((item, index) => {
                 return (
-                  <div key={index} onClick={() => {setShowArticlePopup(true)}}>
+                  <div key={index} onClick={() => {handleArticleIndex(index); setShowArticlePopup(true)}}>
                     <Image
                       src={item.image}
-                      width={235}
-                      height={142}
+                      width={210}
+                      height={128}
                       alt=""
                     />
                     <div className='text-white leading-5 mt-5'>
