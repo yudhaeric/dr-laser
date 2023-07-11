@@ -540,7 +540,7 @@ export default function Home() {
           </p>
         </div>
         {/* Sleep Quality Section Desktop */}
-        <div className='flex mt-[5vh] large-desktop:mt-[15vh]'>
+        <div className='flex mt-[3vh] large-desktop:mt-[15vh]'>
           <div className='mobile:hidden lg:inline w-[50%] h-44'>
             <Image
               className='mt-10'
