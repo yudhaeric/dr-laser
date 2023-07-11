@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useState } from 'react';
 import Image from 'next/legacy/image'
 import Slider from 'react-slick';
@@ -382,10 +383,9 @@ export default function Home() {
       {/* Header Desktop */}
       <div className='mobile:hidden lg:inline'>
         <div className='mobile:hidden lg:inline lg:absolute -z-10'>
-          <Image
-            src="/bg-hero.png"
-            width={1920}
-            height={1281}
+          <img
+            className="w-full h-full object-cover"
+            src="/bg-hero-large.png"
             alt=""
           />
         </div>
@@ -496,11 +496,10 @@ export default function Home() {
       <div className='mobile:hidden lg:inline'>
         <h1 className='flex justify-center text-[#ff565c] font-bold text-[20pt] mb-5'>MANFAAT</h1>
         <div className='absolute -z-10'>
-          <Image
-            src="/benefit-bg.png"
-            width={1918}
-            height={628}
-            alt="Icon Arrow"
+          <img
+            className="w-full h-full object-cover"
+            src="/benefit-bg-large.png"
+            alt=""
           />
         </div>
         <div className='flex justify-center text-[8pt] text-white gap-36 z-10 mt-[10%]'>
@@ -840,7 +839,7 @@ export default function Home() {
                     <p className='mobile:hidden text-lg lg:inline mb-10 text-[#464646] text-center font-bold leading-6'>
                       {item.city}
                     </p>
-                    <div className='lg:h-[17vh] lg:w-[20vw] lg:mb-7 mb-5 text-center'>
+                    <div className='lg:h-[17vh] lg:w-[20vw] lg:mb-7 md:h-[13vh] ld:h-[10vh] xd:h-[6vh] mb-5 text-center'>
                       <p className='mobile:hidden text-lg lg:inline text-[#464646] font-bold leading-6'>
                         {item.address}
                       </p>

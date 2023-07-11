@@ -12,7 +12,9 @@ module.exports = {
     extend: {
       screens: {
         'mobile': '360px', 
-        'large-desktop': '1580px'
+        'md': '1580px', 
+        'ld': '1880px',
+        'xd': '2080px',
       },
       keyframes: {
         slideIn: {
