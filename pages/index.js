@@ -10,6 +10,7 @@ import HeaderDesktop from '../components/header';
 export default function Home() {
   const PrevProduct = ({ onClick }) => (
     <button 
+      aria-label="Previous Product Arrow Icon"
       onClick={onClick}
       className='lg:left-[-5vw] custom-prev-arrow absolute top-1/2 left-[5vw] transform -translate-y-1/2 bg-white rounded-full px-3 pt-3 pb-2 z-10'
     >
@@ -24,6 +25,7 @@ export default function Home() {
 
   const NextProduct = ({ onClick }) => (
     <button
+      aria-label="Next Product Arrow Icon"
       onClick={onClick}
       className='lg:right-[-5vw] custom-next-arrow absolute top-1/2 right-[5vw] transform -translate-y-1/2 bg-white rounded-full px-3 pt-3 pb-2 z-10'
     >
@@ -211,7 +213,10 @@ export default function Home() {
   ];
 
   const PrevArticle = ({ onClick }) => (
-    <button className="custom-prev-arrow absolute -top-[28%] right-[15%] lg:right-[4%] px-2 pt-1" onClick={onClick}>
+    <button 
+    aria-label="Previous Article Arrow Icon"
+    className="custom-prev-arrow absolute -top-[28%] right-[15%] lg:right-[4%] px-2 pt-1" onClick={onClick}
+    >
       <Image
         src="/arrow-left-article.png"
         width={26}
@@ -222,7 +227,10 @@ export default function Home() {
   );
 
   const NextArticle = ({ onClick }) => (
-    <button className="custom-next-arrow absolute -top-[28%] right-[0%] px-2 pt-1" onClick={onClick}>
+    <button 
+      aria-label="Next Article Arrow Icon"
+      className="custom-next-arrow absolute -top-[28%] right-[0%] px-2 pt-1" onClick={onClick}
+    >
       <Image
         src="/arrow-right-article.png"
         width={26}
@@ -361,7 +369,7 @@ export default function Home() {
             height={47}
             alt="Dr Laser Logo"
           />
-          <button onClick={() => {setShowHeaderMobile(true)}}>
+          <button aria-label="Header Menu Icon" onClick={() => {setShowHeaderMobile(true)}}>
             <Image
               src="/menu.png"
               width={34}
@@ -390,10 +398,18 @@ export default function Home() {
           />
           <div className='h-[130px] bg-white w-[600px] rounded-b-[40px]'>
             <ul className='flex justify-center align-end gap-20 text-[12px] mt-16 font-bold text-[#464646]'>
-              <a href='#' className='hover:text-[#ff565c]'>HOME</a>
-              <a href='#produk' className='hover:text-[#ff565c]'>PRODUK</a>
-              <a href='#testimoni' className='hover:text-[#ff565c]'>TESTIMONI</a>
-              <a href='#find' className='hover:text-[#ff565c]'>TEMUKAN KAMI</a>
+              <li>
+                <a href='#' className='hover:text-[#ff565c]'>HOME</a>
+              </li>
+              <li>
+                <a href='#produk' className='hover:text-[#ff565c]'>PRODUK</a>
+              </li>
+              <li>
+                <a href='#testimoni' className='hover:text-[#ff565c]'>TESTIMONI</a>
+              </li>
+              <li>
+                <a href='#find' className='hover:text-[#ff565c]'>TEMUKAN KAMI</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -683,7 +699,6 @@ export default function Home() {
                     alt="Review"
                     controls
                   />
-
                 <p className='w-38 text-center text-[#464646] font-bold'>
                   {item.nama} (Artis)
                 </p>
@@ -830,6 +845,7 @@ export default function Home() {
                     </div>
                     <div className='mobile:hidden lg:inline'>
                       <iframe
+                        title='Store Location'
                         src={item.iframe}
                         width={280}
                         height={280}
@@ -966,7 +982,10 @@ export default function Home() {
       </div>
       {/* WhatsApp */}
       <div className='fixed right-5 bottom-5 z-10'>
-        <a href='http://wa.me/+6282170003007'>
+        <a
+          aria-label='WhatsApp'
+          href='http://wa.me/+6282170003007'
+        >
           <Image
             src={"/whatsapp.png"}
             width={44}
