@@ -389,7 +389,7 @@ export default function Home() {
             alt=""
           />
         </div>
-        <div className='flex items-center justify-center gap-52'>
+        <div className='md:gap-80 flex items-center justify-center gap-52'>
           <Image
             src="/logo.png"
             width={220}
@@ -397,7 +397,7 @@ export default function Home() {
             alt="Dr Laser Logo"
           />
           <div className='h-[130px] bg-white w-[600px] rounded-b-[40px]'>
-            <ul className='flex justify-center align-end gap-20 text-[12px] mt-16 font-bold text-[#464646]'>
+            <ul className='md:text-[14px] flex justify-center align-end gap-20 text-[12px] mt-16 font-bold text-[#464646]'>
               <li>
                 <a href='#' className='hover:text-[#ff565c]'>HOME</a>
               </li>
@@ -441,20 +441,20 @@ export default function Home() {
       </div>
       {/* Hero Section Desktop */}
       <div className='flex justify-center gap-20 mb-[7%]'>
-        <div className='mobile:hidden lg:inline w-[400px] mt-16'>
-          <h1 className='text-[22pt] mb-7 leading-8'>
+        <div className='md:w-[500px] mobile:hidden lg:inline w-[400px] mt-16'>
+          <h1 className='md:text-[30pt] md:leading-10 text-[22pt] mb-7 leading-8'>
             <span className='text-[#464646] font-bold'>
               CEGAH STROKE, <br/> SERANGAN JANTUNG <br/> <span className='font-light'> DAN {""} </span> DIABETES <br/>
               <span className='font-light'>DENGAN {""}</span> <span className='text-[#ff565c]'> LOW LEVEL LASER TECHNOLOGY<br/> </span>
             </span> 
           </h1>
-          <p className='text-[#4e4e4e] mb-7 text-[10pt]'>
+          <p className='md:text-[14pt] text-[#4e4e4e] mb-7 text-[10pt]'>
             Low Level Laser membantu mengencerkan darah sehingga mencegah terbentuknya trombus (gumpalan darah), 
             dengan mekanisme menghambat agregasi trombosit, serta dapat mengaktifkan fibrinolisis sehingga membantu 
             menguraikan trombus/gumpalan darah pemicu STROKE dan SERANGAN JANTUNG.
           </p>
-          <div className='flex justify-center justify-items-center w-[200px] h-[45px] bg-[#ff565c] hover:bg-[#EE3D43] cursor-pointer rounded-full text-white'>
-            <a href='#produk' className='mt-[10px] text-[12pt] font-bold'>
+          <div className='md:w-[220px] md:h-[55px] flex justify-center justify-items-center w-[200px] h-[45px] bg-[#ff565c] hover:bg-[#EE3D43] cursor-pointer rounded-full text-white'>
+            <a href='#produk' className='md:mt-[15px] mt-[10px] text-[12pt] font-bold'>
               PESAN SEKARANG
             </a>
           </div>
@@ -494,7 +494,7 @@ export default function Home() {
       </div>
       {/* Benefit Section Desktop */}
       <div className='mobile:hidden lg:inline'>
-        <h1 className='flex justify-center text-[#ff565c] font-bold text-[20pt] mb-5'>MANFAAT</h1>
+        <h1 className='md:text-[24pt] flex justify-center text-[#ff565c] font-bold text-[20pt] mb-5'>MANFAAT</h1>
         <div className='absolute -z-10'>
           <img
             className="w-full h-full object-cover"
@@ -502,7 +502,7 @@ export default function Home() {
             alt=""
           />
         </div>
-        <div className='flex justify-center text-[8pt] text-white gap-36 z-10 mt-[10%]'>
+        <div className='md:mt-[8%] flex justify-center text-[8pt] text-white gap-36 z-10 mt-[10%]'>
           {benefit.map((item) => {
             return (
               // eslint-disable-next-line react/jsx-key
@@ -513,7 +513,7 @@ export default function Home() {
                 height={38}
                 alt="Icon Heart"
                 />
-                <p className='mt-5 w-44 text-center text-[10pt] leading-4'>{item.benefit}</p>
+                <p className='md:text-[12pt] md:w-48 md:leading-5 mt-5 w-44 text-center text-[10pt] leading-4'>{item.benefit}</p>
               </div>
             )
           })}
@@ -551,10 +551,10 @@ export default function Home() {
             />
           </div>
           <div className='mobile:hidden lg:inline w-[50%] h-44 mt-24'>
-            <h1 className='font-bold text-[#ff565c] text-2xl'>
+            <h1 className='md:text-[24pt] md:leading-10 font-bold text-[#ff565c] text-2xl'>
               MEMPERBAIKI <br/> KUALITAS TIDUR
             </h1>
-            <p className='text-[#464646] mt-8'>
+            <p className='md:text-[16pt] text-[#464646] mt-8'>
               <span className='font-bold'>Kualitas tidur yang baik</span> adalah salah satu faktor <br/> pendukung terapi. <span className='font-bold'>90% pengguna Dr Laser merasakan <br/> tidur
               yang lebih nyenyak</span>, tidak lagi merasakan <br/> insomnia sehingga merasa segar ketika bangun tidur. <br/> Tidur yang berkualitas
               membuat imunitas tetap terjaga <br/> dan gula darah lebih terkontrol.
@@ -618,7 +618,7 @@ export default function Home() {
         {/* Product Section Desktop */}
         <div id='produk' className='mobile:hidden lg:inline'>
           <div className='flex flex-col items-center justify-center mb-[3%] mt-[20%]'>
-            <h1 className='text-[#ff565c] font-bold text-[20pt]'>DAPATKAN SEKARANG</h1>
+            <h1 className='md:text-[22pt] text-[#ff565c] font-bold text-[20pt]'>DAPATKAN SEKARANG</h1>
           </div>
           <div className='w-[80%] mx-[10%]'>
             <Slider {...productDesktopSettings}>
@@ -685,7 +685,7 @@ export default function Home() {
       {/* Those Who Have Section */}
       <div id='testimoni' className='lg:w-[70%] lg:mx-[15%] w-[80%] mx-[10%]'>
         <div className='flex flex-col items-center justify-center mb-4 mt-10'>
-          <h1 className='text-[#ff565c] font-bold text-[18pt] lg:text-[20pt]'>MEREKA YANG PERNAH MERASAKAN</h1>
+          <h1 className='md:text-[22pt] text-[#ff565c] font-bold text-[18pt] lg:text-[20pt]'>MEREKA YANG PERNAH MERASAKAN</h1>
         </div>
         <div className='lg:flex grid grid-cols-1 text-[12pt] text-red gap-5 mt-[30px]'>
           {thoseWhoHave.map((item, index) => (
@@ -747,7 +747,7 @@ export default function Home() {
       {/* Media Partner */}
       <div className='mt-6'>
         <div className='flex items-center justify-center mb-4'>
-          <h1 className='text-[#ff565c] font-bold text-[20pt]'>MEDIA PARTNER OF</h1>
+          <h1 className='md:text-[22pt] text-[#ff565c] font-bold text-[20pt]'>MEDIA PARTNER OF</h1>
         </div> 
         <div className='flex justify-center'>
           <div className='mobile:w-[200px] mobile:h-[50px]'>
@@ -807,7 +807,7 @@ export default function Home() {
       {/* Find Us */}
       <div id='find' className='lg:mt-16 mt-12'>
         <div className='lg:mb-12 flex items-center justify-center mb-8'>
-          <h1 className='text-[#ff565c] font-bold text-[20pt]'>TEMUKAN KAMI</h1>
+          <h1 className='md:text-[22pt] text-[#ff565c] font-bold text-[20pt]'>TEMUKAN KAMI</h1>
         </div>
         <div className='lg:flex lg:w-[70%] lg:mx-[15%] justify-center w-[80%] mx-[10%] gap-5'>
           {location.map((item) => {
@@ -864,7 +864,7 @@ export default function Home() {
       {/* Article */}
       <div className='mt-10 bg-[#464646] w-full py-7'>
         <div className='lg:w-[70%] lg:mx-[15%] w-[80%] mx-[10%]'>
-          <h1 className='text-lg font-bold text-white mb-5 w-[70%]'>Artikel Menarik Tentang Kesehatan</h1>
+          <h1 className='md:text-[20pt] text-lg font-bold text-white mb-5 w-[70%]'>Artikel Menarik Tentang Kesehatan</h1>
           <div className='lg:hidden cursor-pointer'>
             <Slider {...articleMobileSettings}>
               {article.map((item, index) => {
