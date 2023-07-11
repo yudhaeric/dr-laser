@@ -688,7 +688,7 @@ export default function Home() {
         <div className='flex flex-col items-center justify-center mb-4 mt-10'>
           <h1 className='text-[#ff565c] font-bold text-[18pt] lg:text-[20pt]'>MEREKA YANG PERNAH MERASAKAN</h1>
         </div>
-        <div className='lg:flex grid grid-cols-2 text-[12pt] text-red gap-5 mt-[30px]'>
+        <div className='lg:flex grid grid-cols-1 text-[12pt] text-red gap-5 mt-[30px]'>
           {thoseWhoHave.map((item, index) => (
             <>
               <div>
