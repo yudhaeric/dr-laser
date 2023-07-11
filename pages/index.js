@@ -152,25 +152,24 @@ export default function Home() {
   
   const thoseWhoHave = [
     {
-      "image" : "/video1.png",
-      "nama" : "Yeyen Lidya", 
-      "link" : "https://www.youtube.com/watch?v=mifxN47KxcY"
+      "video" : "/yeyen.mp4",
+      "nama" : "Yeyen Lidya"
       
     },
     {
-      "image" : "/video2.png",
-      "nama" : "Lula Kamal", 
-      "link" : "https://www.youtube.com/watch?v=gvFa_TStOZ4"
+      "video" : "/lula.mp4",
+      "nama" : "Lula Kamal"
+
     },
     {
-      "image" : "/video3.png",
-      "nama" : "Melisa Karim", 
-      "link" : "https://www.youtube.com/watch?v=SGCk4IE35ok"
+      "video" : "/melisa.mp4",
+      "nama" : "Melisa Karim"
+
     },
     {
-      "image" : "/video4.png",
-      "nama" : "Okan Kornelius", 
-      "link" : "https://www.youtube.com/watch?v=FDEsb9-BLy8"
+      "video" : "/okan.mp4",
+      "nama" : "Okan Kornelius"
+
     }
   ];
   
@@ -210,7 +209,7 @@ export default function Home() {
   ];
 
   const testimoniMobile = [
-    "/testimoni/testi1mobile.png", "/testimoni/testi2mobile.jpg", "/testimoni/testi3mobile.jpg", 
+    "/testimoni/testi1mobile.jpg", "/testimoni/testi2mobile.jpg", "/testimoni/testi3mobile.jpg", 
     "/testimoni/testi4mobile.jpg", "/testimoni/testi5mobile.jpg", "/testimoni/testi6mobile.jpg",
   ];
 
@@ -669,14 +668,14 @@ export default function Home() {
           {thoseWhoHave.map((item, index) => (
             <>
               <div>
-                <a href={item.link}target="_blank" rel="noopener noreferrer">
-                  <Image
-                    src={item.image}
+                  <video
+                    src={item.video}
                     width={344}
                     height={196}
                     alt="Review"
+                    controls
                   />
-                </a>
+
                 <p className='w-38 text-center text-[#464646] font-bold'>
                   {item.nama} (Artis)
                 </p>
@@ -739,7 +738,7 @@ export default function Home() {
         <div className='flex justify-center text-[12pt] gap-5 py-7 lg:mt-[40px] lg:bg-[#ff565c] mobile:flex-wrap mobile:px-10'>
           <div>
             <Image
-              src="/media1.png"
+              src="/media_1.png"
               width={480}
               height={270}
               alt="..."
@@ -748,7 +747,7 @@ export default function Home() {
           
           <div>
             <Image
-              src="/media2.png"
+              src="/media_2.png"
               width={480}
               height={270}
               alt="..."
