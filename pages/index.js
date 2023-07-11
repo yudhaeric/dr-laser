@@ -130,7 +130,7 @@ export default function Home() {
       "name" : "DR AIR \nAir Sterilizer PLUS\n ㅤㅤㅤ",
       "desc" : "Efektif Menyaring & Memusnahkan partikel debu, pollen, allergen, jamur, bakteri hingga VIRUS (berukuran 0,3 mikrometer) baik di udara maupun di permukaan benda.",
       "disc" : "Rp 9.890.000",
-      "price" : "Rp 7,890,000",
+      "price" : "Rp 7.890.000",
       "link" : "http://wa.me/+6282170003007"
     },
     {
@@ -154,23 +154,19 @@ export default function Home() {
   const thoseWhoHave = [
     {
       "video" : "/yeyen.mp4",
-      "nama" : "Yeyen Lidya"
-      
+      "nama" : "Yeyen Lidya"  
     },
     {
       "video" : "/lula.mp4",
       "nama" : "Lula Kamal"
-
     },
     {
       "video" : "/melisa.mp4",
       "nama" : "Melisa Karim"
-
     },
     {
       "video" : "/okan.mp4",
       "nama" : "Okan Kornelius"
-
     }
   ];
   
