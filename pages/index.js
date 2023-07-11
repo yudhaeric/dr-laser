@@ -5,6 +5,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import ArticlePopup from '../components/article';
+import HeaderDesktop from '../components/header';
 
 export default function Home() {
   const PrevProduct = ({ onClick }) => (
@@ -337,11 +338,22 @@ export default function Home() {
     setArticleIndex(index);
   };
 
+  const [showHeaderMobile, setShowHeaderMobile] = useState(false)
+
+  const handleCloseHeader = () => {
+    setShowHeaderMobile(!showHeaderMobile)
+  }
+
   return (
     <div className='overflow-hidden'>
       {showArticlePopup && (
         <>
           <ArticlePopup handleCloseArticle={handleCloseArticle} articleIndex={articleIndex} />
+        </>
+      )}
+      {showHeaderMobile && (
+        <>
+          <HeaderDesktop handleCloseHeader={handleCloseHeader} />
         </>
       )}
       {/* Header Mobile */}
@@ -353,12 +365,12 @@ export default function Home() {
             height={47}
             alt="Dr Laser Logo"
           />
-          <button>
+          <button onClick={() => {setShowHeaderMobile(true)}}>
             <Image
-              src="/hamburger.png"
-              width={24}
-              height={24}
-              alt="Icon"
+              src="/menu.png"
+              width={34}
+              height={34}
+              alt=""
             />
           </button>
         </div>
@@ -383,9 +395,9 @@ export default function Home() {
           <div className='h-[130px] bg-white w-[600px] rounded-b-[40px]'>
             <ul className='flex justify-center align-end gap-20 text-[12px] mt-16 font-bold text-[#464646]'>
               <a href='#' className='hover:text-[#ff565c]'>HOME</a>
-              <a href='#produk' className='hover:text-[#ff565c]'>PRODUCT</a>
+              <a href='#produk' className='hover:text-[#ff565c]'>PRODUK</a>
               <a href='#testimoni' className='hover:text-[#ff565c]'>TESTIMONI</a>
-              <a href='#contact' className='hover:text-[#ff565c]'>CONTACT US</a>
+              <a href='#find' className='hover:text-[#ff565c]'>TEMUKAN KAMI</a>
             </ul>
           </div>
         </div>
@@ -781,7 +793,7 @@ export default function Home() {
         </div>
       </div>
       {/* Find Us */}
-      <div id='contact' className='lg:mt-16 mt-12'>
+      <div id='find' className='lg:mt-16 mt-12'>
         <div className='lg:mb-12 flex items-center justify-center mb-8'>
           <h1 className='text-[#ff565c] font-bold text-[20pt]'>TEMUKAN KAMI</h1>
         </div>
