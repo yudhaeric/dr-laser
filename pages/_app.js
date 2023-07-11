@@ -1,7 +1,18 @@
 import '../styles/globals.css'
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Head>
+        <html lang="id" />
+        <meta name="description" content="DR.LASER | Cegah Stroke, Serangan Jantung, dan Diabetes" />
+        <link rel="icon" href="/favicon.png" />
+        <title>DR.LASER</title>
+      </Head>
+      <Component {...pageProps} />
+    </>
+  );
 }
 
-export default MyApp
+export default MyApp;
