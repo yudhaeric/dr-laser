@@ -6,7 +6,6 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import ArticlePopup from '../components/article';
 import HeaderDesktop from '../components/header';
-import LazyLoad from 'react-lazyload';
 
 export default function Home() {
   const PrevProduct = ({ onClick }) => (
@@ -691,15 +690,13 @@ export default function Home() {
           {thoseWhoHave.map((item, index) => (
             <>
               <div>
-                <LazyLoad height={200}>
-                  <video
-                    src={item.video}
-                    width={344}
-                    height={196}
-                    alt="Review"
-                    controls
-                  />
-                </LazyLoad>
+                <video
+                  src={item.video}
+                  width={344}
+                  height={196}
+                  alt="Review"
+                  controls
+                />
                 <p className='w-38 text-center text-[#464646] font-bold'>
                   {item.nama} (Artis)
                 </p>
