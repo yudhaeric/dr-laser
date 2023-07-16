@@ -82,7 +82,7 @@ export default function Home() {
       "benefit" : "Teknologi laser merangsang tubuh untuk memperoduksi nitric oxide yang berfungsi melebarkan pembuluh darah dan membuatnya lebih elastis sehingga membantu menurunkan tekanan darah. Nitric oxide juga berfungsi untuk meningkatkan aliran darah ke seluruh tubuh sehingga membantu mencegah dan mengatas impotensi."
     },
     {
-      "benefit" : "Teknologi laser mengaktifkan enzim dalam tubuh yang bertugas untuk mingkatkan pembakaran kolesterol. Kolesterol akan menurun dan mencegah terjadinya plak kolesterol."
+      "benefit" : "Teknologi laser mengaktifkan enzim dalam tubuh yang bertugas untuk meningkatkan pembakaran kolesterol. Kolesterol akan menurun dan mencegah terjadinya plak kolesterol."
     },
   ];
 
@@ -184,13 +184,13 @@ export default function Home() {
     },
     {
       "city" : "Makassar",
-      "address" : "Ruko Eks-Bioskop Artis,Jl. Gn. Lompobattang No.1 i, Pisang Utara, Kec. Ujung Pandang, Kota Makassar, Sulawesi Selatan 90157",
-      "iframe" : "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3973.8179438004945!2d119.41314031476415!3d-5.133001796274922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNcKwMDcnNTguOCJTIDExOcKwMjQnNTUuMiJF!5e0!3m2!1sen!2sid!4v1688791209468!5m2!1sen!2sid"
+      "address" : "Jl. Gn. Lompobattang No.314, Pisang Utara, Kec. Ujung Pandang, Kota Makassar, Sulawesi Selatan 90115",
+      "iframe" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.8177453345243!2d119.41285907451737!3d-5.133033651929286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbf02aa28a12199%3A0x796bbb10e99a5fa0!2sDimarco%20Mitra%20Utama.%20PT!5e0!3m2!1sen!2sid!4v1689484095825!5m2!1sen!2sid"
     },
     {
       "city" : "Medan",
-      "address" : "Jl. Catur 11-31, Ps. Merah Bar., Kec. Medan Kota, Kota Medan, Sumatera Utara 20216",
-      "iframe" : "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3982.0787567318457!2d98.69316961475852!3d3.56935329740249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zM8KwMzQnMDkuNyJOIDk4wrA0MSc0My4zIkU!5e0!3m2!1sen!2sid!4v1688791312210!5m2!1sen!2sid"
+      "address" : "Jl. Catur No.9, Ps. Merah Bar., Kec. Medan Kota, Kota Medan, Sumatera Utara 20216",
+      "iframe" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.0791900575514!2d98.69075517251622!3d3.569253342504524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3031305a8c3c2bb5%3A0x81902ab573d18bc4!2sJl.%20Catur%20No.9%2C%20Ps.%20Merah%20Bar.%2C%20Kec.%20Medan%20Kota%2C%20Kota%20Medan%2C%20Sumatera%20Utara%2020216!5e0!3m2!1sen!2sid!4v1689484316621!5m2!1sen!2sid"
     },
     {
       "city" : "Bandung",
