@@ -169,6 +169,10 @@ export default function Home() {
     {
       "video" : "/okan.mp4",
       "nama" : "Okan Kornelius"
+    },
+    {
+      "video" : "/boyke.mp4",
+      "nama" : "Dr. Boyke"
     }
   ];
   
